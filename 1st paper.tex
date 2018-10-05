@@ -1,20 +1,42 @@
 \documentclass[12pt]{article}
+\usepackage{jcappub}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{mathtools} %For summations with limits
 \usepackage{multicol} %For multiple columns
 \setlength{\columnsep}{1cm}
 
+
+\title{The Distribution of Vacua in Random Landscape Potentials}
+
+\author{Low Lerh Feng,}
+\author{Shaun Hotchkiss}
+\author{and Richard Easther}
+
+\emailAdd{lerh.low@auckland.ac.nz}
+\emailAdd{s.hotchkiss@auckland.ac.nz}
+\emailAdd{r.easther@auckland.ac.nz}
+
+\newcommand{\re}[1]{\textcolor{blue}{[{\bf RE}: #1]}}
+\newcommand{\lfl}[1]{\textcolor{red}{[{\bf LL}: #1]}}
+
+
+\affiliation{Department of Physics,\\ University of Auckland, \\Private Bag 92019,\\ Auckland, New Zealand}
+
+
+
+\abstract{
+We analyze the distribution of stationary points of multi-dimensional random Gaussian fields of known field value. We find an analytical expression for this distribution, from which we calculate the probability that a given maximum has a field value below the average, or equivalently a given minimum has a field value above the average. The complexity of the expression increases very quickly with the number of dimensions. We present analytic results up until 6 dimensions, and numerical results to 10 dimensions. Although our motivations stem from cosmology, the results depend only on the properties of random Gaussian fields.}
+
 \begin{document}
 
-{\large\textbf{The statistics of minima of a given field value in Gaussian random fields}}\\
-\begin{center}Low Lerh Feng, Shaun Hotchkiss, Richard Easther\end{center}
 
-\section{Abstract}
 
-We analyze the distribution of stationary points of multi-dimensional random Gaussian fields of known field value. We find an analytical expression for this distribution, from which we calculate the probability that a given maximum has a field value below the average, or equivalently a given minimum has a field value above the average. The complexity of the expression increases very quickly with the number of dimensions. We present analytic results up until 6 dimensions, and numerical results to 10 dimensions. Although our motivations stem from cosmology, the results depend only on the properties of random Gaussian fields.
+\maketitle
 
 \section{Introduction}
+
+\re{We should start this with a discussion of the multiverse / landscape and the anthropic selection of the vacuum energy; our main point is about $P(\Lambda)$ not inflation, and be clear about the difference between a random potential and {\em the} string landscape. I am probably best placed to do this} 
 
 The theory of inflation is the current best explanation for certain perplexing observations of the Universe, such as the monopole problem, horizon problem, and flatness problem. Inflation is thought to be caused by a scalar field, but the exact nature of this field is shrouded in unknowns. The simplest possibility is a one-dimensional scalar field analogous to the gravitational potential; however multidimensional scalar fields are also possible. In particular, string theory predicts the existence of a highly complex, $O(100)$ dimensional scalar field known as the \emph{landscape}. The string landscape is so complex that quantitative predictions are hard to extract; as a result, most studies of the landscape assume it is a Gaussian random field.\cite{GRF1, GRF2, GRF3} Physically, this assumption works if the individual terms that make up the landscape are sufficiently uncorrelated that the central limit theorem is applicable.
 
@@ -25,6 +47,8 @@ In addition to the probability of minima, the distribution of eigenvalues of the
 In all these works, the statistics of stationary points at a given field value has not been studied. In standard inflation theory, the universe inflates when the gradient of the potential is small (so-called ``slow-roll inflation"), and stops inflating when we reach the potential's minimum. If the minimum is a global minimum, then the end state is stable. If it is only a local minimum, then in principle the universe might quantum tunnel to an even lower-potential state, but it is usually assumed in landscape models that the local minimum is metastable, with a lifetime much greater than the age of the universe. Nonetheless, if the local minimum has a value above zero, then this can manifest as a nonzero dark energy term. Therefore, the probability a minima has potential value above zero is a desirable number to know. This probability is investigated in our paper. We will begin with an overview of the theory, followed by analytical results and numerical results up to $N=10$. We will then discuss some general features of this probability, and finally present our conclusions.
 
 \section{Theory}
+
+\re{This needs to start ``further back'' -- we don't want to recap all of BBKS, but we need to define what a random function is, dimensionality, the connection between that  and the potential we associate with the landscape, and walk people through the Kac-Moody formula so they can see why we're doing what we're doing. It does not need to be a book, but I would imagine it as a couple of pages, and also to be clear about the difference between paper and the one I had with Guth and Masoumi}
 
 Our analysis is an N-dimensional generalization of Appendix A in Bardeen, Bond, Kaiser and Szalay (henceforth BBKS) \cite{BBKS}. We adopt ths same notation, $\eta_i \equiv \frac{\partial \phi}{\partial x^i}, \xi_{ij} \equiv \frac{\partial^2 \phi}{\partial x^i \partial x^j}$. In this notation, the correlations of a Gaussian random field at a random point in N-dimensions are:
 
@@ -46,7 +70,7 @@ Our analysis is an N-dimensional generalization of Appendix A in Bardeen, Bond, 
 \end{split}
 \end{equation}
 
-\noindent The subscript $i$ serves only as an identifier for the element of the vector (e.g. $\alpha_1 = \phi$) and has no other meaning. We define the covariance matrix $M_{ij}\equiv\langle\alpha_i\alpha_j\rangle$ and its inverse $K \equiv M^{-1}$. Working through the math, one can see that given the correlations in Eq. \ref{corr}, the correlation matrix is not diagonal, for example in 3 dimensions it takes the following form:
+\noindent The subscript $i$ serves only as an identifier for the element of the vector (e.g. $\alpha_1 = \phi$) and has no other meaning. We define the covariance matrix $M_{ij}\equiv\langle\alpha_i\alpha_j\rangle$ and its inverse $K \equiv M^{-1}$. Working through the math, one can see that given the correlations in Eq. \ref{corr}, the correlation matrix is not diagonal, for example in 3 dimensions it takes the following form: \re{Can we write down the general form; possibly as a block matrix with the individual blocks show separate -- better to avoid giving examples for specific $N$; we have used the examples as ``handholds'' as we figure this out }
 
 \[
 M=
@@ -64,7 +88,7 @@ M=
   \end{bmatrix}
 \]
 
-The probability distribution of $\alpha$ is (by definition for Gaussian random fields)
+The probability distribution of $\alpha$ is (by definition for Gaussian random fields \re{this is something you derive, not something you define -- we should sketch how this works})
 
 \begin{equation} \label{ProbDistrib}
 p(\alpha_i)=\frac{1}{(2\pi)^{N(N+3)/4}\sqrt{\mathrm{det}M}} e^{-\frac{1}{2}\alpha K \alpha}
@@ -84,7 +108,7 @@ Like BBKS, we transform to a different basis; however the basis we choose is dif
 \end{split}
 \end{align*}
 
-We pick this basis because it simplifies the integration region later in the analysis, which we find gives the fastest computational time; however in principle all bases should give the same result. Following BBKS, we introduce $\nu = F/\sigma_0$. With this choice of basis, the nonzero correlations are:
+We pick this basis because it simplifies the integration region later in the analysis, which we find gives the fastest computational time; however in principle all bases should give the same result. Following BBKS, we introduce $\nu = F/\sigma_0$. With this choice of basis, the nonzero correlations are \re{maybe say why, at least for an exampke}:
 
 \begin{gather}
 \langle\nu^2\rangle = 1, \langle x^2\rangle=1, \langle y^2 \rangle = \langle \xi_{11}^2 -2\xi_{11}\xi_{22} + \xi_{11}^2\rangle = \frac{4}{N(N+2)} \\
@@ -116,9 +140,13 @@ F = \lambda_1\lambda_2\lambda_3\ldots\lambda_N \sum^N_{i,j; i>j} (\lambda_i - \l
 
 \noindent $Q$ is given by Eq. \ref{Q}, $A$ is some constant factor, and the integration limits are only over the region where the conditions are satisfied. 
 
+\section{Peak numbers as a function of height}
+
+\re{I think we want to develop the general problem of finding the number of peaks/minima as a function of $V$; we can develop both via the Monte Carlo integrals and via the ``peak ratio'' method, and perhaps even showing examples for specific realisations for $N$ from 2 to 5.  We could do this as a set of subsections.}  
+
 In principle, evaluating the $x, y, z \ldots$ integrals leaves just a $\nu$ integral, and the desired probability is the integral over $0 \leq \nu \leq \infty$ divided by the integral over $-\infty \leq \nu \leq \infty$. In practice, the complexity of the integral rises quickly. Although the result in 3D contains only a few terms (c.f. BBKS Eq. (A15)), the 4D integral has 14 terms, and the 5D integral over eight hundred (our tool of choice, Mathematica, even fails to analytically integrate the 5D result unless a different basis is used).
 
-\section{Results}
+
 The final probability depends not only on the field value $\phi$ but also the moments of the power spectrum $\sigma_0, \sigma_1, \sigma_2$. However, it turns out that two of the three $\sigma$'s are normalizable. $\sigma_0$ is closely related to the average value of the field (see Eq. \ref{corr}), so with an appropriate choice of the zero of the field, we can set $\sigma_0 = 1$. Similarly, $\sigma_1$ represents the average of the first derivatives, and with an appropriate rescaling of the axis length we can also set it $\sigma_1 = 1$. This leaves $\sigma_2$ as the only remaining parameter, and all the results we present will be in terms of $\sigma_2$.
 
 \begin{figure}
@@ -185,7 +213,10 @@ For $N > 6$, the integral is complex enough that Mathematica struggles to get an
   \label{Log-Linear}
 \end{figure}
 
-\section{Discussion}
+\section{Implications for Multiverse Cosmology}
+
+\re{I would move from looking at the abstract problem in the previous section to the specific implications for cosmology in this section; and how $P(\Lambda)$ depends on $\sigma_2$}
+
 As can be seen, the probability that a given extremum with $\phi > 0$ is a minimum decreases with increasing $N$. For a constant $\sigma_0$ and $\sigma_1$, the probability also decreases for increasing $\sigma_2$. Both of these general trends are to be expected: as $N$ increases, there are more conditions that must be simultaneously met for a point to be a minimum, hence the probability decreases. Also, since $\sigma_2$ is the average of the second derivative of the field, as $\sigma_2$ increases the field gets more and more turbulent. This means there are both more maxima and more minima, and the probability decreases.
 
 In Fig. \ref{Log-Linear}, we present a log-linear plot of the probability against the dimension for the three values of $\sigma_2$. The resulting lines are surprisingly straight. There is a noticeable kink in both the $\sigma_2 = 3.5$ and $\sigma_2=2$ case between $N=6$ and $N=7$. This is a numerical effect -- it is where the exact results end and the numerical ones begin. We checked this by running the numerical integration for $N=6$ as well. Replacing the exact result with the numerical one, the kink moves to the left. The kink indicates that the numerical results are consistently overestimating the true probability, but that is not surprising because the numerical results rely on the trapezoidal rule. The trapezoidal rule overestimates the result when the integral is concave up, and underestimates it when it is concave down. The final probability is the area under the curve for $\phi > 0$ divided by the area under the curve for all $\phi$. From Fig. \ref{Likelihood}, for $\phi > 0$ the curve is concave up, so the trapezoidal rule overestimates the numerator, and accordingly the probability as well. This trend holds for higher $N$ as well, since in for higher $N$ the plot moves to more negative values.

@@ -53,13 +53,13 @@ We proceed from a generalisation of the Kac-Rice formalism \cite{Kac1943,Rice194
 
 \section{Random Potentials in $N$ Dimensions}
 
-We begin by developing an $N$-dimensional analogue of the treatment of three dimensional random functions due to Bardeen, Bond, Kaiser and Szalay (henceforth BBKS) \cite{BBKS}, generalising their derivation and keeping their notation as far as possible.  \re{We said we would say function and not field?} An $N$-dimensional scalar-valued function $F(r)$ is a set of values that fill each point of $N$-dimensional space. The function is \emph{random} if its values depend on a probability distribution function,
+We begin by developing an $N$-dimensional analogue of the treatment of three dimensional random functions due to Bardeen, Bond, Kaiser and Szalay (henceforth BBKS) \cite{BBKS}, generalising their derivation and keeping their notation as far as possible.   An $N$-dimensional scalar-valued function $F(r)$ is a set of values that fill each point of $N$-dimensional space. The function is \emph{random} if its values depend on a probability distribution function,
 %
 \begin{equation}
 P[F(r_1), F(r_2), \ldots, F(r_m)]dF(r_1)dF(r_2)\ldots dF(r_m)
 \end{equation}
 %
-\noindent where $r$ is a position (and thus a point in $N$ dimensional space), for $m$  points. This corresponds to the probability that the function takes value $F(r_1) \pm dF(r_1)$ at position $r_1$, $F(r_2) \pm dF(r_2)$ at position $r_2$, and so on. 
+\noindent where $r_i$ is a position in $N$ dimensional space. This corresponds to the probability that the function takes value $F(r_1) \pm dF(r_1)$ at position $r_1$, $F(r_2) \pm dF(r_2)$ at position $r_2$, and so on. 
 %
 The function is \emph{Gaussian random} if the probability distribution function is an $N$-dimensional Gaussian function,
 %
@@ -76,7 +76,7 @@ Here $M$ is the \emph{covariance matrix},
 M_{ij} \equiv \langle \Delta y_i \Delta y_j \rangle
 \end{equation}
 
-\noindent while $\Delta y_i$ is the difference between the measured value and the average, $\Delta y_i \equiv y_i - \langle y_i \rangle$. For the Gaussian random function, the probability distribution only depends on $M$, which in turn only depends on the two-point correlation function $\langle \Delta y_i \Delta y_j \rangle$. In other words, the two-point correlation function completely determines the statistical properties of the Gaussian random function.
+\noindent while $\Delta y_i$ is the difference between the measured value and the average, $\Delta y_i \equiv y_i - \langle y_i \rangle$. For a Gaussian random function, the probability distribution only depends on $M$, which in turn only depends on the two-point correlation function $\langle \Delta y_i \Delta y_j \rangle$. In other words, the two-point correlation function completely determines the statistical properties of the Gaussian random function.
 
 In our application, the function value we're interested in is the potential of the landscape $\phi$, so henceforth we will replace $y$ with $F$.  \re{would this be clearer to say the the independent variables were $\phi$ and the function / potential $V$?? What are $x$ and $y$ below, or the subscripts $\alpha$ and $\beta$??} The two-point correlation function is, by definition, the Fourier transform of the power spectrum $P(k)$,
 
@@ -145,8 +145,8 @@ K_{\xi_{ii}, \xi_{jj}} &= \frac{(N(N+1)-2)\sigma_1^4 - N(N+1)\sigma_0^2\sigma_2^
 p(\alpha_i)=\frac{1}{(2\pi)^{N/2}\sqrt{\mathrm{det}M}} e^{-\frac{1}{2}\alpha K \alpha}
 \end{equation}
 %
-For our purposes, we can usually ignore the constant prefactor since we will primarily be concerned with ratios of probabilities.  Like BBKS, we transform to a different basis; however the basis we choose is different from BBKS:
-
+We can usually ignore the constant prefactor since we will primarily be concerned with ratios of probabilities.  We begin work in the basis
+%
 \begin{align*}
 \begin{split}
 \sigma_2x = -\nabla^2\phi &= -(\xi_{11}+\xi_{22}+\ldots+\xi_{NN})\\
@@ -156,9 +156,9 @@ For our purposes, we can usually ignore the constant prefactor since we will pri
 \ldots
 \end{split}
 \end{align*}
-
-We pick this basis because it simplifies the integration region later in the analysis, which we find gives the fastest computational time. \re{Is this the same as Shaun's basis; or will be introduce that later?  -- READ TO HERE}  Following BBKS, we introduce $\nu = F/\sigma_0$. With this choice of basis, the nonzero correlations are (from Eq. \ref{corr}):
-
+%
+Following BBKS, we introduce $\nu = F/\sigma_0$. With this choice of basis, the nonzero correlations are (from Eq. \ref{corr}):
+%
 \begin{gather}
 \langle\nu^2\rangle = 1, \langle x^2\rangle=1, \langle y^2 \rangle = \langle \xi_{11}^2 -2\xi_{11}\xi_{22} + \xi_{11}^2\rangle = \frac{4}{N(N+2)} \\
 \langle z^2 \rangle = \frac{12}{N(N+2)}, etc.
@@ -175,97 +175,171 @@ From here, the factor $\alpha K \alpha$ ($Q$ in BBKS) in Eq. \ref{ProbDistrib} t
 
 \noindent where $x_* \equiv \gamma x$ and $\gamma = \frac{\sigma_1^2}{\sigma_2 \sigma_0}$. This is the equivalent of BBKS Eq. (A4) for $N$-dimensions. Note the first two terms remain constant for all $N$, but the remaining terms vary. The $\eta$ terms are zero at minima by definition, while the off-diagonal $\xi_{ij}$ terms can be Euler-rotated away by choosing an appropriate set of axes. The $\xi$ matrix is already symmetric (by rotational symmetry), and Euler rotation turns it diagonal.\cite{Goldstein} The upshot is that the symmetric $\xi$ matrix becomes a diagonal matrix where the individual elements are the eigenvalues $\lambda_i = -\xi_{ii}$ of the Hessian. We are interested in minima, hence we demand all second derivatives to be positive, i.e. all eigenvalues to be positive.\footnote{Note there is an alternative convention where all eigenvalues being \emph{negative} corresponds to maxima. Although it can be confusing, it is a simple matter to convert results from one convention to the other; $p(min)$ is simply $1-p(max)$.} From here, the analysis is exactly the same as BBKS, except that when we define the ordering of the eigenvalues $\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0$, our boundary conditions are significantly simpler because of the different choice of basis. For example, in 3D, our conditions are $y \geq 0, y \leq z$, and $x \geq z$ (compare BBKS's equation between Eq. (A14) and Eq. (A15)).
 
-The final expression we arrive at for the density of peaks is:
-
+This yields the following expression for the density of peaks
+%
 \begin{equation} \label{DensityOfPeaks}
 N = A \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} F \times e^{-Q} d\nu dx dy dz \ldots
 \end{equation}
-
+%
 \noindent where
-
+%
 \begin{equation}
 F = \lambda_1\lambda_2\lambda_3\ldots\lambda_N \sum^N_{i,j; i>j} (\lambda_i - \lambda_j),
 \end{equation}
+%
+or
+while  $F$ has the form 
+\begin{equation}
+F = \left(\prod_{i}^{N} \lambda_i \right)\left(\prod_{i<j} |\lambda_i-\lambda_j|\right)
+\end{equation} 
+%
+$Q$ is given by Eq. \ref{Q}, $A$ is some constant factor, and the integration limits are only over the region where the conditions are satisfied. 
 
-\noindent $Q$ is given by Eq. \ref{Q}, $A$ is some constant factor, and the integration limits are only over the region where the conditions are satisfied. This is a key integral, and evaluating it is the focus of Section \ref{PeakNumbers}.
+We will find it convenient to make a further transformation to
+%
+\begin{equation}
+x_1 = \sum_{i=1}^N \lambda_i \, , \qquad x_n = \sum_{i=1}^{n-1} \lambda_i  -(n-1) \lambda_n\, , n\geq 2\, . 
+\end{equation} 
+%
+In these variables it can be shown that  
+%
+\begin{equation}
+Q = \frac{x^2-2\gamma x \nu+\nu^2}{1-\gamma^2} + \sum_{n=2}^N \frac{N(N+2)}{2n(n-1)}x_n^2  \label{Qx}
+\end{equation}
+%
+The inverse transformation is $\lambda_1$,
+%s
+\begin{equation}
+\lambda_1 = \frac{x_1}{N} + \sum_{i=2}^N \frac{x_i}{i(i-1)} \, , \qquad
+  \lambda_n = \frac{x_1}{N} - \frac{x_n}{n} + \sum_{i=n+1}^N \frac{x_i}{i(i-1)}.
+\end{equation}
+%
+In these units the relevant region becomes $x_1\geq x_N\geq x_{N-1} ... \geq x_2 \geq 0$.
 
-At this point we will briefly discuss the results obtained by Yamada and Vilenkin \cite{Yamada2018}. They have derived $p(\mathrm{min}|U, s.p.)$, while we are interested in $p(F>0|\mathrm{min})=\int^\infty_0 p(F|\mathrm{min})dF/\int^\infty_{-\infty} p(F|min)dF$. The two are related by $p(F|\mathrm{min})= \frac{p(\mathrm{min}|F, s.p.)p(F|s.p.)}{p(\mathrm{min}|sp)}$\footnote{This result is derived using Bayes theorem, as well as the fact that minima are necessarily stationary points}.The numerator is independent of $F$, so it cancels. Therefore the two probabilities can be related with knowledge of $p(F|s.p.)$. However, this quantity is not trivial to compute. We have been able to derive an analytical formula for this in 2D (see appendix), but even in 2D the complexity is formidable.
+\re{this above is going to need to be checked for self-consistency and trimmed}
 
-We attempted to use this result to compare Yamada and Vilenkin's Eq. 4.22 with ours in 2D, but the results disagreed substantially. However, because Yamda and Vilenkin worked in a high-$N$ approximation, this is not surprising.
+\re{{\it can trim / compress/ move this} At this point we will briefly discuss the results obtained by Yamada and Vilenkin \cite{Yamada2018}. They have derived $p(\mathrm{min}|U, s.p.)$, while we are interested in $p(F>0|\mathrm{min})=\int^\infty_0 p(F|\mathrm{min})dF/\int^\infty_{-\infty} p(F|min)dF$. The two are related by $p(F|\mathrm{min})= \frac{p(\mathrm{min}|F, s.p.)p(F|s.p.)}{p(\mathrm{min}|sp)}$\footnote{This result is derived using Bayes theorem, as well as the fact that minima are necessarily stationary points}.The numerator is independent of $F$, so it cancels. Therefore the two probabilities can be related with knowledge of $p(F|s.p.)$. However, this quantity is not trivial to compute. We have been able to derive an analytical formula for this in 2D (see appendix), but even in 2D the complexity is formidable. }
 
-\section{Peak numbers as a function of height} \label{PeakNumbers}
 
-As can be seen from Eq. \ref{DensityOfPeaks}, the final probability depends not only on the function value $\phi$ but also the moments of the power spectrum $\sigma_0, \sigma_1, \sigma_2$. It turns out that two of the three $\sigma$'s are normalizable for physical reasons. $\sigma_0$ is closely related to the average value of the function (see Eq. \ref{corr}), so with an appropriate choice of the zero of the function, we can set $\sigma_0 = 1$. Similarly, $\sigma_1$ represents the average of the first derivatives, and with an appropriate rescaling of the axis length we can also set $\sigma_1 = 1$. This leaves $\sigma_2$ as the only remaining parameter, and all the results we present will be in terms of $\sigma_2$.
 
-\subsection{$N \leq 6$}
-The basic recipe is to evaluate the $x, y, z \ldots$ integrals, leaving just a $\nu$ integral. The desired probability is the integral over $0 \leq \nu \leq \infty$ divided by the integral over $-\infty \leq \nu \leq \infty$. This has already been done by BBKS in 3D (c.f. BBKS Eq. (A15)). With the computational power at our disposal, we can evaluate this up to $N=6$.
+\section{Peak Probabilities: $V$ and $N$} \label{PeakNumbers}
+
+Our overall goal here is to understand the form $P(\Lambda)$ for  Gaussian random landscape potentials, the probability distribution that defines the distribution of vacuum energies at minima in the landscape. The overall probability Eq. \ref{DensityOfPeaks} depends on the value of $V$ and the moments of the power spectrum $\sigma_0, \sigma_1$,  and $\sigma_2$.  Since we will focus on a purely Gaussian landscape with no  physical parameters that set a scale we can work with both $\sigma_0$ and $\sigma_1$ equal to unity. The former is achieved by setting the average value of $V$ to zero by an additive rescaling, as can be seen from  Eq. \ref{corr}. Likewise, $\sigma_1$ responds to the average magnitude of the first derivatives and can be set to unity by rescaling the units of length, leaving $\sigma_2$ as the only nontrivial parameter. It can be shown that if $\sigma_0=\sigma_1=1$, $\sigma_2>1$; in much of what follows we  parameterise the landscape by $\gamma = 1/\sigma_2$ \re{should we actually show this; I know you sorted this out} and the dimensionality $N$,  in the knowledge that $0<\gamma<1$.
+
+The probability $P$ gives the (relative) likelihood of finding a maximum \re{at what point do we start talking about minima, not maxima; we should probably flip it from the start} with value $V$ and the given values of $x_i$ which will, in turn, determine the eigenvalues of the Hessian at the minimum.  Up to an undetermined overall  constant the probability of obtaining a peak with value $V$ is given thus given by 
+%
+\begin{equation}
+P(V) = \int dx_1 \cdots dx_N F(x) \exp{(-Q)}
+\end{equation} 
+%
+where it is assumed that all such integrals are over $x_1\geq x_N\geq x_{N-1} ... \geq x_2 \geq 0$.
+
+
+\subsection{Landscape Heuristics}
+
+\begin{figure}
+  \centering
+  
+  \huge{FIGURE TO GO HERE}
+%  \includegraphics[width=\linewidth]{N6minima.png}
+  \caption{We show  realisations of a \re{(1 or 2D - you choose)} random function with $\gamma = 0.2$ and $\gamma=0.9$; the former case has a larger second moment and thus  more ``short scale'' power, allowing minima (maxima) to appear in significant numbers above (below) zero. Conversely with $\gamma$ close to unity the spectrum is dominated by longer wavelength modes, and most minima are low-lying. }
+  \label{examples1}
+\end{figure}
+
+
+We begin by making a qualitative exploration of the properties of the landscape. From a purely computational perspective, the $F$ term complicates what would otherwise be a relatively simple Gaussian function. However, note that the integrand vanishes when any two ``adjacent'' $\lambda_i$ become equal, enforcing an ``eigenvalue repulsion'' in the Hessian matrices for the maxima and minima.   
+
+Here, we are interested in $P(V)$; looking at Eq.~\ref{Qx} we see that if $\gamma$ is close to unity, the first term will dominate, heavily penalising negative values of $V$. \re{again we will need to sort our labeling, and whether we follow BBKS and talk about maxima, or switch to minima all the way through} Figure~\ref{examples1} shows two illustrative examples; at larger values of $\gamma$ the power spectrum is effectively ``red'' and the overall function is dominated by longer wavelength modes. By constrast, when $\gamma$ is small the spectrum is ``blue'' and dominated by shorter wavelengths, making it more likely that both kinds of extrema can be found on either side of zero.   Conversely, as $N$ increases the summation in $Q$ will typically grow, making it less likely to find minima and maxima on the ``wrong'' side of zero. 
+
+Consequently, we can develop the expectation that for large $N$ (e.g. ${\cal{O}}(100)$) a Gaussian random landscape potential will have $P(\Lambda)$ such that $\Lambda< 0$ is strongly favoured over positive values. Beyond this, given knowledge of the powerspectrum and thus $\gamma$ we will be able to draw detailed inferences about the form of $P(\Lambda)$. 
+
+
+
+
+
+\subsection{$N\le10$: Direct Evaluation of $P(\Lambda)$  }
 
 \begin{figure}
   \centering
   \includegraphics[width=\linewidth]{N6minima.png}
-  \caption{The probability that a given minimum has $\phi > 0$ as a function of $\sigma_2$, for $N=5,6$. A close-up of the probabilities for small values of $\sigma_2$ is shown as well. The probability for $N=5$ is always larger than that for $N=6$.}
+  \caption{The probability that a given minimum has $\phi > 0$ as a function of $\sigma_2$, for $N=5,6$. A close-up of the probabilities for small values of $\sigma_2$ is shown as well. The probability for $N=5$ is always larger than that for $N=6$. \re{Can we show these for $\gamma$ not $\sigma_2$ and make the plots in Mathematica, since they will be more easily tweaked there than in Excel}}
   \label{N6}
 \end{figure}
 
-In Fig. \ref{N6}, we present the probability that a given minimum has $\phi > 0$ as a function of $\sigma_2$. As expected, if the potential is highly oscillatory (i.e. $\sigma_2$ is large, or $\gamma$ is small), the probability tends towards 0.5 -- equal likelihood of an extremum being a maximum or a minimum. Conversely, if the potential is very smooth ($\sigma_2$ is small), the probability tends towards 0. Further, for any given $\sigma_2$, the probability decreases with increasing dimension.
+\begin{figure}
+  \centering
+    \huge{FIGURE TO GO HERE}
+%  \includegraphics[width=\linewidth]{N6minima.png}
+  \caption{\re{A plot showing the value of $P_\pm$ for a few values of $\gamma$ as a function of $N$ with $N\le10$}}
+  \label{gamma}
+\end{figure}
 
-While this analytical approach works well for low dimensions, the complexity of the integral rises quickly: for illustration, the 4D integral has 15 terms (see appendix), the 5D integral over 800, and the 6D integral $\sim2800$. To push the results to higher dimensions, we switch to numerical integration.
 
-\subsection{$N \leq 10$}
-To numerically integrate Eq. \ref{DensityOfPeaks}, we have written a C++ code, using the VEGAS \cite{VEGAS} monte carlo integration routines of the GNU Scientific Library.\cite{GSL} The code is only able to perform the integral for a given value of $\phi$ and $\gamma$. However, with enough data points, it becomes possible to numerically evaluate the probability using the trapezoidal rule. Using $\phi$ in steps of 0.5, we confirm that the numerical integration code matches the analytical integration for $N < 6$ to two digits of precision; we also confirm that agreement improves if we increase the resolution of $\phi$. We present some data up until $N = 10$ in Table 1; beyond $N = 10$, even the numerical integration fails to produce results due to underflow errors.
+For relatively small values of $N$ we can directly integrate over the $x_i$ to numerically evaluate $P(\Lambda)$ without any further approximations in a numerical algebra package; and for $N<10$ the VEGAS \cite{VEGAS} Monte Carlo integration routine in the GNU Scientific Library.\cite{GSL} gives results to several figures.   In order to characterise the landscape, consider 
+%
+\begin{equation} \label{Ppm}
+P_\pm = \frac{\int_0^\infty d \Lambda P(\Lambda)} {\int_{-\infty}^\infty d \Lambda P(\Lambda)} 
+\end{equation}
+%
+which is a measure of the fraction of minima lying ``above the waterline'', or at positive values of the effective vacuum energy. 
 
-\begin{table}[h!] \label{Data}
-  \begin{center}
-    \caption{The probability that a given minimum has $\phi > 0$ as a function of $\sigma_2$. Values given for $N=4,5,6$ are exact; for larger values they are approximate (see the text; errors are on the order of the third nonzero digit after the decimal).}
-    \label{tab:table1}
-    \begin{tabular}{c|c|c} % <-- Alignments: center/center/center (l and r for left and right if needed)
-      $\textbf{N}$ & $\sigma_2$ & $p_{min}$\\
-      \hline
-      4 & 10 & 0.39141\\
-      5 & 10 & 0.37667\\
-      6 & 10 & 0.36320\\
-      7 & 10 & 0.35210\\
-      8 & 10 & 0.34227\\
-      9 & 10 & 0.33159\\
-      10 & 10 & 0.32151\\
-      \hline
-      4 & 3.5 & 0.21520\\
-      5 & 3.5 & 0.17886\\
-      6 & 3.5 & 0.15274\\
-      7 & 3.5 & 0.13599\\
-      8 & 3.5 & 0.11711\\
-      9 & 3.5 & 0.10093\\
-      10 & 3.5 & 0.08729\\
-      \end{tabular}
-      \quad
-      \begin{tabular}{c|c|c} 
-      $\textbf{N}$ & $\sigma_2$ & $p_{min}$\\
-      \hline
-      4 & 2 & 0.066638\\
-      5 & 2 & 0.043103\\
-      6 & 2 & 0.030844\\
-      7 & 2 & 0.02013\\
-      8 & 2 & 0.01307\\
-      9 & 2 & 0.00845\\
-      10 & 2 & 0.00544\\
-      \hline
-      4 & 1.25 & 0.001526\\
-      5 & 1.25 & 0.000327\\
-      6 & 1.25 & 6.53328 $\times 10^{-5}$\\
-      7 & 1.25 & 2.09673 $\times 10^{-5}$ \\
-      8 & 1.25 & 3.97235  $\times 10^{-6}$ \\
-      9 & 1.25 & 7.13489  $\times 10^{-7}$ \\
-      10 & 1.25 & 1.20253  $\times 10^{-7}$ \\
-     \end{tabular}
-  \end{center}
-\end{table}
+ In Fig. \ref{N6}, we present $P_\pm$; as expected, if the potential is highly oscillatory with $\sigma_2$ is large, or small $\gamma$ is small, $P_\pm$  tends towards 0.5 --  an equal likelihood of any given extremum being a maximum or a minimum. Conversely, if the potential is very smooth ($\sigma_2$ is small; $\gamma$ is close to unity), $P_\pm$  tends towards 0. Moreover, for any given $\gamma$, the $P_\pm$ decreases with increasing $N$.   At larger $N$ we use the Monte Carlo integrator to evaluate $P(\Lambda)$ and a final trapezoidal integration over $\Lambda$  to evaluate $P_\pm$. 
+ 
+%\begin{table}[h!] \label{Data}
+%  \begin{center}
+%    \caption{The probability that a given minimum has $\phi > 0$ as a function of $\sigma_2$. Values given for $N=4,5,6$ are exact; for larger values they are approximate (see the text; errors are on the order of the third nonzero digit after the decimal).}
+%    \label{tab:table1}
+%    \begin{tabular}{c|c|c} % <-- Alignments: center/center/center (l and r for left and right if needed)
+%      $\textbf{N}$ & $\sigma_2$ & $p_{min}$\\
+%      \hline
+%      4 & 10 & 0.39141\\
+%      5 & 10 & 0.37667\\
+%      6 & 10 & 0.36320\\
+%      7 & 10 & 0.35210\\
+%      8 & 10 & 0.34227\\
+%      9 & 10 & 0.33159\\
+%      10 & 10 & 0.32151\\
+%      \hline
+%      4 & 3.5 & 0.21520\\
+%      5 & 3.5 & 0.17886\\
+%      6 & 3.5 & 0.15274\\
+%      7 & 3.5 & 0.13599\\
+%      8 & 3.5 & 0.11711\\
+%      9 & 3.5 & 0.10093\\
+%      10 & 3.5 & 0.08729\\
+%      \end{tabular}
+%      \quad
+%      \begin{tabular}{c|c|c} 
+%      $\textbf{N}$ & $\sigma_2$ & $p_{min}$\\
+%      \hline
+%      4 & 2 & 0.066638\\
+%      5 & 2 & 0.043103\\
+%      6 & 2 & 0.030844\\
+%      7 & 2 & 0.02013\\
+%      8 & 2 & 0.01307\\
+%      9 & 2 & 0.00845\\
+%      10 & 2 & 0.00544\\
+%      \hline
+%      4 & 1.25 & 0.001526\\
+%      5 & 1.25 & 0.000327\\
+%      6 & 1.25 & 6.53328 $\times 10^{-5}$\\
+%      7 & 1.25 & 2.09673 $\times 10^{-5}$ \\
+%      8 & 1.25 & 3.97235  $\times 10^{-6}$ \\
+%      9 & 1.25 & 7.13489  $\times 10^{-7}$ \\
+%      10 & 1.25 & 1.20253  $\times 10^{-7}$ \\
+%     \end{tabular}
+%  \end{center}
+%\end{table}
 
 As can be seen, the same general trends already observed in the analytical case can be seen: the probability that a given minimum has $\phi > 0$ decreases with increasing $N$, and for a constant $\sigma_0$ and $\sigma_1$, the probability also decreases for increasing $\sigma_2$.
 
 %As can be seen, the probability that a given minimum has $\phi > 0$ decreases with increasing $N$. For a constant $\sigma_0$ and $\sigma_1$, the probability also decreases for increasing $\sigma_2$. Both of these general trends are to be expected: as $N$ increases, there are more conditions that must be simultaneously met for a point to be a minimum, hence the probability decreases. Also, since $\sigma_2$ is the average of the second derivative of the function, as $\sigma_2$ increases the function gets more and more turbulent. This means there are both more maxima and more minima, and the probability increases.
 
-\subsection{$N > 10$}
-For $N > 10$ we have to rely on extrapolation from the lower-dimension case.\footnote{Note that extrapolation might not be valid; in particular see Fig. 4 in Yamada \& Vilenkin.}  In Fig. \ref{Log-Linear}, we present a log-linear plot of the probability against the dimension for the three values of $\sigma_2$ in Table \ref{Data}. The resulting lines are surprisingly straight. There is a noticeable kink in both the $\sigma_2 = 3.5$ and $\sigma_2=2$ case between $N=6$ and $N=7$. This is a numerical effect -- it is where the exact results end and the numerical ones begin. If the trend is robust, then for the case of $\sigma_2=2$, the probability at $N=100$ is of the order of $p \sim 10^{-42}$. Since there are approximately $\sim 10^{500}$ stationary points in the landscape,\cite{Douglas} this probability, while small, still leads to there being $\sim 10^{458}$ minima that might correspond to our universe. %We have tried two ways to do this.
+\subsection{Gaussian Approximates to the Integral}
+
+\re{put a write-up the Gaussian method here. I don't think we need the tables of values}
+
+%We have tried two ways to do this.
 
 %The first way is to extrapolate from the data in Table \ref{Data}. In Fig. \ref{Log-Linear}, we present a log-linear plot of the probability against the dimension for the three values of $\sigma_2$. The resulting lines are surprisingly straight. There is a noticeable kink in both the $\sigma_2 = 3.5$ and $\sigma_2=2$ case between $N=6$ and $N=7$. This is a numerical effect -- it is where the exact results end and the numerical ones begin. If the trend is robust, then for the case of $\sigma_2=2$, the probability at $N=100$ is of the order of $p \sim 10^{-42}$. Since there are $\sim 10^{500}$ stationary points in the landscape,\cite{Douglas} this probability, while small, still leads to there being $\sim 10^{458}$ minima that might correspond to our universe.
 

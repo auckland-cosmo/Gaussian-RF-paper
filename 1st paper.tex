@@ -25,7 +25,7 @@
 
 
 
-\abstract{ Landscape cosmology posits the existence of a convoluted, multidimensional, scalar potential -- the eponymous ``landscape'' -- with vast numbers of metastable minima. The huge number of minima supported by landscape potentials motivate arguments that landscape cosmology reduces tuning problems associated with a small but non-zero vacuum energy by providing a framework in which anthropic or ``environmental'' selection is plausible. Random matrices and random functions in many dimensions can be used to discuss  conceptual issues associated with landscape scenarios; here we explore the distribution of minima as a function of vacuum energy in an $N$-dimensional Gaussian random potential. We derive a ``likelihood''  for the density of minima in $N$ dimensions, showing that after rescalings its properties are fully defined by $N$ and a  single free parameter. We use this likelihood to compute the likelihood of finding minima as a function of the amplitude of the landscape, to compute $P(\Lambda)$, the distribution function of vacuum energies in these scenarios.  }
+\abstract{ Landscape cosmology posits the existence of a convoluted, multidimensional, scalar potential -- the eponymous ``landscape'' -- with vast numbers of metastable minima. The huge number of minima supported by landscape potentials motivate arguments that landscape cosmology reduces tuning problems associated with a small but non-zero vacuum energy by providing a framework in which anthropic or ``environmental'' selection is plausible. Random matrices and random functions in many dimensions can be used to discuss  conceptual issues associated with landscape scenarios; here we explore the distribution of minima as a function of vacuum energy in an $N$-dimensional Gaussian random potential. We derive a ``likelihood''  for the density of minima in $N$ dimensions, showing that after rescalings its properties are fully defined by $N$ and a  single free parameter, $\sigma_2$. We use this likelihood to compute the likelihood of finding minima as a function of the amplitude of the landscape, and to compute $P(\Lambda)$, the distribution function of vacuum energies in these scenarios. \lfl{Aren't $P(\Lambda)$ and the likelihood of finding minima as a function of the amplitude synonymous?}}
 
 \begin{document}
 
@@ -41,11 +41,11 @@ Stochastic (or eternal) inflation implies the existence of a multiverse composed
  
 The detailed properties of any possible landscape are almost entirely unknown -- it is still unclear whether any specific stringy construction  realises  the $SU(3) \times SU(2) \times U(1)$ gauge group of the Standard Model.  More recently the Swampland Conjecture suggests that all stable minima of the theory might actually be ``underwater'' \cite{Agrawal2018},  located at negative values of $\Lambda$. If true, this would require that the cosmological dark energy was underpinned by dynamical quintessence-like evolution.  
 
-An alternative approach to   landscape scenarios is to strip them down to their barest essence -- by realising multiverse cosmology within a {\em random\/} multidimensional ($N\sim100$ or more) potential of interacting scalar fields.\footnote{Random is used here in the  context of random function theory \cite{GRF1, GRF2, GRF3}.  We refer to random functions rather than random fields, the nomenclature often seen in the mathematical literature, to avoid confusion with the individual scalar fields that are coupled by the potential.}  In this approach the ``large $N$'' properties of the multidimensional landscape actually provides leverage that can be used to develop an understanding of its properties. The first steps in this direction were taken by Aazami and Easther \cite{Aazami2006}, investigating ensembles of Hessian matrices describing extrema in a random landscape.  At  a minimum in the landscape the eigenvalues of the Hessian are all positive. For simple random matrix distributions eigenvalues are likely to be evenly distributed between positive and negative values with fluctuations away from this situation being strongly suppressed at even moderate values of $N$, suggesting that the number of minima is super-exponentially smaller than the number of saddles. This simple argument is actually incorrect; the individual entries of the Hessians matrices of random functions are correlated and therefore not drawn from identical, independent distributions violating a common premise of random matrix theory \cite{Battefeld2012,Easther2016}. That said, this  overall approach has been widely pursued and has now been extended in a number of directions \cite{Easther2006, Frazer2011, Henry2009, Marsh2013, garwal2011,Yang2012,Masoumi2016,Yamada2018}. This line of enquiry has also motivated studies of the properties of random matrices and random functions at large $N$.\cite{Bray2007,Dean2008,Majumdar2009,Bachlechner2014,Battefeld2012,Fyodorov2013,Masoumi2017}, and similar mathematical problems arise in statistical mechanics, string theory, and complex dynamics.\cite{Fyodorov2004,Douglas2004,Douglas2006,Fyodorov2007,Fyodorov2012,Fyodorov2018,Ros2019}
+An alternative approach to   landscape scenarios is to strip them down to their barest essence -- by realising multiverse cosmology within a {\em random\/} multidimensional ($N\sim100$ or more) potential of interacting scalar fields.\footnote{Random is used here in the  context of random function theory \cite{GRF1, GRF2, GRF3}.  We refer to random functions rather than random fields, the nomenclature often seen in the mathematical literature, to avoid confusion with the individual scalar fields that are coupled by the potential.}  In this approach the ``large $N$'' properties of the multidimensional landscape actually provides leverage that can be used to develop an understanding of its properties. The first steps in this direction were taken by Aazami and Easther \cite{Aazami2006}, investigating ensembles of Hessian matrices describing extrema in a random landscape.  At  a minimum in the landscape the eigenvalues of the Hessian are all positive. For simple random matrix distributions eigenvalues are likely to be evenly distributed between positive and negative values with fluctuations away from this situation being strongly suppressed at even moderate values of $N$, suggesting that the number of minima is super-exponentially smaller than the number of saddles. This simple argument is actually incorrect; the individual entries of the Hessians matrices of random functions are correlated and therefore not drawn from identical, independent distributions, violating a common premise of random matrix theory \cite{Battefeld2012,Easther2016}. That said, this  overall approach has been widely pursued and has now been extended in a number of directions \cite{Easther2006, Frazer2011, Henry2009, Marsh2013, Agarwal2011,Yang2012,Masoumi2016,Yamada2018}. This line of enquiry has also motivated studies of the properties of random matrices and random functions at large $N$.\cite{Bray2007,Dean2008,Majumdar2009,Bachlechner2014,Battefeld2012,Fyodorov2013,Masoumi2017} Similar mathematical problems arise in statistical mechanics, string theory, and complex dynamics.\cite{Fyodorov2004,Douglas2004,Douglas2006,Fyodorov2007,Fyodorov2012,Fyodorov2018,Ros2019}
 
 %The theory of inflation is the current best explanation for certain perplexing observations of the Universe, such as the monopole problem, horizon problem, and flatness problem. Inflation is thought to be caused by a scalar field, but the exact nature of this field is shrouded in unknowns. The simplest possibility is a one-dimensional scalar field analogous to the gravitational potential; however multidimensional scalar fields are also possible. In particular, string theory predicts the existence of a highly complex, $O(100)$ dimensional scalar field known as the \emph{landscape}. The string landscape is so complex that quantitative predictions are hard to extract; as a result, most studies of the landscape assume it is a Gaussian random field
 
-In conventional inflationary scenarios, accelerated expansion occurs when the gradient of the potential is small (so-called ``slow-roll"), and trajectories typically end in a minimum of the potential. If this is the global minimum, the end-state is stable. However,  bubbles of space can tunnel from  a local minimum to lower-lying vacua, rendering local minima metastable, although often with lifetimes much greater than the age of the universe. If this local minimum has a positive vacuum energy it will contribute an apparent cosmological constant term to observers within the universe. Accordingly, we are interested in the probability of finding a minimum at potential values $F >0$. In particular, we show that for some region of parameter space, a random potential with $10^M$ minima (where $M$ is a number of order $\mathcal{O}(100)$) can also have $P(F > 0|min) < 10^{-M}$, so that it is conceivable that these scenarios have no metastable solutions with  positive vacuum energy. Further, these considerations may be used to establish a weakly non-uniform measure on the vacuum energy. Finally, the methods we use also provide a likelihood for the eigenvalues at minima, allowing to draw inferences about their shapes.
+In conventional inflationary scenarios, accelerated expansion occurs when the gradient of the potential is small (so-called ``slow-roll"), and trajectories typically end in a minimum of the potential. If this is the global minimum, the end-state is stable. However,  bubbles of space can tunnel from  a local minimum to lower-lying vacua, rendering local minima metastable, although often with lifetimes much greater than the age of the universe. If this local minimum has a positive vacuum energy it will contribute an apparent cosmological constant term to observers within the universe. Accordingly, we are interested in the probability of finding a minimum at potential values $F >0$. In particular, we show that for some region of parameter space, a random potential with $10^M$ minima (where $M$ is a number of order $\mathcal{O}(100)$) can also have $P(F > 0|min) < 10^{-M}$, so that it is conceivable that these scenarios have no metastable solutions with  positive vacuum energy. Further, these considerations may be used to establish a weakly non-uniform measure on the vacuum energy. Finally, the methods we use also provide a likelihood for the eigenvalues at minima, allowing us to infer their shapes.
 
 We proceed from a generalisation of the Kac-Rice formalism \cite{Kac1943,Rice1945} and the  machinery developed by Bond, Bardeen, Kaiser and Szalay  \cite{BBKS}  for studying the statistics of Gaussian random fields in  cosmological perturbation theory   to $N$ dimensions.  We then build a ``ladder'' of numerical techniques, proceeding from exactly evaluated integrals at small $N$ to Monte Carlo evaluation, and then to numerical evaluations of Gaussian approximations to the underlying integrals out to $N=100$. These techniques can be generalised to other, more complex questions about trajectories in these potentials, and give information about the ``shapes'' of minima which may inform analyses of tunnelling. We show that $P(\Lambda)$, the probability density function for the vacuum energy, depends on the dimensionality $N$ and a single free parameter for a Gaussian random landscape, and this parameter can be computed directly from the power spectrum. Finally, we discuss the implications of these results for landscape cosmology and notions of anthropic selection. 
 
@@ -76,26 +76,26 @@ M_{ij} \equiv \langle \Delta y_i \Delta y_j \rangle
 
 \noindent while $\Delta y_i$ is the difference between the measured value and the average, $\Delta y_i \equiv y_i - \langle y_i \rangle$. For a Gaussian random function, the probability distribution only depends on $M$, which in turn only depends on the two-point correlation function $\langle \Delta y_i \Delta y_j \rangle$. In other words, the two-point correlation function completely determines the statistical properties of the Gaussian random function.
 
-In our application, the function value we're interested in is the potential of the landscape $\phi$, so henceforth we will replace $y$ with $F$. \re{would this be clearer to say the the independent variables were $\phi$ and the function / potential $V$??}\lfl{We're using F because that's the symbol used by BBKS} The two-point correlation function is, by definition, the Fourier transform of the power spectrum $P(k)$,
+In our application, the function value we're interested in is the potential of the landscape, so henceforth we will replace $y$ with $F$. The two-point correlation function is, by definition, the Fourier transform of the power spectrum $P(k)$,
 
 \begin{equation}
-\langle F_\alpha(\vec{x}) F_\beta(\vec{y}) \rangle = \frac{\delta_{\alpha\beta}}{(2\pi)^N} \int d^Nk e^{i \vec{k} \cdot (\vec{x}-\vec{y})} P(k)
+\langle F(\vec{x}) F(\vec{y}) \rangle = \frac{1}{(2\pi)^N} \int d^Nk e^{i \vec{k} \cdot (\vec{x}-\vec{y})} P(k)
 \end{equation}
 
-\noindent where $\vec{x}$ and $\vec{y}$ are directional vectors, while $\alpha$ and $\beta$ are labels for the different functions. We define moments of the power spectrum by
+\noindent where $\vec{x}$ and $\vec{y}$ are directional vectors. We define moments of the power spectrum by
 
 \begin{equation} \label{moments}
 \sigma_n^2 = \frac{1}{(2\pi)^N}\int d^Nk (k^{2})^n P(k)
 \end{equation}
 
-\noindent i.e. $\langle F_\alpha F_\beta \rangle = \sigma_0^2\delta_{\alpha\beta}$. We can differentiate Eq. \ref{moments} and set $\vec{x} = \vec{y}$ to get
+\noindent i.e. $\langle FF \rangle = \sigma_0^2$. We can differentiate Eq. \ref{moments} and set $\vec{x} = \vec{y}$ to get
 
 \begin{align*}
-\langle \eta_{\alpha,i}(\vec{x})\eta_{\beta,j}(\vec{x})\rangle &= \frac{\delta_{\alpha\beta}}{(2\pi)^N} \frac{\partial}{\partial x^i}\frac{\partial}{\partial y^j} \int d^Nk e^{i \vec{k} \cdot (\vec{x}-\vec{y})} P(k)\bigg{|}_{\vec{y}=\vec{x}}\\
-&= \frac{\delta_{\alpha\beta}}{(2\pi)^N}\int d^Nk k^i k^j P(k)
+\langle \eta_{i}(\vec{x})\eta_{j}(\vec{x})\rangle &= \frac{1}{(2\pi)^N} \frac{\partial}{\partial x^i}\frac{\partial}{\partial y^j} \int d^Nk e^{i \vec{k} \cdot (\vec{x}-\vec{y})} P(k)\bigg{|}_{\vec{y}=\vec{x}}\\
+&= \frac{1}{(2\pi)^N}\int d^Nk k^i k^j P(k)
 \end{align*}
 
-\noindent where $\eta_{\alpha, i}$ indicates the derivative of $F_\alpha(\vec{x})$ with respect to $x^i$. Because of isotropy (derivatives must be the same in all directions), the right hand side must be proportional to $\delta_{ij}$. Therefore
+\noindent where $\eta_{i}$ indicates the derivative of $F(\vec{x})$ with respect to $x_i$. Because of isotropy (derivatives must be the same in all directions), the right hand side must be proportional to $\delta_{ij}$. Therefore
 
 \begin{align*}
 \langle \eta_{\alpha,i}\eta_{\beta,j}\rangle = K \delta_{\alpha,\beta}\delta_{ij} &\rightarrow \delta_{ij}\langle \eta_{\alpha,i}\eta_{\beta,j}\rangle = NK \delta_{\alpha,\beta}=\sigma_1^2\\
@@ -121,16 +121,16 @@ We define the following vector:
 
 \begin{equation}
 \begin{split}
-\alpha_i = \{F,\eta_1,\eta_2,\ldots,\xi_{11},\xi_{22},\ldots,\xi_{NN},\xi_{N-1,N},\xi_{N-2,N},\ldots,\xi_{1N},\xi_{N-2,N-1},\\
+\alpha = \{F,\eta_1,\eta_2,\ldots,\xi_{11},\xi_{22},\ldots,\xi_{NN},\xi_{N-1,N},\xi_{N-2,N},\ldots,\xi_{1N},\xi_{N-2,N-1},\\
 \ldots\xi_{1,N-1},\ldots,\xi_{12}\}
 \end{split}
 \end{equation}
 
-\noindent The subscript $i$ serves only as an identifier for the element of the vector (e.g. $\alpha_1 = F$) and has no other meaning. With this choice for $\alpha$ (equivalent to $\Delta y$ in Eq. \ref{MultivariateGaussian}), the covariance matrix $M_{ij}\equiv\langle\alpha_i\alpha_j\rangle$ and its inverse $K \equiv M^{-1}$ takes the following general form:
+\noindent With this choice for $\alpha$ (equivalent to $\Delta y$ in Eq. \ref{MultivariateGaussian}), the covariance matrix $M_{ij}\equiv\langle\alpha_i\alpha_j\rangle$ and its inverse $K \equiv M^{-1}$ takes the following general form:
 
 \begin{align*}
-K_{\phi, \phi} &= \frac{\sigma_2^2}{\sigma_0^2\sigma_2^2-\sigma_1^4} \\
-K_{\phi, \xi_{ij}} &= \frac{\sigma_1^2}{\sigma_0^2\sigma_2^2-\sigma_1^4} \\
+K_{F, F} &= \frac{\sigma_2^2}{\sigma_0^2\sigma_2^2-\sigma_1^4} \\
+K_{F, \xi_{ij}} &= \frac{\sigma_1^2}{\sigma_0^2\sigma_2^2-\sigma_1^4} \\
 K_{\eta_i,\eta_j} &= \frac{N}{\sigma_1^2}\\
 K_{\xi_{ii},\xi_{ii}} &=  \frac{N(N+2)}{\sigma_2^2} \\
 K_{\xi_{ij}, \xi_{ij}} &= \frac{N\sigma_0^2\sigma_2^2-(N+2)\sigma_1^4}{2(\sigma_1^4\sigma_2^2-\sigma_0^2\sigma_2^4)}, (i\neq j)\\
@@ -145,15 +145,16 @@ p(\alpha_i)=\frac{1}{(2\pi)^{N/2}\sqrt{\mathrm{det}M}} e^{-\frac{1}{2}\alpha K \
 %
 We can usually ignore the constant prefactor since we will primarily be concerned with ratios of probabilities.  We adopt the basis
 %
-\begin{align*}
+\begin{align}
 \begin{split}
+\label{BasisTransform}
 \sigma_2x_1 = -\nabla^2F &= -(\xi_{11}+\xi_{22}+\ldots+\xi_{NN})\\
 \sigma_2x_2 &= -(\xi_{11}-\xi_{22})\\
 \sigma_2x_3 &= -(\xi_{11}+\xi_{22}-2\xi_{33})\\
 \sigma_2x_4 &= -(\xi_{11}+\xi_{22}+\xi_{33}-3\xi_{44})\\
 \ldots
 \end{split}
-\end{align*}
+\end{align}
 %
 $x_1, x_2, x_3, \ldots$ are analogous to BBKS's $x, y, z$. Following BBKS, we introduce $\nu = F/\sigma_0$. With this choice of basis, the nonzero correlations are (from Eq. \ref{corr}):
 %
@@ -172,13 +173,14 @@ The factor $\alpha K \alpha$ (equivalent to $Q$ in BBKS) in Eq. \ref{ProbDistrib
 
 \noindent where $x_* \equiv \gamma \nu$ and $\gamma = \frac{\sigma_1^2}{\sigma_2 \sigma_0}$. This is the equivalent of BBKS Eq. (A4) for $N$-dimensions. Note the first two terms remain constant for all $N$, but the remaining terms vary. The $\eta$ terms are zero at minima by definition, while the off-diagonal $\xi_{ij}$ terms can be Euler-rotated away by choosing an appropriate set of axes. The $\xi$ matrix is already symmetric (by rotational symmetry), and Euler rotation turns it diagonal.\cite{Goldstein} The upshot is that the symmetric $\xi$ matrix becomes a diagonal matrix where the individual elements are the eigenvalues $\lambda_i = -\xi_{ii}$ of the Hessian. We are interested in minima, hence we demand all second derivatives to be positive, i.e. all eigenvalues to be positive.\footnote{Note there is an alternative convention where all eigenvalues being \emph{negative} corresponds to maxima. Although it can be confusing, it is a simple matter to convert results from one convention to the other; $p(min)$ is simply $1-p(max)$.} From here, the analysis is exactly the same as BBKS, except that when we define the ordering of the eigenvalues $\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0$, our boundary conditions become $x_1\geq x_N\geq x_{N-1} ... \geq x_2 \geq 0$ because of the different choice of basis. This leads to significantly simpler boundary conditions, for example in 3D our conditions are $x_2 \geq 0, x_2 \leq x_3$, and $x_1 \geq x_3$ (compare BBKS's equation between Eq. (A14) and Eq. (A15)).
 
-This yields the following expression for the density of peaks  \re{this needs to be in  terms of the $x_i$.}
+This yields the following expression for the density of peaks:
 %
 \begin{equation} \label{DensityOfPeaks}
 N_{peak} = A \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} G \times e^{-Q} d\nu dx dy dz \ldots
 \end{equation}
 %
-\noindent where $G$ has the form 
+\noindent where $G$ has the form\footnote{$G$ can also be expressed in terms of $x_i$ using the inverse transform of Eq. \ref{BasisTransform}}
+
 \begin{equation}
 G = \left(\prod_{i}^{N} \lambda_i \right)\left(\prod_{i<j} |\lambda_i-\lambda_j|\right),
 \end{equation} 
@@ -214,7 +216,13 @@ $Q$ is given by Eq. \ref{Q}, $A$ is some constant factor, and the integration li
 
 \section{Peak Probabilities: $F$ and $N$} \label{PeakNumbers}
 
-Our  goal  is to evaluate $P(F|min)$ for  Gaussian random landscape potentials, the probability distribution that defines the distribution of vacuum energies at minima in the landscape. The overall probability Eq. \ref{DensityOfPeaks} depends on the value of $F$ and the moments of the power spectrum $\sigma_0, \sigma_1$,  and $\sigma_2$.  Given a purely Gaussian landscape we can set both $\sigma_0$ and $\sigma_1$  to unity. The former is achieved by setting the average value of $F$ to unity by an multiplicative \re{was additive, but seems wrong} rescaling, as can be seen from  Eq. \ref{corr}, and we can thus take $F = \nu$. Likewise, $\sigma_1$ responds to the average magnitude of the first derivatives and can be set to unity by rescaling the units of length, leaving  $\sigma_2$ as the only nontrivial parameter. It can be shown that if $\sigma_0=\sigma_1=1$, $\sigma_2>1$.\footnote{Per Ref. \cite{Yamada2018}, if $\sigma_0\sigma_2 - \sigma_1^2 < 0$, then the probability distribution Eq. \ref{ProbDistrib} cannot be normalized.} In much of what follows we  parameterise the landscape by $\gamma = 1/\sigma_2$ \re{should we actually show this; I know you sorted this out} \lfl{I think we cite Yamada \& Vilenkin for this and leave out the explicit proof} and the dimensionality $N$,  in the knowledge that $0<\gamma<1$.
+Our goal  is to evaluate $P(F|min)$ for  Gaussian random landscape potentials, the probability distribution that defines the distribution of vacuum energies at minima in the landscape. We are interested in the probability of finding a minimum above $\nu = 0$ (equivalently, the probability of finding a maximum below $\nu = 0$), i.e. we want to calculate
+
+\begin{equation} \label{PminIntegral}
+P(F|min) =  \frac{\int^\infty_0 d\nu \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} G \times e^{-Q} dx_1  \cdots dx_N}{\int^\infty_{-\infty} d\nu \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} G \times e^{-Q} dx_1  \cdots dx_N}
+\end{equation}
+
+This integral depends on the value of $Q$ (Eq. \ref{Q})  and therefore on the moments of the power spectrum $\sigma_0, \sigma_1$,  and $\sigma_2$. We now argue that of these three parameters, only one is physically significant. Given a purely Gaussian landscape we can $\sigma_0=1$ by rescaling $F$ multiplicatively, see Eq. \ref{corr}, and we can thus take $F = \nu$. Likewise, $\sigma_1$ responds to the average magnitude of the first derivatives and can be set to unity by rescaling the units of length. This leaves $\sigma_2$ as the only nontrivial parameter. It can be shown that if $\sigma_0=\sigma_1=1$, $\sigma_2>1$.\footnote{Per Ref. \cite{Yamada2018}, if $\sigma_0\sigma_2 - \sigma_1^2 < 0$, then the probability distribution Eq. \ref{ProbDistrib} cannot be normalized.} In much of what follows we follow BBKS and parameterise the landscape by $\gamma = \frac{\sigma_1^2}{\sigma_2 \sigma_0}=1/\sigma_2$ and the dimensionality $N$,  in the knowledge that $0<\gamma<1$.
 
 %The probability $P$ gives the (relative) likelihood of finding a minimum \re{at what point do we start talking about minima, not maxima; we should probably flip it from the start} \lfl{I don't understand, we've been using minimum since the beginning?} with value $F$ and the given values of $x_i$ which will, in turn, determine the eigenvalues of the Hessian at the minimum.  Up to an undetermined overall  constant the probability of obtaining a peak with value $F$ is given thus given by 
 
@@ -238,31 +246,40 @@ Our  goal  is to evaluate $P(F|min)$ for  Gaussian random landscape potentials, 
   \label{examples1}
 \end{figure}
 
-
 We begin by making a qualitative exploration of the overall ``likelihood''. Firstly, we note that the integrand vanishes when any two ``adjacent'' $\lambda_i$ become equal, enforcing an ``eigenvalue repulsion'' in the Hessian matrices for the maxima and minima. This implies that a generic minima will be asymmetric, as their Hessians will have well separated eigenvalues.   
 
-Secondly,  looking at Eq.~\ref{Q} we see that if $\gamma$ is close to unity,  the second term in $Q$ becomes very large, making the integrand a steeper function of the $x_i$ Conversely, if   $\gamma$ is small, $\nu$ can take larger values without dominating $Q$.  At larger values of $\gamma$ the power spectrum is effectively ``red'' and the random function is dominated by longer wavelength modes. By constrast, when $\gamma$ is small the spectrum is ``blue'' and dominated by shorter modes. In this case, it is more likely that extrema will be found at positive values of $\nu$. This behaviour is sketched in Fig~\ref{examples1} for illustrative one dimensional examples. \re{Does this make sense; we are looking at unnormalised probabilities:  Conversely, as $N$ increases $Q$ will always grow, making it less likely to find minima and maxima on the ``wrong'' side of zero. }
+Secondly,  looking at Eq.~\ref{Q} we see that if $\gamma$ is close to unity,  the second term in $Q$ becomes very large, making the integrand a steeper function of the $x_i$ Conversely, if   $\gamma$ is small, $\nu$ can take larger values without dominating $Q$.  At larger values of $\gamma$ the power spectrum is effectively ``red'' and the random function is dominated by longer wavelength modes. By constrast, when $\gamma$ is small the spectrum is ``blue'' and dominated by shorter modes. In this case, it is more likely that extrema will be found at positive values of $\nu$. This behaviour is sketched in Fig~\ref{examples1} for illustrative one dimensional examples. 
 
-Our key goal is to evaluate $P(\Lambda | N,\gamma)$, the probability density function for the vacuum energy in a Gaussian random landscape. Looking at Eq. \ref{DensityOfPeaks} we can write
-%
+Thirdly, as $N$ increases $Q$ will always grow, making it less likely to find minima and maxima on the ``wrong'' side of zero.
+
+Finally, because we are interested in the regimes $\nu = 0 \ldots \infty$ and $\nu = -\infty \ldots \infty$, we can simplify the integral Eq. \ref{PminIntegral} by performing the $\nu$ integral analytically. The only dependence in the integrand on $\nu$ is in the first two terms of $Q$, which further remains the same for all $N$:
+
 \begin{equation}
-P(\Lambda | N,\gamma) =  \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} G \times e^{-Q} dx_1  \cdots dx_N
+\begin{split}
+\int^\infty_{-\infty} d\nu \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} G \times e^{-Q} dx_1  \cdots dx_N \\ 
+= \int^\infty_{-\infty} d\nu e^{-\frac{\nu^2}{2}- \frac{(x- \gamma \nu)^2}{2(1-\gamma^2)}} \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} f(x_1, x_2 \ldots) dx_1  \cdots dx_N \\
+= \int^\infty_{-\infty} d\nu e^{-\frac{x^2}{2}- \frac{(\nu - \gamma x)^2}{2(1-\gamma^2)}} \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} f(x_1, x_2 \ldots) dx_1  \cdots dx_N \\
+= e^{-\frac{x^2}{2}} \sqrt{2\pi}\sqrt{1-\gamma^2}  \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} f(x_1, x_2 \ldots) dx_1  \cdots dx_N
+\end{split}
 \end{equation}
+
+Similarly, 
+
+\begin{equation}
+\begin{split}
+\int^\infty_0 d\nu \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} G \times e^{-Q} dx_1  \cdots dx_N \\ 
+= e^{-\frac{x^2}{2}} \sqrt{\frac{\pi}{2}}\sqrt{1-\gamma^2} (1+\mathrm{Erf}(\frac{\gamma x}{\sqrt{2-2\gamma^2}})) \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} f(x_1, x_2 \ldots) dx_1  \cdots dx_N
+\end{split}
+\end{equation}
+
+Although these analytic integrals are not always usable in what follows, when they are, they lighten the computational cost significantly.
 
 \subsection{$N < 10$: Direct Evaluation  }
 
 \begin{figure}
   \centering
-%  \includegraphics[width=\linewidth]{Analytic56.png}
-  \caption{Plots with representative $P(\Lambda)$ for (say) $\gamma$ of  0.2, 0.5, 0.9. 0.95 and $N=$ 3, 6, and  9.  Do these as foursubplots }
-  \label{distro}
-\end{figure}
-
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\linewidth]{Analytic56.png}
-  \caption{The probability that a given minimum has $F > 0$ as a function of $\gamma$, for $N=5,6$ (blue and orange lines respectively). The probability for $N=5$ is always larger than that for $N=6$.   \re{am generating numbers out to $N=9$}}
+  \includegraphics[width=\linewidth]{N369.png}
+  \caption{The probability that a given minimum has $F > 0$ as a function of $\gamma$, for $N=3, 6, 9$. We can see that all the heuristics are obeyed: the probability decreases with $N$, and increases with $\sigma_2$.}
   \label{N6}
 \end{figure}
 
@@ -273,12 +290,7 @@ P(\Lambda | N,\gamma) =  \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \g
   \label{gamma}
 \end{figure}
 
-
-
-For relatively small values of $N$ we can compute the integrals   without any further approximations.   In Fig.~\ref{distro} we \re{commentary here}.  
-
-
- In Fig. \ref{N6}, we present $P(F>0|min)$; as expected, if the potential is highly oscillatory ($\sigma_2$ large, or $\gamma$ small), $P(F>0|min)$  tends towards 0.5 --  an equal likelihood of any given extremum being a maximum or a minimum. Conversely, if the potential is very smooth ($\sigma_2$ small; $\gamma$ very large), $P(F>0|min)$  tends towards 0. Moreover, for any given $\gamma$, $P(F>0|min)$ decreases with increasing $N$. 
+For relatively small values of $N$ we can compute the integrals without any further approximations.   In Figs.~\ref{N6} and \ref{gamma}, we present $P(F>0|min)$ as a function of $N$ and $\gamma$. As expected, if the potential is highly oscillatory ($\sigma_2$ large, or $\gamma$ small), $P(F>0|min)$  tends towards 0.5 --  an equal likelihood of any given extremum being a maximum or a minimum. Conversely, if the potential is very smooth ($\sigma_2$ small; $\gamma$ very large), $P(F>0|min)$  tends towards 0. Moreover, for any given $\gamma$, $P(F>0|min)$ decreases with increasing $N$. 
  
 %\begin{table}[h!] \label{Data}
 %  \begin{center}
@@ -328,8 +340,8 @@ For relatively small values of $N$ we can compute the integrals   without any fu
 
 %As can be seen, the probability that a given minimum has $\phi > 0$ decreases with increasing $N$. For a constant $\sigma_0$ and $\sigma_1$, the probability also decreases for increasing $\sigma_2$. Both of these general trends are to be expected: as $N$ increases, there are more conditions that must be simultaneously met for a point to be a minimum, hence the probability decreases. Also, since $\sigma_2$ is the average of the second derivative of the function, as $\sigma_2$ increases the function gets more and more turbulent. This means there are both more maxima and more minima, and the probability increases.
 
-\subsection{Gaussian Approximations to the Integral}
-For $N>10$, direct calculation becomes very resource-intensive. We first select the value of the field $\nu$ that maximizes the integral in in Eq. \ref{DensityOfPeaks}, then approximate the integral as a Gaussian integral about that point:
+\subsection{$10 < N < \sim30$: Gaussian Approximations to the Integral}
+For $N>10$, direct calculation becomes very resource-intensive. To proceed, we first select a value of the field $\nu$, then find the values of $x_1, x_2 \ldots$ that maximizes the integral in in Eq. \ref{DensityOfPeaks}. We then approximate the integral as a Gaussian integral about this maximum likelihood point:
 
 \begin{align*}
 \begin{split}
@@ -339,9 +351,22 @@ N &= A \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} F \times e^{
 \end{split}
 \end{align*}
 
-\noindent where $H$ is the Hessian at the point being considered, and we no longer have an integral over $\nu$. This approximate value can then be compared against the exact value. The Gaussian approximation turns out to be very good (see Fig. \ref{Comparison}). The Gaussian integral can be more efficiently computed than Eq. \ref{DensityOfPeaks}, which lets us evaluate it up to $N\approx30$. \lfl{Debating putting this up to $N=35$ or possibly even higher. Where do we stop?}
+\noindent where $H$ is the Hessian at the point being considered, and we no longer have an integral over $\nu$. This produces a list of points for each value of $\nu$. Fitting these points to a function and integrating that for the region with $\nu > 0$, we get an approximate result of the integral. \lfl{I feel like there's a more technical term for this, don't know what though.} This approximate value can then be compared against the exact value. The Gaussian approximation turns out to be very good (see Fig. \ref{Comparison}). The Gaussian integral can be more efficiently computed than Eq. \ref{DensityOfPeaks}, which lets us evaluate it up to $N\approx30$.
 
-The plot of the logarithms of these results against the number of dimensions is surprisingly straight (Fig. \ref{PVaryingWithNGaussian}). If we assume that the results can be extrapolated to higher dimensions,\footnote{Per Figure 4 of \cite{Yamada2018}, this assumption might not hold, especially for $N >100$.} then the value of $\sigma_2$ for which $P(F>0|min)$ drops to $\sim 10^{-500}$ at $N = 100$ is about $1.08$. In other words, there will be plenty of minima in the landscape that could correspond to our universe if the landscape has $\sigma_2 \gtrapprox 1.08$ (with $\sigma_0$ and $\sigma_1$ normalized to 1).
+The plot of the logarithms of these results against the number of dimensions is surprisingly straight (Fig. \ref{PVaryingWithNGaussian}). Although it is not conclusive,\footnote{Per Figure 4 of \cite{Yamada2018}, it is possible the behavior of the function changes at $N >100$.} it is suggestive.
+
+\subsection{$\sim 30 < N < \sim100$: Approximations using the $\nu=0$ point}
+
+The Gaussian approximation described in the previous subsection requires the integral to be computed for several different values of $\nu$. If we use only the result at the $\nu=0$ point, we get a result that is much larger than the exact results, but it remains at a nearly-constant ratio to it (see Fig. sigma2=2v=0). Using this, we confirm that the straight line behavior holds up to $N = 100$.
+
+\begin{figure} 
+  \centering
+  \includegraphics[width=\linewidth]{sigma2=2v=0.png}
+  \caption{A comparison of the Gaussian approximation evaluated at the $\nu=0$ point to the full integral. The blue line corresponds to the $\nu=0$ results, while the orange line corresponds to the Gaussian results (Section 3.3). Horizontal axis is $N$ while the vertical axis is the $Log_{10}$ of the probability. The $\nu=0$ results are always larger than the actual results, but the ratio of their logarithms is approximately constant.}
+  \label{sigma2=2v=0}
+\end{figure}
+
+Based on these calculations, we conclude that the value of $\sigma_2$ for which $P(F>0|min)$ drops to $\sim 10^{-500}$ at $N = 100$ is about $1.08$. In other words, there will be plenty of minima in the landscape that could correspond to our universe if the landscape has $\sigma_2 \gtrapprox 1.08$ (with $\sigma_0$ and $\sigma_1$ normalized to 1).
 
 \begin{figure} 
   \centering
@@ -386,7 +411,7 @@ The plot of the logarithms of these results against the number of dimensions is 
 \lfl{Dunno what to put here anymore}
 
 \section{Conclusion}
-We have presented results for the statistics of stationary points at a given function value as a function of $N$ and $\sigma_2$. The numbers confirm the intuitive expectation that the probability of a given extremum with $F > 0$ being a minimum decreases as $N$ increases or as $\sigma_2$ decreases. We are able to calculate precise values for the probability up to $N=10$. Above this dimension, evaluating Eq. \ref{DensityOfPeaks} is computationally prohibitive, but we find that Eq. \ref{DensityOfPeaks} is well-approximated by a Gaussian integral. Using this approximation, we are able to estimate the probability up to $N \approx 30$. The results are well-approximated by a straight line when plotted on a logarithmic scale for various values of $\sigma_2$ (Fig. \ref{PVaryingWithNGaussian}). If this trend holds to larger values of $N$, we estimate that the value of $\sigma_2$ for which $P(F>0|min)$ drops to $\sim 10^{-500}$ is approximately $1.08$.
+We have presented results for the statistics of stationary points at a given function value as a function of $N$ and $\sigma_2$. The numbers confirm the intuitive expectation that the probability of a given extremum with $F > 0$ being a minimum decreases as $N$ increases or as $\sigma_2$ decreases. We are able to calculate precise values for the probability up to $N=10$. Above this dimension, evaluating Eq. \ref{DensityOfPeaks} is computationally prohibitive, but we find that Eq. \ref{DensityOfPeaks} is well-approximated by a Gaussian integral. Using this approximation, we are able to estimate the probability up to $N \approx 30$. For $N>30$, we use only the $\nu=0$ point, which although much smaller than the actual results, remains in roughly constant ratio with it. The final probability as a function of $N$ is well-approximated by a straight line when plotted on a logarithmic scale for various values of $\sigma_2$ (Fig. \ref{PVaryingWithNGaussian}). If this trend holds to larger values of $N$, we estimate that the value of $\sigma_2$ for which $P(F>0|min)$ drops to $\sim 10^{-500}$ is approximately $1.08$.
 
 The results of this paper establish the number of vacua that could correspond to our universe in string theory, but does not treat the distribution of eigenvalues -- and accordingly the duration of slow-roll inflation -- that could arise from these vacua. An analysis of this will be the focus of future work.
 

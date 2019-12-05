@@ -54,7 +54,7 @@ We proceed \SH{Proceed, or begin}\lfl{Sounds synonymous to me} from a generalisa
 
 \section{Random Potentials in $N$ Dimensions}
 
-We begin by developing an $N$-dimensional analogue of the treatment of three dimensional random functions due to Bardeen, Bond, Kaiser and Szalay (henceforth BBKS) \cite{BBKS}, generalising their derivation and keeping their notation as far as possible.   An $N$-dimensional scalar-valued function $F(r)$ is a set of values that fill each point of $N$-dimensional space. The function is \emph{random} if its values depend on a probability distribution function,
+We begin by developing an $N$-dimensional analogue of the treatment of \SH{the peaks of?} three dimensional random functions due to Bardeen, Bond, Kaiser and Szalay (henceforth BBKS) \cite{BBKS}, generalising their derivation and keeping their notation as far as possible \SH{Do we want to follow BBKS' notation as far as possible? At the moment we still use $\Lambda$, $F$ and $\nu$ all to mean the same quantity at different parts of the paper. Can we settle on one? Maybe even settle on $V$ for potential? We could still use $\Lambda$ sparingly, but make it clear that it is just different notation for the same $V$ when we do?}.   An $N$-dimensional scalar-valued function $F(r)$ is a set of values that fill each point of $N$-dimensional space. The function is \emph{random} if its values depend on a probability distribution function,
 %
 \begin{equation}
 P[F(r_1), F(r_2), \ldots, F(r_m)]dF(r_1)dF(r_2)\ldots dF(r_m)
@@ -62,7 +62,7 @@ P[F(r_1), F(r_2), \ldots, F(r_m)]dF(r_1)dF(r_2)\ldots dF(r_m)
 %
 \noindent where $r_i$ is a position in $N$ dimensional space. This corresponds to the probability that the function takes value $F(r_1) \pm dF(r_1)$ at position $r_1$, $F(r_2) \pm dF(r_2)$ at position $r_2$, and so on. 
 %
-The function is \emph{Gaussian random} if the probability distribution function is an $N$-dimensional Gaussian function,
+The function is \emph{Gaussian random} if the probability distribution function is an $N$-dimensional Gaussian function,\SH{we suddenly swap here from $F$ to $y$. I know this is the notation BBKs use, but that paper is notoriously difficult to digest, so probably not the best to be emulating when it is being confusing.}
 %
 \begin{equation} \label{MultivariateGaussian}
 \begin{split}
@@ -77,35 +77,36 @@ Here $M$ is the \emph{covariance matrix},
 M_{ij} \equiv \langle \Delta y_i \Delta y_j \rangle
 \end{equation}
 
-\noindent while $\Delta y_i$ is the difference between the measured value and the average, $\Delta y_i \equiv y_i - \langle y_i \rangle$. For a Gaussian random function, the probability distribution only depends on $M$, which in turn only depends on the two-point correlation function $\langle \Delta y_i \Delta y_j \rangle$. In other words, the two-point correlation function completely determines the statistical properties of the Gaussian random function.
+\noindent while $\Delta y_i$ is the difference between the measured value and the average, $\Delta y_i \equiv y_i - \langle y_i \rangle$. For a Gaussian random function, the probability distribution only depends on $M$, which in turn only depends on the two-point correlation function $\langle \Delta y_i \Delta y_j \rangle$ \SH{$M$ \emph{is} the two point correlation function}. In other words, the two-point correlation function completely determines the statistical properties of the Gaussian random function \SH{just checking we're all happy that much of this section is a direct translation of BBKS? Adding it does make our own paper more complete on its own, but it also adds length going over theory that can be found in references?}.
 
-In our application, the function value we're interested in is the potential of the landscape, so henceforth we will replace $y$ with $F$. The two-point correlation function is, by definition, the Fourier transform of the power spectrum $P(k)$,
+In our application, the function value we're interested in is the potential of the landscape, so henceforth we will replace $y$ with $F$ \SH{We're interested in $F$ and $\xi$ so $y$ gets replaced by $F$, $\eta$ (which is set to zero) and $\xi$}. The two-point correlation function is, by definition, the Fourier transform of the power spectrum $P(k)$,\SH{This seems to me to get the ordering of the definitions wrong... the correlation function is just the average value over all ensembles of $\Delta y_i \Delta y_j$. One can then define the power spectrum from the correlation function. It would also be the \emph{inverse} Fourier transform if defined this way.}
 
 \begin{equation}
 \langle F(\vec{x}) F(\vec{y}) \rangle = \frac{1}{(2\pi)^N} \int d^Nk e^{i \vec{k} \cdot (\vec{x}-\vec{y})} P(k)
 \end{equation}
 
-\noindent where $\vec{x}$ and $\vec{y}$ are directional vectors. We define moments of the power spectrum by
+\noindent where $\vec{x}$ and $\vec{y}$ are directional vectors. We define moments \SH{This sounds like it is something we are doing that is original. ``The moments of the power spectrum are'' might work better} of the power spectrum by
 
 \begin{equation} \label{moments}
 \sigma_n^2 = \frac{1}{(2\pi)^N}\int d^Nk (k^{2})^n P(k)
 \end{equation}
 
-\noindent i.e. $\langle FF \rangle = \sigma_0^2$. We can differentiate Eq. \ref{moments} and set $\vec{x} = \vec{y}$ to get
+\noindent i.e. $\langle FF \rangle = \sigma_0^2$ \SH{I would reverse the LHS and RHS here}. We can differentiate Eq. \ref{moments} and set $\vec{x} = \vec{y}$ to get
 
 \begin{align*}
 \langle \eta_{i}(\vec{x})\eta_{j}(\vec{x})\rangle &= \frac{1}{(2\pi)^N} \frac{\partial}{\partial x^i}\frac{\partial}{\partial y^j} \int d^Nk e^{i \vec{k} \cdot (\vec{x}-\vec{y})} P(k)\bigg{|}_{\vec{y}=\vec{x}}\\
 &= \frac{1}{(2\pi)^N}\int d^Nk k^i k^j P(k)
 \end{align*}
 
-\noindent where $\eta_{i}$ indicates the derivative of $F(\vec{x})$ with respect to $x_i$. Because of isotropy (derivatives must be the same in all directions), the right hand side must be proportional to $\delta_{ij}$. Therefore
+\noindent where $\eta_{i}$ indicates the derivative of $F(\vec{x})$ with respect to $x_i$\SH{suggest writing $\eta_i=\partial F/\partial x^i $}. Because of isotropy (derivatives must be the same in all directions)\SH{I think this explanation if a little confusing. the field has \emph{statistical} isotropy, it isn't isotropic. so derivatives in different directions can be different in any specific realisation of the Gaussian field/function. I would just argue that this is zero for $i\neq j$ because the integrand is an odd function of $k^i$ and $k^j$}, the right hand side must be proportional to $\delta_{ij}$. Therefore
 
 \begin{align*}
 \langle \eta_{\alpha,i}\eta_{\beta,j}\rangle = K \delta_{\alpha,\beta}\delta_{ij} &\rightarrow \delta_{ij}\langle \eta_{\alpha,i}\eta_{\beta,j}\rangle = NK \delta_{\alpha,\beta}=\sigma_1^2\\
 &\rightarrow K = \frac{1}{N}\sigma_1^2
 \end{align*}
 
-A similar analysis holds for the second derivatives $\xi_{ij}$, and the resulting relations between the various moments of the power spectrum, the function values, and the derivatives are:
+\SH{the indices $\alpha$ and $\beta$ have appeared out of nowhere here. I think they are relevant when thereis more than one underlying field/function which can be indexed via $\alpha$ but in this paper we only have the potential energy as a function of interest.}\SH{I'm also not sure how clear this derivation will be, I think we can do it slightly better} A similar analysis holds for the second derivatives \sh{$\xi_{ij}=\partial^2 F/\partial x^i \partial x^j$}. The resulting relationships between the various moments of the power spectrum, the function values, and the derivatives are \sh
+{(all evaluated at the same point in space)}:
 
 %Our analysis is an N-dimensional generalization of Appendix A in Bardeen, Bond, Kaiser and Szalay (henceforth BBKS) \cite{BBKS}. We adopt the same notation, $\eta_i \equiv \frac{\partial \phi}{\partial x^i}, \xi_{ij} \equiv \frac{\partial^2 \phi}{\partial x^i \partial x^j}$. In this notation, the correlations of a Gaussian random function at a random point in N-dimensions are:
 
@@ -113,14 +114,14 @@ A similar analysis holds for the second derivatives $\xi_{ij}$, and the resultin
 \begin{split}
 \langle FF \rangle &= \sigma_0^2 \\
 \langle\eta_i\eta_j\rangle &= \frac{1}{N}\delta_{ij}\sigma_1^2 \\
-\langle\phi\eta_{ij}\rangle &= -\frac{1}{N}\delta_{ij}\sigma_1^2 \\
+\langle\sh{F\xi_{ij}}\rangle &= -\frac{1}{N}\delta_{ij}\sigma_1^2 \\
 \langle\xi_{ij}\xi_{kl}\rangle &= \frac{1}{N(N+2)}\sigma_2^2(\delta_{ij}\delta_{kl}+\delta_{il}\delta_{jk}+\delta_{ik}\delta_{jl})
 \end{split}
 \end{equation}
 
 \noindent For $N=3$ this reduces to BBKS's equation A1. 
 
-We define the following vector:
+We define the following vector\SH{This small passage is the only time the notation $\alpha$ is used. I think we can get away without introducing it. I think in general the way BBKS goes from $F$ at different points in space to $F$, $\eta$ and $\xi$ is confusing and we can make it a bit clearer here if we want}:
 
 \begin{equation}
 \begin{split}
@@ -129,7 +130,7 @@ We define the following vector:
 \end{split}
 \end{equation}
 
-\noindent With this choice for $\alpha$ (equivalent to $\Delta y$ in Eq. \ref{MultivariateGaussian}), the covariance matrix $M_{ij}\equiv\langle\alpha_i\alpha_j\rangle$ and its inverse $K \equiv M^{-1}$ takes the following general form:
+\noindent With this choice for $\alpha$ (equivalent to $\Delta y$ in Eq. \ref{MultivariateGaussian}), the covariance matrix $M_{ij}\equiv\langle\alpha_i\alpha_j\rangle$ and its inverse $K \equiv M^{-1}$ takes the following general form\SH{I guess this result comes from Mathematica? There must be a way of simplifying the $K_{\xi_{ij}\xi_{kl}}$ terms into one expression using $\delta_{ij}$ etc, like with $M$. Actually, this $K$ seems to never be used so I'm not sure we need to write it down. If we want to write out the inverse in all detail we should do it in terms of the variables we eventually use (i.e. $x_i$)}:
 
 \begin{align*}
 K_{F, F} &= \frac{\sigma_2^2}{\sigma_0^2\sigma_2^2-\sigma_1^4} \\
@@ -140,13 +141,13 @@ K_{\xi_{ij}, \xi_{ij}} &= \frac{N\sigma_0^2\sigma_2^2-(N+2)\sigma_1^4}{2(\sigma_
 K_{\xi_{ii}, \xi_{jj}} &= \frac{(N(N+1)-2)\sigma_1^4 - N(N+1)\sigma_0^2\sigma_2^2}{2(\sigma_1^4\sigma_2^2-\sigma_0^2\sigma_2^4)}, (i \neq j)\\
 \end{align*}
 
-\noindent and all other terms are zero. The probability distribution of $\alpha_i$ is, from Eq. \ref{MultivariateGaussian}
+\noindent and all other terms are zero\SH{Are there some $\delta_{ij}$ terms missing in the 2nd and 3rd lines above?}. The probability distribution of $\alpha_i$ is, from Eq. \ref{MultivariateGaussian}\SH{This is just eq. 2.2 repeated with $\alpha$ instead of $y$, I think there is a way of expressing all of this without so many introduced variables like $y$ $\alpha$ that are used only once each. I don't we've ever explicitly said we're considering functions/fields where $\langle F\rangle=0$ either, which we've assumed in order to write this equation.}.
 
 \begin{equation} \label{ProbDistrib}
 p(\alpha_i)=\frac{1}{(2\pi)^{N/2}\sqrt{\mathrm{det}M}} e^{-\frac{1}{2}\alpha K \alpha}
 \end{equation}
 %
-We can usually ignore the constant prefactor since we will primarily be concerned with ratios of probabilities.  We adopt the basis
+We can usually ignore the constant prefactor since we will primarily be concerned with ratios of probabilities.  We adopt the basis \SH{I think this can be written more concisely using a $\Sigma$. Also, with better understanding than when we started using this notation, given that $x_2$, $x_3$, etc are very different to $x_1$ might it be better to have $x_1$ just labelled $x$ and all the others as $y_i$ here and in all following expressions?}
 %
 \begin{align}
 \begin{split}
@@ -159,14 +160,14 @@ We can usually ignore the constant prefactor since we will primarily be concerne
 \end{split}
 \end{align}
 %
-$x_1, x_2, x_3, \ldots$ are analogous to BBKS's $x, y, z$. Following BBKS, we introduce $\nu = F/\sigma_0$. With this choice of basis, the nonzero correlations are (from Eq. \ref{corr}):
+$x_1, x_2, x_3, \ldots$ are analogous to BBKS's $x, y, z$. Following BBKS, we introduce $\nu = F/\sigma_0$. With this choice of basis, the nonzero correlations are (from Eq. \ref{corr}) \SH{and $\langle\xi_{ij}^2\rangle$ with $i\neq j$}:
 %
 \begin{gather}
 \langle\nu^2\rangle = 1, \langle x_1^2\rangle=1, \langle x_2^2 \rangle = \langle \xi_{11}^2 -2\xi_{11}\xi_{22} + \xi_{11}^2\rangle = \frac{4}{N(N+2)} \\
 \langle x_3^2 \rangle = \frac{12}{N(N+2)}, \ldots, \langle x_n^2 \rangle = \frac{2n(n-1)}{N(N+2)}.
 \end{gather}
 
-The factor $\alpha K \alpha$ (equivalent to $Q$ in BBKS) in Eq. \ref{ProbDistrib} takes the form
+The factor $\alpha K \alpha$ (equivalent to $Q$ in BBKS) in Eq. \ref{ProbDistrib} takes the form \SH{I expect this needs to be quadratic in $\xi_{ij}$. Is the prefactor to that term definitely correct?}
 
 \begin{equation} \label{Q}
 \begin{split}
@@ -174,21 +175,21 @@ The factor $\alpha K \alpha$ (equivalent to $Q$ in BBKS) in Eq. \ref{ProbDistrib
 \end{split}
 \end{equation}
 
-\noindent where $x_* \equiv \gamma \nu$ and $\gamma = \frac{\sigma_1^2}{\sigma_2 \sigma_0}$. This is the equivalent of BBKS Eq. (A4) for $N$-dimensions. Note the first two terms remain constant for all $N$, but the remaining terms vary. The $\eta$ terms are zero at minima by definition, while the off-diagonal $\xi_{ij}$ terms can be Euler-rotated away by choosing an appropriate set of axes. The $\xi$ matrix is already symmetric (by rotational symmetry), and Euler rotation turns it diagonal.\cite{Goldstein} The upshot is that the symmetric $\xi$ matrix becomes a diagonal matrix where the individual elements are the eigenvalues $\lambda_i = -\xi_{ii}$ of the Hessian. We are interested in minima, hence we demand all second derivatives to be positive, i.e. all eigenvalues to be positive.\footnote{Note there is an alternative convention where all eigenvalues being \emph{negative} corresponds to maxima. Although it can be confusing, it is a simple matter to convert results from one convention to the other; $p(min)$ is simply $1-p(max)$.} From here, the analysis is exactly the same as BBKS, except that when we define the ordering of the eigenvalues $\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0$, our boundary conditions become $x_1\geq x_N\geq x_{N-1} ... \geq x_2 \geq 0$ because of the different choice of basis. This leads to significantly simpler boundary conditions, for example in 3D our conditions are $x_2 \geq 0, x_2 \leq x_3$, and $x_1 \geq x_3$ (compare BBKS's equation between Eq. (A14) and Eq. (A15)).
+\noindent where $x_* \equiv \gamma \nu$ \SH{I would just leave it as $\gamma \nu$} and $\gamma = \frac{\sigma_1^2}{\sigma_2 \sigma_0}$. This is the equivalent of BBKS Eq. (A4) for $N$-dimensions. Note the first two terms remain constant for all $N$, but the remaining terms vary. The $\eta$ terms are zero at minima by definition, while the off-diagonal $\xi_{ij}$ terms can be Euler-rotated away by choosing an appropriate set of axes \SH{I don't know what this means.}. The $\xi$ matrix is already symmetric (by rotational symmetry), and Euler rotation turns it diagonal.\cite{Goldstein} The upshot is that the symmetric $\xi$ matrix becomes a diagonal matrix where the individual elements are the eigenvalues $\lambda_i = -\xi_{ii}$ of the Hessian. We are interested in minima, hence we demand all second derivatives to be positive, i.e. all eigenvalues to  \SH{demanding $\lambda$ be positive isolates maxima, doesn't it? - $\xi$ is the actual second derivative and at a minimum the actual second derivative should be positive.} be positive.\footnote{Note there is an alternative convention where all eigenvalues being \emph{negative} corresponds to maxima \SH{I don't think this is true}. Although it can be confusing, it is a simple matter to convert results from one convention to the other; $p(min)$ is simply $1-p(max)$.\SH{This isn't true because some saddles can be neither minimum nor maximum.}} From here, the analysis is exactly the same as BBKS, except that when we define the ordering of the eigenvalues $\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0$, our boundary conditions become $x_1\geq x_N\geq x_{N-1} ... \geq x_2 \geq 0$ because of the different choice of basis. This leads to significantly simpler boundary conditions, for example in 3D our conditions are $x_2 \geq 0, x_2 \leq x_3$, and $x_1 \geq x_3$ \SH{This can be written even more simply} (compare BBKS's equation between Eq. (A14) and Eq. (A15)).
 
-This yields the following expression for the density of peaks:
+This yields the following expression for the density of peaks \SH{peaks are maxima}:
 %
 \begin{equation} \label{DensityOfPeaks}
 N_{peak} = A \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} G \times e^{-Q} d\nu dx dy dz \ldots
 \end{equation}
 %
-\noindent where $G$ has the form\footnote{$G$ can also be expressed in terms of $x_i$ using the inverse transform of Eq. \ref{BasisTransform}}
+\SH{we have no $y$ and $z$}\noindent where $G$ has the form\footnote{$G$ can also be expressed in terms of $x_i$ using the inverse transform of Eq. \ref{BasisTransform}}
 
 \begin{equation}
 G = \left(\prod_{i}^{N} \lambda_i \right)\left(\prod_{i<j} |\lambda_i-\lambda_j|\right),
 \end{equation} 
 %
-$Q$ is given by Eq. \ref{Q}, $A$ is some constant factor, and the integration limits are only over the region where the conditions are satisfied. This is a key integral, and evaluating it will be the focus of much of the remainder of this paper.
+$Q$ is given by Eq. \ref{Q}, $A$ is some constant factor \SH{We should perhaps mention here that we are only ever interested in proportions of minima satisfying certain properties, so we never need to know $A$ because we always divide by the total number of minima and hence $A$ cancels (note $A$ does depend on $N$ and $\gamma$ and even $\sigma_0$ and $\sigma_1$}, and the integration limits are only over the region where the conditions are satisfied. This is a key integral, and evaluating it will be the focus of much of the remainder of this paper.
 
 %We will find it convenient to make a further transformation to
 %%
@@ -203,7 +204,7 @@ $Q$ is given by Eq. \ref{Q}, $A$ is some constant factor, and the integration li
 %\end{equation}
 %%
 %The inverse transformation is $\lambda_1$,
-%%s
+%%
 %\begin{equation}
 %\lambda_1 = \frac{x_1}{N} + \sum_{i=2}^N \frac{x_i}{i(i-1)} \, , \qquad
 %  \lambda_n = \frac{x_1}{N} - \frac{x_n}{n} + \sum_{i=n+1}^N \frac{x_i}{i(i-1)}.

@@ -3,6 +3,7 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{xcolor}
+\usepackage[normalem]{ulem}
 \usepackage{mathtools} %For summations with limits
 \usepackage{multicol} %For multiple columns
 \setlength{\columnsep}{1cm}
@@ -26,13 +27,9 @@
 
 \affiliation{Department of Physics,\\ University of Auckland, \\Private Bag 92019,\\ Auckland, New Zealand}
 
-
-
-\abstract{ Landscape cosmology posits the existence of a convoluted, multidimensional, scalar potential -- the  ``landscape'' -- with vast numbers of metastable minima. The huge number of minima supported by landscape potentials motivate arguments that landscape cosmology reduces tuning problems associated with a small but non-zero vacuum energy by providing a framework in which anthropic or ``environmental'' selection is plausible. Random matrices and random functions in many dimensions can be used to discuss  conceptual issues associated with landscape scenarios; here we explore the distribution of minima as a function of vacuum energy in an $N$-dimensional Gaussian random potential. We derive a probability density for the density of minima in $N$ dimensions, showing that after rescalings its properties are fully defined by $N$ and a  single free parameter.  We use this likelihood to compute $P(\Lambda)$, the distribution function of vacuum energies in these scenarios. \re{little more to come}}
+\abstract{ Landscape cosmology posits the existence of a convoluted, multidimensional, scalar potential -- the  ``landscape'' -- with vast numbers of metastable minima. The huge number of minima supported by landscape potentials motivate arguments that landscape cosmology reduces tuning problems associated with a small but non-zero vacuum energy by providing a framework in which anthropic or ``environmental'' selection is plausible. Random matrices and random functions in many dimensions can be used to discuss  conceptual issues associated with landscape scenarios; here we explore \sh{\sout{the distribution}} the minima \sh{\sout{as a function of} and} vacuum energy in an $N$-dimensional Gaussian random potential. We derive a probability density for the density of minima in $N$ dimensions, showing that after rescalings its properties are fully defined by $N$ and a  single free parameter. This gives us $P(\Lambda)$, the probability density function of vacuum energies in these scenarios. \re{little more to come}}
 
 \begin{document}
-
-
 
 \maketitle
 
@@ -44,156 +41,172 @@ Stochastic (or eternal) inflation implies the existence of a multiverse composed
  
 The detailed properties of any possible landscape are almost entirely unknown -- it is still unclear whether any specific stringy construction  realises  the $SU(3) \times SU(2) \times U(1)$ gauge group of the Standard Model.  More recently the Swampland Conjecture suggests that all stable minima of the theory might actually be ``underwater'' \cite{Agrawal2018},  located at negative values of $\Lambda$. If true, this would require that the cosmological dark energy was underpinned by dynamical quintessence-like evolution.  
 
-An alternative approach to   landscape scenarios is to strip them down to their barest essence -- by realising multiverse cosmology within a {\em random\/} multidimensional ($N\sim100$ or more) potential of interacting scalar fields.\footnote{Random is used here in the  context of random function theory \cite{GRF1, GRF2, GRF3}.  We refer to random functions rather than random fields, the nomenclature often seen in the mathematical literature, to avoid confusion with the individual scalar fields that are coupled by the potential.}  In this approach the ``large $N$'' properties of the multidimensional landscape actually provides leverage that can be used to develop an understanding of its properties. The first steps in this direction were taken by Aazami and Easther \cite{Aazami2006}, investigating ensembles of Hessian matrices describing extrema in a random landscape.  At  a minimum in the landscape the eigenvalues of the Hessian are all positive. For simple random matrix distributions eigenvalues are likely to be evenly distributed between positive and negative values with fluctuations away from this situation being strongly suppressed at even moderate values of $N$, suggesting that the number of minima is super-exponentially smaller than the number of saddles. However, the individual entries of Hessians matrices of random functions are correlated and therefore not drawn from identical, independent distributions,\cite{Battefeld2012,Easther2016} violating a common premise of random matrix theory. That said, this overall approach has been widely pursued and has now been extended in a number of directions \cite{Easther2006, Frazer2011, Henry2009, Marsh2013, Agarwal2011,Yang2012,Masoumi2016,Yamada2018} \re{shaun to fix} This line of enquiry has also motivated studies of the properties of random matrices and random functions at large $N$.\cite{Bray2007,Dean2008,Majumdar2009,Bachlechner2014,Battefeld2012,Fyodorov2013,Masoumi2017} Similar mathematical problems arise in statistical mechanics, string theory, and complex dynamics.\cite{Fyodorov2004,Douglas2004,Douglas2006,Fyodorov2007,Fyodorov2012,Fyodorov2018,Ros2019}
+An alternative approach to   landscape scenarios is to strip them down to their barest essence -- by realising multiverse cosmology within a {\em random\/} multidimensional ($N\sim100$ or more) potential of interacting scalar fields.\footnote{Random is used here in the  context of random function theory \cite{GRF1, GRF2, GRF3}.  We refer to random functions rather than random fields, the nomenclature often seen in the mathematical literature, to avoid confusion with the individual scalar fields that are coupled by the potential.}  In this approach the ``large $N$'' properties of the multidimensional landscape actually provides leverage that can be used to develop an understanding of its properties. The first steps in this direction were taken by Aazami and Easther \cite{Aazami2006}, investigating ensembles of Hessian matrices describing extrema in a random landscape. At  a minimum in the landscape the eigenvalues of the Hessian are all positive. For simple random matrix distributions eigenvalues are likely to be evenly distributed between positive and negative values with fluctuations away from this situation being strongly suppressed at even moderate values of $N$, suggesting that the number of minima is super-exponentially smaller than the number of saddles. However, the individual entries of Hessians matrices of random functions are correlated and therefore not drawn from identical, independent distributions,\cite{Battefeld2012,Easther2016} violating a common premise of \sh{simple} random matrix theory \sh{and making minima more probable}. \sh{\sout{That said,} T}his overall approach has \sh{now} been widely pursued and has \sh{\sout{now}} been extended in a} number of directions \cite{Easther2006, Frazer2011, Henry2009, Marsh2013, Agarwal2011,Yang2012,Masoumi2016,Yamada2018} This line of inquiry has also motivated studies of the properties of random matrices and random functions at large $N$.\cite{Bray2007,Dean2008,Majumdar2009,Bachlechner2014,Battefeld2012,Fyodorov2013,Masoumi2017} Similar mathematical problems arise in statistical mechanics, string theory, and complex dynamics.\cite{Fyodorov2004,Douglas2004,Douglas2006,Fyodorov2007,Fyodorov2012,Fyodorov2018,Ros2019}
 
 %The theory of inflation is the current best explanation for certain perplexing observations of the Universe, such as the monopole problem, horizon problem, and flatness problem. Inflation is thought to be caused by a scalar field, but the exact nature of this field is shrouded in unknowns. The simplest possibility is a one-dimensional scalar field analogous to the gravitational potential; however multidimensional scalar fields are also possible. In particular, string theory predicts the existence of a highly complex, $O(100)$ dimensional scalar field known as the \emph{landscape}. The string landscape is so complex that quantitative predictions are hard to extract; as a result, most studies of the landscape assume it is a Gaussian random field
 
-In the conventional picture of the multiverse, the universe traces out a path in the landscape. If it moves along a path where the gradient of the potential is small, there is so-called ``slow-roll" inflation. Eventually, the universe's evolution ends in a minimum of the potential. If this is the global minimum, the end-state is stable. However, bubbles of space can tunnel from a local minimum to lower-lying vacua, rendering local minima metastable, although often with lifetimes much greater than the age of the universe. If this local minimum has a positive vacuum energy it will contribute an apparent cosmological constant term to observers within the universe. Accordingly, we are interested in the probability of minima having potential values $V > 0$. In particular, we show that for a region of parameter space, a random potential with $10^M$ minima (where $M$ is a number of order $\mathcal{O}(100)$) can also have $P(V > 0|min) \ll 10^{-M}$, so that it is conceivable that these scenarios have no metastable solutions with  positive vacuum energy. 
+In the conventional picture of the multiverse, the universe \sh{\sout{traces out a path} exists in a local minimum of} the landscape. \sh{\sout{If it moves along a path where the gradient of the potential is small, there is so-called ``slow-roll" inflation. Eventually, the universe's evolution ends in a minimum of the potential. If this is the global minimum, the end-state is stable. However, bubbles of space can tunnel from a local minimum to lower-lying vacua, rendering local minima metastable, although often with lifetimes much greater than the age of the universe.}}\SH{Do we need to write the above?} If this local minimum has a positive vacuum energy it will contribute an apparent cosmological constant term to observers within the universe. Accordingly, we are interested in the probability of minima having potential values $V > 0$. \sh{\sout{In particular,} \SH{check}W}e show that for a region of parameter space, a random potential with $10^M$ minima (where $M$ is a number of order $\mathcal{O}(100)$) can also have $P(V > 0|{\rm min}) \ll 10^{-M}$, so that it is conceivable that these scenarios have no metastable solutions with  positive vacuum energy.
 
 These considerations may lead to a weakly non-uniform measure on the vacuum energy  \re{more on measure problem, including definition and citations} 
 
-Finally, the methods we use also provide a probability density for the eigenvalues at minima, allowing us to infer their shapes \re{more to come} 
+Finally, the methods we use also provide a probability density for the eigenvalues at minima, allowing us to infer the shape \sh{around the minima} \re{more to come} 
 
-We start from a generalisation of the Kac-Rice formalism \cite{Kac1943,Rice1945} and the  machinery developed by Bond, Bardeen, Kaiser and Szalay  \cite{BBKS}  for studying the statistics of Gaussian random functions in  cosmological perturbation theory   to $N$ dimensions.  This yields integral expressions for all terms of interest, with dimensionality $N+1$. At $N=2$ the full integral can be evaluated analytically; at $N \lesssim 10$ we can directly compute the full numerical integral, and then to numerical evaluations of Gaussian approximations to the underlying integrals out to $N=100$. These techniques can be generalised to other, more complex questions about trajectories in these potentials, and give information about the ``shapes'' of minima which may inform analyses of tunnelling and inflation. We show that $P(\Lambda)$, the probability density function for the vacuum energy, depends on the dimensionality $N$ and a single free parameter for a Gaussian random landscape, and calculate how $P(\Lambda)$ varies with $N$. Finally, we discuss the implications of these results for landscape cosmology and notions of anthropic selection. \re{more detail here}
+We start \sh{by} generalising \sh{to $N$ dimensions} the Kac-Rice formalism \cite{Kac1943,Rice1945} and the  machinery developed \sh{and summarised} by Bond, Bardeen, Kaiser and Szalay  \cite{BBKS}  for studying the statistics of Gaussian random functions \sh{\sout{ cosmological perturbation theory to $N$ dimensions}}. This yields $N$-dimensional integral expressions for \sh{\sout{all terms of interest} the proportion of minima that will have a given value of the potential, $V$}. At $N=2$ the full integral can be evaluated analytically; at $N \lesssim 10$ we can \sh{\sout{directly} numerically} compute the full integrals; \sh{and for $N \lesssim 100$ \sout{then to numerical evaluations of} we evaluate Gaussian approximations to the underlying integrals \sout{out to $N=100$}. The Gaussian approximations are tested against the exact numerical result for $N <10$ where they match closely.} These techniques can be generalised to other, more complex questions about trajectories in these potentials, and give information about the ``shapes'' of minima which may inform analyses of tunnelling and inflation. We show that $P(\Lambda)$, the probability density function for the vacuum energy, depends on the dimensionality $N$ and a single free parameter for a Gaussian random landscape, and calculate how $P(\Lambda)$ varies with $N$. Finally, we discuss the implications of these results for landscape cosmology and notions of anthropic selection. \re{more detail here}\SH{we still use $V$ and $\Lambda$ interchangeably in the paper, without much apparent order. I would favour only using $\Lambda$ very sparingly when explicitly referring to the observed vacuum energy. Or, perhaps $\Lambda$ is only ever the value of $V$ when it is explicitly in a minimum?}
 
 \section{Random Potentials in $N$ Dimensions}
 
-We begin by developing an $N$-dimensional analogue of the treatment of \SH{the peaks of?}\re{i think what we are doing is more general than just peaks, even if that is our focus here}  three dimensional random functions due to Bardeen, Bond, Kaiser and Szalay (henceforth BBKS) \cite{BBKS}, generalising their derivation and keeping their notation as far as possible \SH{Do we want to follow BBKS' notation as far as possible? At the moment we still use $\Lambda$, $F$ and $\nu$ all to mean the same quantity at different parts of the paper. Can we settle on one? Maybe even settle on $V$ for potential? We could still use $\Lambda$ sparingly, but make it clear that it is just different notation for the same $V$ when we do?}\re{i think it makes sense to use for $V$ for the potential consistently}.   An $N$-dimensional scalar-valued function $F(r)$ is a set of values that fill each point of $N$-dimensional space. The function is \emph{random} if its values depend on a probability distribution function,
+%\sh{\sout{We begin by developing an $N$-dimensional analogue of the treatment of three dimensional random functions due to Bardeen, Bond, Kaiser and Szalay (henceforth BBKS) \cite{BBKS}, generalising their derivation and keeping their notation as far as possible.}}\SH{We're no longer following the notation and we say the rest in the paragraph just before this, in the introduction}.
+
+\sh{We treat the potential energy function $V({\vec{\phi}})$ as a Gaussian random function over an $N$-dimensional field space. We wish to examine minima and saddles, therefore we require the probability density for the value of the potential itself and the values of its derivatives, $\eta_i = \partial V/\partial \phi^i$ and $\zeta_{ij}=\partial^2 V/\partial \phi^i\partial \phi^j$ at individual points in this field space. These variables can be grouped together into a vector ${\bf y} = [V,\eta,\zeta]$. In $N$ dimensions ${\bf y}$ has $\mathcal{N}=1+N+(N^2+N)/2$ independent components via $V$, $\eta$ and $\zeta$ respectively. $V$ is a Gaussian random function, this means that the variables in ${\bf y}$ are described by a multivariate Gaussian distribution. A general multivariate Gaussian distribution with $\mathcal{N}$ independent variables has the form}
+  %\sout{An $N$-dimensional scalar-valued function $V({\bf r})$ is a set of values \sh{\sout{that fill} defined at} each point of $N$-dimensional space. The function is \emph{random} if its values \sh{can be described by} a probability density function},
 %
-\begin{equation}
-P[F(r_1), F(r_2), \ldots, F(r_m)]dF(r_1)dF(r_2)\ldots dF(r_m)
-\end{equation}
+%\begin{equation}
+%P[V({\bf r_1}), V({\bf r_2}), \ldots, V({\bf r_n})]dV({\bf r_1})dV({\bf r_2})\ldots dV({\bf r_n})
+%\end{equation}
 %
-\noindent where $r_i$ is a position in $N$ dimensional space. This corresponds to the probability that the function takes value $F(r_1) \pm dF(r_1)$ at position $r_1$, $F(r_2) \pm dF(r_2)$ at position $r_2$, and so on. 
+%\noindent where ${\bf r_i}$ is a position in $N$ dimensional space. This corresponds to the probability that the function takes value $V({\bf r_1}) \pm dV({\bf r_1})$ at position ${\bf r_1}$ \emph{and} $V({\bf r_2}) \pm dV({\bf r_2})$ at position ${\bf r_2}$, and so on.
 %
-The function is \emph{Gaussian random} if the probability distribution function is an $N$-dimensional Gaussian function,\SH{we suddenly swap here from $F$ to $y$. I know this is the notation BBKs use, but that paper is notoriously difficult to digest, so probably not the best to be emulating when it is being confusing.}\re{i think we should do whjat is clearest}
+%A function is \emph{Gaussian random} if the probability density function is an $N$-dimensional Gaussian function,
 %
 \begin{equation} \label{MultivariateGaussian}
 \begin{split}
-P(y_1,\ldots,y_N)dy_1\ldots dy_N &= \frac{e^{-Q}}{[(2\pi)^N \mathrm{det}(M)]^{1/2}} dy_1\ldots dy_N \, ,\\
-Q &\equiv \frac{1}{2} \sum \Delta y_i (M^{-1})_{ij} \Delta y_{ij} \, .\\
+P({\bf y})d^\mathcal{N}{\bf y} &= \frac{e^{-Q}}{[(2\pi)^N \mathrm{det}(M)]^{1/2}} d^\mathcal{N}{\bf y} \, ,\\
+Q &\equiv \frac{1}{2} \sum_{i,j}^\mathcal{N} \Delta y_i (M^{-1})_{ij} \Delta y_{j} \, .\\
 \end{split}
 \end{equation}
 %
-Here $M$ is the \emph{covariance matrix}, 
-
+Here $\Delta y_i$ is the difference between the actual value and the mean value, i.e. $\Delta y_i \equiv y_i - \langle y_i \rangle$, and $M$ is the \emph{covariance matrix}, 
+%
 \begin{equation}
-M_{ij} \equiv \langle \Delta y_i \Delta y_j \rangle
+M_{ij} \equiv \langle \Delta y_i \Delta y_j \rangle.
 \end{equation}
+%
+\sh{Averages denoted by $\langle \,\,\rangle$ are ensemble averages. We further assume that $\langle V\rangle = \langle \eta\rangle = \langle \zeta\rangle = 0$.\footnote{\sh{$\langle V\rangle=0$ can always be obtained by a constant shift in the definition of $V$. $\langle \eta \rangle = 0$ and $\langle \zeta\rangle = 0$ can be enforced by assuming $V$ is statistically isotropic in field space. An interesting path for future work would be to examine our results without this assumption of statistical isotropy.}}} Therefore the probability density only depends on the covariance matrix, $M$, \sh{and its inverse}.
 
-\noindent while $\Delta y_i$ is the difference between the measured value and the average, $\Delta y_i \equiv y_i - \langle y_i \rangle$. For a Gaussian random function, the probability distribution only depends on $M$, which in turn only depends on the two-point correlation function $\langle \Delta y_i \Delta y_j \rangle$ \SH{$M$ \emph{is} the two point correlation function}\re{true, just edit accordingly}. In other words, the two-point correlation function completely determines the statistical properties of the Gaussian random function \SH{just checking we're all happy that much of this section is a direct translation of BBKS? Adding it does make our own paper more complete on its own, but it also adds length going over theory that can be found in references?}\re{I think it makes sense; once our comments are out it is just a paragraph}.
+\sh{We next introduce the field space power spectrum, $P$, of the random function $V$, which will be useful for writing $M$ in a concise form. We define it here to be the Fourier transform of the correlation function of $V$, i.e.}
 
-In our application, the function value we're interested in is the potential of the landscape, so henceforth we will replace $y$ with $F$ \SH{We're interested in $F$ and $\xi$ so $y$ gets replaced by $F$, $\eta$ (which is set to zero) and $\xi$}. The two-point correlation function is, by definition, the Fourier transform of the power spectrum $P(k)$,\SH{This seems to me to get the ordering of the definitions wrong... the correlation function is just the average value over all ensembles of $\Delta y_i \Delta y_j$. One can then define the power spectrum from the correlation function. It would also be the \emph{inverse} Fourier transform if defined this way.}\re{happy to go with this}
-
-\begin{equation}
-\langle F(\vec{x}) F(\vec{y}) \rangle = \frac{1}{(2\pi)^N} \int d^Nk e^{i \vec{k} \cdot (\vec{x}-\vec{y})} P(k)
+\begin{equation}\label{powspec}
+\langle V(\vec{\phi}_1) V(\vec{\phi}_2) \rangle = \xi(|\vec{\phi}_1-\vec{\phi}_2|)= \frac{1}{(2\pi)^N} \int d^Nk e^{i \vec{k} \cdot (\vec{\phi}_1-\vec{\phi}_2)} P(k).
 \end{equation}
-
-\noindent where $\vec{x}$ and $\vec{y}$ are directional vectors. We define moments \SH{This sounds like it is something we are doing that is original. ``The moments of the power spectrum are'' might work better}\re{agree} of the power spectrum by
-
+%
+\sh{We have assumed $V$ is statistically homogeneous and isotropic in field space, therefore $\xi$ depends only on $|\vec{\phi}_1-\vec{\phi}_2|$ and  $P$ depends only on the magnitude of the Fourier coordinate $k$.\footnote{\sh{We work in a field space basis where the field space metric is Euclidean.}}} The moments of the power spectrum can be defined as
+%
 \begin{equation} \label{moments}
 \sigma_n^2 = \frac{1}{(2\pi)^N}\int d^Nk (k^{2})^n P(k)
 \end{equation}
+%
+This gives $\sigma_0^2=\xi(0)=\langle V^2 \rangle$.
 
-\noindent i.e. $\langle FF \rangle = \sigma_0^2$ \SH{I would reverse the LHS and RHS here}. We can differentiate Eq. \ref{moments} and set $\vec{x} = \vec{y}$ to get
-
-\begin{align*}
-\langle \eta_{i}(\vec{x})\eta_{j}(\vec{x})\rangle &= \frac{1}{(2\pi)^N} \frac{\partial}{\partial x^i}\frac{\partial}{\partial y^j} \int d^Nk e^{i \vec{k} \cdot (\vec{x}-\vec{y})} P(k)\bigg{|}_{\vec{y}=\vec{x}}\\
-&= \frac{1}{(2\pi)^N}\int d^Nk k^i k^j P(k)
-\end{align*}
-
-\noindent where $\eta_{i}$ indicates the derivative of $F(\vec{x})$ with respect to $x_i$\SH{suggest writing $\eta_i=\partial F/\partial x^i $}. Because of isotropy (derivatives must be the same in all directions)\SH{I think this explanation if a little confusing. the field has \emph{statistical} isotropy, it isn't isotropic. so derivatives in different directions can be different in any specific realisation of the Gaussian field/function. I would just argue that this is zero for $i\neq j$ because the integrand is an odd function of $k^i$ and $k^j$}, the right hand side must be proportional to $\delta_{ij}$. Therefore
+We can differentiate equation \eqref{powspec} and then set $\vec{\phi}_1 = \vec{\phi}_2$ to get
 
 \begin{align*}
-\langle \eta_{\alpha,i}\eta_{\beta,j}\rangle = K \delta_{\alpha,\beta}\delta_{ij} &\rightarrow \delta_{ij}\langle \eta_{\alpha,i}\eta_{\beta,j}\rangle = NK \delta_{\alpha,\beta}=\sigma_1^2\\
-&\rightarrow K = \frac{1}{N}\sigma_1^2
+\langle \eta_{i}\eta_{j}\rangle &= \frac{1}{(2\pi)^N} \frac{\partial}{\partial \phi_1^i}\frac{\partial}{\partial \phi_2^j} \int d^Nk e^{i \vec{k} \cdot (\vec{\phi}_1-\vec{\phi}_2)} P(k)\bigg{|}_{\vec{\phi}_1=\vec{\phi}_2}\\
+&= \frac{1}{(2\pi)^N}\int d^Nk (k^i k^j) P(k)
 \end{align*}
+%
+\sh{The integrand on the RHS is an odd function of both $k^i$ and $k^j$, therefore the integral over all $\vec{k}$ is zero unless $i=j$. Furthermore, because $k^2 = \sum_i k_i^2$, we see that $\sum_i \langle \eta_{i}\eta_{i}\rangle = \sigma_1^2$. We have assumed the field is statistically isotropic and thus $\langle \eta_{i}\eta_{i}\rangle=\langle \eta_{j}\eta_{j}\rangle$, meaning $\langle \eta_{i}\eta_{i}\rangle=\sigma_1^2/N$. Therefore $\langle \eta_{i}\eta_{j}\rangle=\delta_{ij}\sigma_1^2/N$}
 
-\SH{the indices $\alpha$ and $\beta$ have appeared out of nowhere here. I think they are relevant when thereis more than one underlying field/function which can be indexed via $\alpha$ but in this paper we only have the potential energy as a function of interest.}\SH{I'm also not sure how clear this derivation will be, I think we can do it slightly better} A similar analysis holds for the second derivatives \sh{$\xi_{ij}=\partial^2 F/\partial x^i \partial x^j$}. The resulting relationships between the various moments of the power spectrum, the function values, and the derivatives are \sh
-{(all evaluated at the same point in space)}:
+%\begin{align*}
+%\langle \eta_{\alpha,i}\eta_{\beta,j}\rangle = K \delta_{\alpha,\beta}\delta_{ij} &\rightarrow \delta_{ij}\langle \eta_{\alpha,i}\eta_{\beta,j}\rangle = NK \delta_{\alpha,\beta}=\sigma_1^2\\
+%&\rightarrow K = \frac{1}{N}\sigma_1^2
+%\end{align*}
+
+A similar analysis holds for the second derivatives \sh{$\zeta_{ij}$}\sh{, which can be used to find the rest of the elements of the covariance matrix. In terms of the} moments of the power spectrum they are:
 
 %Our analysis is an N-dimensional generalization of Appendix A in Bardeen, Bond, Kaiser and Szalay (henceforth BBKS) \cite{BBKS}. We adopt the same notation, $\eta_i \equiv \frac{\partial \phi}{\partial x^i}, \xi_{ij} \equiv \frac{\partial^2 \phi}{\partial x^i \partial x^j}$. In this notation, the correlations of a Gaussian random function at a random point in N-dimensions are:
 
 \begin{equation} \label{corr}
 \begin{split}
-\langle FF \rangle &= \sigma_0^2 \\
+\langle VV \rangle &= \sigma_0^2 \\
 \langle\eta_i\eta_j\rangle &= \frac{1}{N}\delta_{ij}\sigma_1^2 \\
-\langle\sh{F\xi_{ij}}\rangle &= -\frac{1}{N}\delta_{ij}\sigma_1^2 \\
-\langle\xi_{ij}\xi_{kl}\rangle &= \frac{1}{N(N+2)}\sigma_2^2(\delta_{ij}\delta_{kl}+\delta_{il}\delta_{jk}+\delta_{ik}\delta_{jl})
+\langle V\zeta_{ij}\rangle &= -\frac{1}{N}\delta_{ij}\sigma_1^2 \\
+\langle\zeta_{ij}\zeta_{kl}\rangle &= \frac{1}{N(N+2)}\sigma_2^2(\delta_{ij}\delta_{kl}+\delta_{il}\delta_{jk}+\delta_{ik}\delta_{jl})
 \end{split}
 \end{equation}
 
-\noindent For $N=3$ this reduces to BBKS's equation A1. 
+\noindent For $N=3$ this reduces to equation A1 \sh{of \cite{BBKS} (hereafter called BBKS)}. 
 
-We define the following vector\SH{This small passage is the only time the notation $\alpha$ is used. I think we can get away without introducing it. I think in general the way BBKS goes from $F$ at different points in space to $F$, $\eta$ and $\xi$ is confusing and we can make it a bit clearer here if we want}:
+%We define the following vector\SH{This small passage is the only time the notation $\alpha$ is used. I think we can get away without introducing it. I think in general the way BBKS goes from $F$ at different points in space to $F$, $\eta$ and $\xi$ is confusing and we can make it a bit clearer here if we want}:
 
+%\begin{equation}
+%\begin{split}
+%\alpha = \{F,\eta_1,\eta_2,\ldots,\xi_{11},\xi_{22},\ldots,\xi_{NN},\xi_{N-1,N},\xi_{N-2,N},\ldots,\xi_{1N},\xi_{N-2,N-1},\\
+%\ldots\xi_{1,N-1},\ldots,\xi_{12}\}
+%\end{split}
+%\end{equation}
+
+%\noindent With this choice for $\alpha$ (equivalent to $\Delta y$ in Eq. \ref{MultivariateGaussian}), the covariance matrix $M_{ij}\equiv\langle\alpha_i\alpha_j\rangle$ and its inverse $K \equiv M^{-1}$ takes the following general form\SH{I guess this result comes from Mathematica? There must be a way of simplifying the $K_{\xi_{ij}\xi_{kl}}$ terms into one expression using $\delta_{ij}$ etc, like with $M$. Actually, this $K$ seems to never be used so I'm not sure we need to write it down. If we want to write out the inverse in all detail we should do it in terms of the variables we eventually use (i.e. $x_i$)}:
+
+%\begin{align*}
+%K_{F, F} &= \frac{\sigma_2^2}{\sigma_0^2\sigma_2^2-\sigma_1^4} \\
+%K_{F, \xi_{ij}} &= \frac{\sigma_1^2}{\sigma_0^2\sigma_2^2-\sigma_1^4} \\
+%K_{\eta_i,\eta_j} &= \frac{N}{\sigma_1^2}\\
+%K_{\xi_{ii},\xi_{ii}} &=  \frac{N(N+2)}{\sigma_2^2} \\
+%K_{\xi_{ij}, \xi_{ij}} &= \frac{N\sigma_0^2\sigma_2^2-(N+2)\sigma_1^4}{2(\sigma_1^4\sigma_2^2-\sigma_0^2\sigma_2^4)}, (i\neq j)\\
+%K_{\xi_{ii}, \xi_{jj}} &= \frac{(N(N+1)-2)\sigma_1^4 - N(N+1)\sigma_0^2\sigma_2^2}{2(\sigma_1^4\sigma_2^2-\sigma_0^2\sigma_2^4)}, (i \neq j)\\
+%\end{align*}
+
+%\noindent and all other terms are zero\SH{Are there some $\delta_{ij}$ terms missing in the 2nd and 3rd lines above?}. The probability density of $\alpha_i$ is, from Eq. \ref{MultivariateGaussian}\SH{This is just eq. 2.2 repeated with $\alpha$ instead of $y$, I think there is a way of expressing all of this without so many introduced variables like $y$ $\alpha$ that are used only once each. I don't we've ever explicitly said we're considering functions/fields where $\langle F\rangle=0$ either, which we've assumed in order to write this equation.}.
+
+%\begin{equation} \label{ProbDistrib}
+%p(\alpha_i)=\frac{1}{(2\pi)^{N/2}\sqrt{\mathrm{det}M}} e^{-\frac{1}{2}\alpha K \alpha}
+%\end{equation}
+%
+%We can usually ignore the constant prefactor since we will primarily be concerned with ratios of probabilities.
+\sh{This covariance matrix is far from diagonal. Therefore, instead of using $V$, $\eta$ and $\zeta$ we wish to adopt a basis of variables that is as diagonal as possible. The $\eta_i$ variables are already diagonal, as are the $\zeta_{ij}$ terms with $i\neq j$. The $\zeta_{ii}$ variables are correlated however, and in fact are also correlated to $V$. We look for a set of $N$ linear combinations of these $N$ variables that is diagonal. For this we choose}
+
+%
 \begin{equation}
-\begin{split}
-\alpha = \{F,\eta_1,\eta_2,\ldots,\xi_{11},\xi_{22},\ldots,\xi_{NN},\xi_{N-1,N},\xi_{N-2,N},\ldots,\xi_{1N},\xi_{N-2,N-1},\\
-\ldots\xi_{1,N-1},\ldots,\xi_{12}\}
-\end{split}
-\end{equation}
-
-\noindent With this choice for $\alpha$ (equivalent to $\Delta y$ in Eq. \ref{MultivariateGaussian}), the covariance matrix $M_{ij}\equiv\langle\alpha_i\alpha_j\rangle$ and its inverse $K \equiv M^{-1}$ takes the following general form\SH{I guess this result comes from Mathematica? There must be a way of simplifying the $K_{\xi_{ij}\xi_{kl}}$ terms into one expression using $\delta_{ij}$ etc, like with $M$. Actually, this $K$ seems to never be used so I'm not sure we need to write it down. If we want to write out the inverse in all detail we should do it in terms of the variables we eventually use (i.e. $x_i$)}:
-
-\begin{align*}
-K_{F, F} &= \frac{\sigma_2^2}{\sigma_0^2\sigma_2^2-\sigma_1^4} \\
-K_{F, \xi_{ij}} &= \frac{\sigma_1^2}{\sigma_0^2\sigma_2^2-\sigma_1^4} \\
-K_{\eta_i,\eta_j} &= \frac{N}{\sigma_1^2}\\
-K_{\xi_{ii},\xi_{ii}} &=  \frac{N(N+2)}{\sigma_2^2} \\
-K_{\xi_{ij}, \xi_{ij}} &= \frac{N\sigma_0^2\sigma_2^2-(N+2)\sigma_1^4}{2(\sigma_1^4\sigma_2^2-\sigma_0^2\sigma_2^4)}, (i\neq j)\\
-K_{\xi_{ii}, \xi_{jj}} &= \frac{(N(N+1)-2)\sigma_1^4 - N(N+1)\sigma_0^2\sigma_2^2}{2(\sigma_1^4\sigma_2^2-\sigma_0^2\sigma_2^4)}, (i \neq j)\\
-\end{align*}
-
-\noindent and all other terms are zero\SH{Are there some $\delta_{ij}$ terms missing in the 2nd and 3rd lines above?}. The probability distribution of $\alpha_i$ is, from Eq. \ref{MultivariateGaussian}\SH{This is just eq. 2.2 repeated with $\alpha$ instead of $y$, I think there is a way of expressing all of this without so many introduced variables like $y$ $\alpha$ that are used only once each. I don't we've ever explicitly said we're considering functions/fields where $\langle F\rangle=0$ either, which we've assumed in order to write this equation.}.
-
-\begin{equation} \label{ProbDistrib}
-p(\alpha_i)=\frac{1}{(2\pi)^{N/2}\sqrt{\mathrm{det}M}} e^{-\frac{1}{2}\alpha K \alpha}
-\end{equation}
-%
-We can usually ignore the constant prefactor since we will primarily be concerned with ratios of probabilities.  We adopt the basis \SH{I think this can be written more concisely using a $\Sigma$. Also, with better understanding than when we started using this notation, given that $x_2$, $x_3$, etc are very different to $x_1$ might it be better to have $x_1$ just labelled $x$ and all the others as $y_i$ here and in all following expressions?}
-%
-\begin{align}
-\begin{split}
 \label{BasisTransform}
-\sigma_2x_1 = -\nabla^2F &= -(\xi_{11}+\xi_{22}+\ldots+\xi_{NN})\\
-\sigma_2x_2 &= -(\xi_{11}-\xi_{22})\\
-\sigma_2x_3 &= -(\xi_{11}+\xi_{22}-2\xi_{33})\\
-\sigma_2x_4 &= -(\xi_{11}+\xi_{22}+\xi_{33}-3\xi_{44})\\
-\ldots
-\end{split}
-\end{align}
+x_1 &= -\frac{1}{\sigma_2}\sum_i\zeta_{ii}, \qquad x_n &= -\frac{1}{\sigma_2}\sum_{i=1}^{n-1}\zeta_{ii}-(n-1)\zeta_{nn},\,\, (2\leq n \leq N)
+%\sigma_2x_3 &= -(\xi_{11}+\xi_{22}-2\xi_{33})\\
+%\sigma_2x_4 &= -(\xi_{11}+\xi_{22}+\xi_{33}-3\xi_{44})\\
+%\ldots
+\end{equation}
 %
-$x_1, x_2, x_3, \ldots$ are analogous to BBKS's $x, y, z$. Following BBKS, we introduce $\nu = F/\sigma_0$. With this choice of basis, the nonzero correlations are (from Eq. \ref{corr}) \SH{and $\langle\xi_{ij}^2\rangle$ with $i\neq j$}:
-%
-\begin{gather}
-\langle\nu^2\rangle = 1, \langle x_1^2\rangle=1, \langle x_2^2 \rangle = \langle \xi_{11}^2 -2\xi_{11}\xi_{22} + \xi_{11}^2\rangle = \frac{4}{N(N+2)} \\
-\langle x_3^2 \rangle = \frac{12}{N(N+2)}, \ldots, \langle x_n^2 \rangle = \frac{2n(n-1)}{N(N+2)}.
-\end{gather}
 
-The factor $\alpha K \alpha$ (equivalent to $Q$ in BBKS) in Eq. \ref{ProbDistrib} takes the form \SH{I expect this needs to be quadratic in $\xi_{ij}$. Is the prefactor to that term definitely correct?}
+%\begin{equation}
+%x_1 = \sum_{i=1}^N \lambda_i \, , \qquad x_n = \sum_{i=1}^{n-1} \lambda_i  -(n-1) \lambda_n\, , n\geq 2\, . 
+%\end{equation} 
+
+The $x_n$ here are analogous, but not identical, to BBKS's $x, y, z$. Following BBKS, we also \sh{rescale $V$ and} introduce $\nu = V/\sigma_0$. With this choice of basis, the \sh{new} nonzero correlations are, from equation \eqref{corr}:
+%
+\begin{eqnarray}
+  \langle\nu^2\rangle &=& 1 \nonumber\\
+  \langle x_1^2\rangle&=&1 \\
+  \langle\nu x_1\rangle &=& \gamma \nonumber\\
+  \langle x_n^2 \rangle &=& \frac{2n(n-1)}{N(N+2)},\,\, (2\leq n \leq N) \nonumber
+\end{eqnarray}
+%
+The only non-diagonal correlation left is between $\nu$ and $x_1$.
+
+The $Q$ factor in equation \eqref{MultivariateGaussian} \sh{can now be calculated and} takes the form
 
 \begin{equation} \label{Q}
 \begin{split}
-2Q = \nu^2 + \frac{(x_1-x_*)^2}{1-\gamma^2} + \frac{N(N+2)}{4}x_2^2 + \frac{N(N+2)}{12}x_3^2 + \ldots + \frac{N(N+2)}{2n(n-1)}x_n^2 \\ + \frac{N \pmb{\eta}\cdot \pmb{\eta}}{\sigma_1^2} + \sum_{i,j;i > j}^N\frac{N(N+2)\xi_{ij}}{\sigma_2^2}
+2Q = \nu^2 + \frac{(x_1-\gamma \nu)^2}{1-\gamma^2}+\sum_{n=2}^N\frac{N(N+2)}{2n(n-1)}x_n^2 + \frac{N \pmb{\eta}\cdot \pmb{\eta}}{\sigma_1^2} + \sum_{i,j;i > j}^N\frac{N(N+2)(\zeta_{ij})^2}{\sigma_2^2}
 \end{split}
 \end{equation}
+%
+where $\gamma = \sigma_1^2/(\sigma_2 \sigma_0)$. This is the equivalent of BBKS equation (A4) for $N$-dimensions, \sh{and our slightly different definition of the $x_n$ variables}. Note the first two terms remain constant for all $N$, but the remaining terms vary. The $\eta$ terms are zero at minima by definition.
 
-\noindent where $x_* \equiv \gamma \nu$ \SH{I would just leave it as $\gamma \nu$} and $\gamma = \frac{\sigma_1^2}{\sigma_2 \sigma_0}$. This is the equivalent of BBKS Eq. (A4) for $N$-dimensions. Note the first two terms remain constant for all $N$, but the remaining terms vary. The $\eta$ terms are zero at minima by definition, while the off-diagonal $\xi_{ij}$ terms can be Euler-rotated away by choosing an appropriate set of axes \SH{I don't know what this means.}. The $\xi$ matrix is already symmetric (by rotational symmetry), and Euler rotation turns it diagonal.\cite{Goldstein} The upshot is that the symmetric $\xi$ matrix becomes a diagonal matrix where the individual elements are the eigenvalues $\lambda_i = -\xi_{ii}$ of the Hessian. We are interested in minima, hence we demand all second derivatives to be positive, i.e. all eigenvalues to  \SH{demanding $\lambda$ be positive isolates maxima, doesn't it? - $\xi$ is the actual second derivative and at a minimum the actual second derivative should be positive.} be positive.\footnote{Note there is an alternative convention where all eigenvalues being \emph{negative} corresponds to maxima \SH{I don't think this is true}. Although it can be confusing, it is a simple matter to convert results from one convention to the other; $p(min)$ is simply $1-p(max)$.\SH{This isn't true because some saddles can be neither minimum nor maximum.}} From here, the analysis is exactly the same as BBKS, except that when we define the ordering of the eigenvalues $\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0$, our boundary conditions become $x_1\geq x_N\geq x_{N-1} ... \geq x_2 \geq 0$ because of the different choice of basis. This leads to significantly simpler boundary conditions, for example in 3D our conditions are $x_2 \geq 0, x_2 \leq x_3$, and $x_1 \geq x_3$ \SH{This can be written even more simply} (compare BBKS's equation between Eq. (A14) and Eq. (A15)).
+\SH{I think this bit of the paragraph is not explained well}while the off-diagonal $\zeta_{ij}$ terms can be Euler-rotated away by choosing an appropriate set of axes \SH{I don't know what this means.}. The $\xi$ matrix is already symmetric (by rotational symmetry), and Euler rotation turns it diagonal.\cite{Goldstein}
 
-This yields the following expression for the density of peaks \SH{peaks are maxima}:
+The upshot is that $\zeta$ becomes diagonal and the individual elements of $\zeta$ are the eigenvalues $\lambda_i = -\zeta_{ii}$ of the Hessian. We are interested in minima, hence we demand all second derivatives to be positive, i.e. all eigenvalues to be \sh{negative}.\footnote{Note there is an alternative convention where the eigenvalues \sh{are defined with the opposite sign, in which case} \emph{positive} \sh{eigenvalues} correspond to \sh{minima}} From here, the analysis is exactly the same as BBKS, except that when we define the ordering of the eigenvalues $\lambda_1 \leq \lambda_2 \leq \lambda_3 \ldots \leq 0$, our boundary conditions become $x_1\leq x_N\leq x_{N-1} ... \leq x_2 \leq 0$ because of the different choice of \sh{variables}. This leads to significantly simpler boundary conditions, for example in 3D our conditions are $x_1\leq x_3 \leq x_2 \leq 0$ (compare BBKS's equation between Eq. (A14) and Eq. (A15)).
+
+This yields the following expression for the \sh{number} density of \sh{minima}:
 %
 \begin{equation} \label{DensityOfPeaks}
-N_{peak} = A \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} G \times e^{-Q} d\nu dx dy dz \ldots
+N_{peak} = A \int_{\lambda_1 \leq \lambda_2 \leq \lambda_3 \ldots \leq 0} G \times e^{-Q} d\nu dx_1 dx_2 dx_3 \ldots
 \end{equation}
 %
-\SH{we have no $y$ and $z$}\noindent where $G$ has the form\footnote{$G$ can also be expressed in terms of $x_i$ using the inverse transform of Eq. \ref{BasisTransform}}
+\noindent where $G$ has the form\footnote{$G$ can also be expressed in terms of $x_i$ using the inverse transform of Eq. \ref{BasisTransform}}\SH{We haven't explained at all where $G$ comes from. The rest is self-contained.}
 
 \begin{equation}
 G = \left(\prod_{i}^{N} \lambda_i \right)\left(\prod_{i<j} |\lambda_i-\lambda_j|\right),
 \end{equation} 
 %
-$Q$ is given by Eq. \ref{Q}, $A$ is some constant factor \SH{We should perhaps mention here that we are only ever interested in proportions of minima satisfying certain properties, so we never need to know $A$ because we always divide by the total number of minima and hence $A$ cancels (note $A$ does depend on $N$ and $\gamma$ and even $\sigma_0$ and $\sigma_1$}, and the integration limits are only over the region where the conditions are satisfied. This is a key integral, and evaluating it will be the focus of much of the remainder of this paper.
+$Q$ is given by Eq. \ref{Q}, $A$ is \sh{a} constant factor, and the integration limits are only over the region where the conditions are satisfied. \sh{We extract probabilities from this expression by calculating the proportion of minima satisfying various properties, hence we do not need to determine $A$ explicitly because it cancels when we take ratios to determine proportions.} Evaluating this integral will be the focus of much of the remainder of this paper.
 
 %We will find it convenient to make a further transformation to
 %%
@@ -216,7 +229,7 @@ $Q$ is given by Eq. \ref{Q}, $A$ is some constant factor \SH{We should perhaps m
 %%
 %In these units the relevant region becomes $x_1\geq x_N\geq x_{N-1} ... \geq x_2 \geq 0$.
 
-\re{this above is can be checked for self-consistency and trimmed}
+%\re{this above is can be checked for self-consistency and trimmed}
 
 %\re{{\it can trim / compress/ move this} At this point we will briefly discuss the results obtained by Yamada and Vilenkin \cite{Yamada2018}. They have derived $p(\mathrm{min}|F, s.p.)$, while we are interested in $p(F>0|\mathrm{min})=\int^\infty_0 p(F|\mathrm{min})dF/\int^\infty_{-\infty} p(F|min)dF$. The two are related by $p(F|\mathrm{min})= \frac{p(\mathrm{min}|F, s.p.)p(F|s.p.)}{p(\mathrm{min}|sp)}$\footnote{This result is derived using Bayes theorem, as well as the fact that minima are necessarily stationary points.}.The numerator is independent of $F$, so it cancels. Therefore the two probabilities can be related with knowledge of $p(F|s.p.)$. However, this quantity is not trivial to compute. We have been able to derive an analytical formula for this in 2D (see appendix), but even in 2D the complexity is formidable.}
 
@@ -224,13 +237,13 @@ $Q$ is given by Eq. \ref{Q}, $A$ is some constant factor \SH{We should perhaps m
 
 \section{Peak Probabilities: $V$ and $N$} \label{PeakNumbers}
 
-Our goal  is to evaluate $P(V|min)$ for  Gaussian random landscape potentials, the probability distribution that defines the distribution of vacuum energies at minima in the landscape. We are interested in the probability of finding a minimum above $\nu = 0$ (equivalently, the probability of finding a maximum below $\nu = 0$), i.e. we want to calculate
+Our goal  is to evaluate $P(V|min)$ for  Gaussian random landscape potentials, the probability density that defines the distribution of vacuum energies at minima in the landscape. We are interested in the probability of finding a minimum above $\nu = 0$ (equivalently, the probability of finding a maximum below $\nu = 0$), i.e. we want to calculate
 
 \begin{equation} \label{PminIntegral}
 P(V|min) =  \frac{\int^\infty_0 d\nu \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} G \times e^{-Q} dx_1  \cdots dx_N}{\int^\infty_{-\infty} d\nu \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} G \times e^{-Q} dx_1  \cdots dx_N}
 \end{equation}
 
-This integral depends on the value of $Q$ (Eq. \ref{Q})  and therefore on the moments of the power spectrum $\sigma_0, \sigma_1$,  and $\sigma_2$. We now argue that of these three parameters, only one is physically significant. Given a purely Gaussian landscape we can $\sigma_0=1$ by rescaling $V$ multiplicatively, see Eq. \ref{corr}, and we can thus take $F = \nu$. Likewise, $\sigma_1$ responds to the average magnitude of the first derivatives and can be set to unity by rescaling the units of length. This leaves $\sigma_2$ as the only nontrivial parameter. It can be shown that if $\sigma_0=\sigma_1=1$, $\sigma_2>1$.\footnote{Per Ref. \cite{Yamada2018}, if $\sigma_0\sigma_2 - \sigma_1^2 < 0$, then the probability distribution Eq. \ref{ProbDistrib} cannot be normalized.} In much of what follows we follow BBKS and parameterise the landscape by $\gamma = \frac{\sigma_1^2}{\sigma_2 \sigma_0}=1/\sigma_2$ and the dimensionality $N$,  in the knowledge that $0<\gamma<1$.
+This integral depends on the value of $Q$ (Eq. \ref{Q})  and therefore on the moments of the power spectrum $\sigma_0, \sigma_1$,  and $\sigma_2$. We now argue that of these three parameters, only one is physically significant. Given a purely Gaussian landscape we can $\sigma_0=1$ by rescaling $V$ multiplicatively, see Eq. \ref{corr}, and we can thus take $F = \nu$. Likewise, $\sigma_1$ responds to the average magnitude of the first derivatives and can be set to unity by rescaling the units of length. This leaves $\sigma_2$ as the only nontrivial parameter. It can be shown that if $\sigma_0=\sigma_1=1$, $\sigma_2>1$.\footnote{Per Ref. \cite{Yamada2018}, if $\sigma_0\sigma_2 - \sigma_1^2 < 0$, then the probability density Eq. \ref{ProbDistrib} cannot be normalized.} In much of what follows we follow BBKS and parameterise the landscape by $\gamma = \frac{\sigma_1^2}{\sigma_2 \sigma_0}=1/\sigma_2$ and the dimensionality $N$,  in the knowledge that $0<\gamma<1$.
 
 %The probability $P$ gives the (relative) likelihood of finding a minimum \re{at what point do we start talking about minima, not maxima; we should probably flip it from the start} \lfl{I don't understand, we've been using minimum since the beginning?} with value $F$ and the given values of $x_i$ which will, in turn, determine the eigenvalues of the Hessian at the minimum.  Up to an undetermined overall  constant the probability of obtaining a peak with value $F$ is given thus given by 
 

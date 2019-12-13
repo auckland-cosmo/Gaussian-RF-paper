@@ -41,7 +41,7 @@ Stochastic (or eternal) inflation implies the existence of a multiverse composed
  
 The detailed properties of any possible landscape are almost entirely unknown -- it is still unclear whether any specific stringy construction  realises  the $SU(3) \times SU(2) \times U(1)$ gauge group of the Standard Model.  More recently the Swampland Conjecture suggests that all stable minima of the theory might actually be ``underwater'' \cite{Agrawal2018},  located at negative values of $\Lambda$. If true, this would require that the cosmological dark energy was underpinned by dynamical quintessence-like evolution.  
 
-An alternative approach to   landscape scenarios is to strip them down to their barest essence -- by realising multiverse cosmology within a {\em random\/} multidimensional ($N\sim100$ or more) potential of interacting scalar fields.\footnote{Random is used here in the  context of random function theory \cite{GRF1, GRF2, GRF3}.  We refer to random functions rather than random fields, the nomenclature often seen in the mathematical literature, to avoid confusion with the individual scalar fields that are coupled by the potential.}  In this approach the ``large $N$'' properties of the multidimensional landscape actually provides leverage that can be used to develop an understanding of its properties. The first steps in this direction were taken by Aazami and Easther \cite{Aazami2006}, investigating ensembles of Hessian matrices describing extrema in a random landscape. At  a minimum in the landscape the eigenvalues of the Hessian are all positive. For simple random matrix distributions eigenvalues are likely to be evenly distributed between positive and negative values with fluctuations away from this situation being strongly suppressed at even moderate values of $N$, suggesting that the number of minima is super-exponentially smaller than the number of saddles. However, the individual entries of Hessians matrices of random functions are correlated and therefore not drawn from identical, independent distributions,\cite{Battefeld2012,Easther2016} violating a common premise of \sh{simple} random matrix theory \sh{and making minima more probable}. \sh{\sout{That said,} T}his overall approach has \sh{now} been widely pursued and has \sh{\sout{now}} been extended in a} number of directions \cite{Easther2006, Frazer2011, Henry2009, Marsh2013, Agarwal2011,Yang2012,Masoumi2016,Yamada2018} This line of inquiry has also motivated studies of the properties of random matrices and random functions at large $N$.\cite{Bray2007,Dean2008,Majumdar2009,Bachlechner2014,Battefeld2012,Fyodorov2013,Masoumi2017} Similar mathematical problems arise in statistical mechanics, string theory, and complex dynamics.\cite{Fyodorov2004,Douglas2004,Douglas2006,Fyodorov2007,Fyodorov2012,Fyodorov2018,Ros2019}
+An alternative approach to   landscape scenarios is to strip them down to their barest essence -- by realising multiverse cosmology within a {\em random\/} multidimensional ($N\sim100$ or more) potential of interacting scalar fields.\footnote{Random is used here in the  context of random function theory \cite{GRF1, GRF2, GRF3}.  We refer to random functions rather than random fields, the nomenclature often seen in the mathematical literature, to avoid confusion with the individual scalar fields that are coupled by the potential.}  In this approach the ``large $N$'' properties of the multidimensional landscape actually provides leverage that can be used to develop an understanding of its properties. The first steps in this direction were taken by Aazami and Easther \cite{Aazami2006}, investigating ensembles of Hessian matrices describing extrema in a random landscape. At  a minimum in the landscape the eigenvalues of the Hessian are all positive. For simple random matrix distributions eigenvalues are likely to be evenly distributed between positive and negative values with fluctuations away from this situation being strongly suppressed at even moderate values of $N$, suggesting that the number of minima is super-exponentially smaller than the number of saddles. However, the individual entries of Hessians matrices of random functions are correlated and therefore not drawn from identical, independent distributions,\cite{Battefeld2012,Easther2016} violating a common premise of \sh{simple} random matrix theory \sh{and making minima more probable}. \sh{\sout{That said,} T}his overall approach has \sh{now} been widely pursued and has \sh{\sout{now}} been extended in a number of directions \cite{Easther2006, Frazer2011, Henry2009, Marsh2013, Agarwal2011,Yang2012,Masoumi2016,Yamada2018} This line of inquiry has also motivated studies of the properties of random matrices and random functions at large $N$.\cite{Bray2007,Dean2008,Majumdar2009,Bachlechner2014,Battefeld2012,Fyodorov2013,Masoumi2017} Similar mathematical problems arise in statistical mechanics, string theory, and complex dynamics.\cite{Fyodorov2004,Douglas2004,Douglas2006,Fyodorov2007,Fyodorov2012,Fyodorov2018,Ros2019}
 
 %The theory of inflation is the current best explanation for certain perplexing observations of the Universe, such as the monopole problem, horizon problem, and flatness problem. Inflation is thought to be caused by a scalar field, but the exact nature of this field is shrouded in unknowns. The simplest possibility is a one-dimensional scalar field analogous to the gravitational potential; however multidimensional scalar fields are also possible. In particular, string theory predicts the existence of a highly complex, $O(100)$ dimensional scalar field known as the \emph{landscape}. The string landscape is so complex that quantitative predictions are hard to extract; as a result, most studies of the landscape assume it is a Gaussian random field
 
@@ -156,13 +156,14 @@ A similar analysis holds for the second derivatives \sh{$\zeta_{ij}$}\sh{, which
 \sh{This covariance matrix is far from diagonal. Therefore, instead of using $V$, $\eta$ and $\zeta$ we wish to adopt a basis of variables that is as diagonal as possible. The $\eta_i$ variables are already diagonal, as are the $\zeta_{ij}$ terms with $i\neq j$. The $\zeta_{ii}$ variables are correlated however, and in fact are also correlated to $V$. We look for a set of $N$ linear combinations of these $N$ variables that is diagonal. For this we choose}
 
 %
-\begin{equation}
+\begin{align*}
 \label{BasisTransform}
-x_1 &= -\frac{1}{\sigma_2}\sum_i\zeta_{ii}, \qquad x_n &= -\frac{1}{\sigma_2}\sum_{i=1}^{n-1}\zeta_{ii}-(n-1)\zeta_{nn},\,\, (2\leq n \leq N)
+x_1 &= -\frac{1}{\sigma_2}\sum_i\zeta_{ii} \\
+x_n &= -\frac{1}{\sigma_2}\sum_{i=1}^{n-1}\zeta_{ii}-(n-1)\zeta_{nn},\,\, (2\leq n \leq N)
 %\sigma_2x_3 &= -(\xi_{11}+\xi_{22}-2\xi_{33})\\
 %\sigma_2x_4 &= -(\xi_{11}+\xi_{22}+\xi_{33}-3\xi_{44})\\
 %\ldots
-\end{equation}
+\end{align*}
 %
 
 %\begin{equation}
@@ -178,7 +179,7 @@ The $x_n$ here are analogous, but not identical, to BBKS's $x, y, z$. Following 
   \langle x_n^2 \rangle &=& \frac{2n(n-1)}{N(N+2)},\,\, (2\leq n \leq N) \nonumber
 \end{eqnarray}
 %
-The only non-diagonal correlation left is between $\nu$ and $x_1$.
+\noindent where $\gamma = \sigma_1^2/(\sigma_2 \sigma_0)$. The only non-diagonal correlation left is between $\nu$ and $x_1$.
 
 The $Q$ factor in equation \eqref{MultivariateGaussian} \sh{can now be calculated and} takes the form
 
@@ -188,7 +189,8 @@ The $Q$ factor in equation \eqref{MultivariateGaussian} \sh{can now be calculate
 \end{split}
 \end{equation}
 %
-where $\gamma = \sigma_1^2/(\sigma_2 \sigma_0)$. This is the equivalent of BBKS equation (A4) for $N$-dimensions, \sh{and our slightly different definition of the $x_n$ variables}. Note the first two terms remain constant for all $N$, but the remaining terms vary. The $\eta$ terms are zero at minima by definition.
+
+This is the equivalent of BBKS equation (A4) for $N$-dimensions, \sh{and our slightly different definition of the $x_n$ variables}. Note the first two terms remain constant for all $N$, but the remaining terms vary. The $\eta$ terms are zero at minima by definition.
 
 \SH{I think this bit of the paragraph is not explained well}while the off-diagonal $\zeta_{ij}$ terms can be Euler-rotated away by choosing an appropriate set of axes \SH{I don't know what this means.}. The $\xi$ matrix is already symmetric (by rotational symmetry), and Euler rotation turns it diagonal.\cite{Goldstein}
 

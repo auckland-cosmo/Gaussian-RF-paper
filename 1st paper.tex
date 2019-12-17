@@ -156,14 +156,14 @@ A similar analysis holds for the second derivatives \sh{$\zeta_{ij}$}\sh{, which
 \sh{This covariance matrix is far from diagonal. Therefore, instead of using $V$, $\eta$ and $\zeta$ we wish to adopt a basis of variables that is as diagonal as possible. The $\eta_i$ variables are already diagonal, as are the $\zeta_{ij}$ terms with $i\neq j$. The $\zeta_{ii}$ variables are correlated however, and in fact are also correlated to $V$. We look for a set of $N$ linear combinations of these $N$ variables that is diagonal. For this we choose}
 
 %
-\begin{align*}
+\begin{align}
 \label{BasisTransform}
-x_1 &= -\frac{1}{\sigma_2}\sum_i\zeta_{ii} \\
+x_1 &= -\frac{1}{\sigma_2}\sum_i\zeta_{ii} \nonumber \\
 x_n &= -\frac{1}{\sigma_2}\sum_{i=1}^{n-1}\zeta_{ii}-(n-1)\zeta_{nn},\,\, (2\leq n \leq N)
 %\sigma_2x_3 &= -(\xi_{11}+\xi_{22}-2\xi_{33})\\
 %\sigma_2x_4 &= -(\xi_{11}+\xi_{22}+\xi_{33}-3\xi_{44})\\
 %\ldots
-\end{align*}
+\end{align}
 %
 
 %\begin{equation}
@@ -194,7 +194,7 @@ This is the equivalent of BBKS equation (A4) for $N$-dimensions, \sh{and our sli
 
 \sh{Via equations \eqref{Q} and \eqref{MultivariateGaussian} we have, in as diagonal a form as possible, the full probability density function for the function, $V$, and its first two derivatives at an arbitrary point in field space. We are interested in finding probabilities about the \emph{minima} of $V$. The probability that an arbitrary point is a minima is vanishing. Therefore, we must instead examine the \emph{number density} of minima instead. To do this we first need the number density of extrema (i.e. points where $\eta=0$), which we then restrict to minima.}
 
-\sh{The process of converting the probability density into a number density of extrema is well described in 3D in BBKS \cite{BBKS} (section III a). The only difference for us is that BBKS had a field $F$ that exists in physical space ${\bf r}$, whereas we have a function $V$ existing in an $N$-dimensional field space, $\phi$. Otherwise it is the same and we get} \SH{We could reproduce it if we want, it seems a bit weird to reproduce everything above and then not reproduce this, but this doesn't change for ND vs 3D.}
+\sh{The process of converting the probability density into a number density of extrema is well described in 3D in BBKS \cite{BBKS} (section III a). The only difference for us is that BBKS had a field $F$ that exists in a 3D physical space ${\bf r}$, whereas we have a function $V$ existing in an $N$-dimensional field space, $\phi$. Otherwise it is the same and we get} \SH{We could reproduce the working in BBKS if we want, it seems a bit weird to reproduce everything above and then not reproduce this, but this doesn't change for ND vs 3D.}
 
 \begin{equation}
 n_{\rm ext}(\phi) \,\,{\rm d}^N \phi= |{\rm det}\,\, \zeta(\phi)| \delta^{(N)}\left[ \eta(\phi)\right] {\rm d}^N \phi.
@@ -204,30 +204,35 @@ n_{\rm ext}(\phi) \,\,{\rm d}^N \phi= |{\rm det}\,\, \zeta(\phi)| \delta^{(N)}\l
 \begin{equation}
 \langle n_{\rm ext}(\phi)  \rangle= \int |{\rm det}\,\, \zeta(\phi)| P(V,\eta=0,\zeta)dV d\zeta
 \end{equation}
-\sh{where, for notational convenience we have dropped the ${\rm d}^N \phi$ from each side.}
+\sh{where for notational convenience we have dropped the ${\rm d}^N \phi$ from each side.}
 
-\sh{Finally, we need to restrict this integral to consider only the extema that are also local minima. It is easiest to do this by considering the eigenvalues, $\lambda_i$ of the Hessian $-\zeta$ and restricting them to be negative.\footnote{Note there is an alternative convention where the eigenvalues \sh{are defined with the opposite sign, in which case} \emph{positive} \sh{eigenvalues} correspond to \sh{minima}}}
+\sh{Finally, we need to restrict this integral to consider only the extrema that are also local minima. It is easiest to do this by considering the eigenvalues, $\lambda_i$ of the Hessian $-\zeta$\SH{What convention do we want to use here for the sign?} and restricting them to be negative.\footnote{Note there is an alternative convention where the eigenvalues \sh{are defined with the opposite sign, in which case} \emph{positive} \sh{eigenvalues} correspond to \sh{minima}} For $\zeta$ expressed in an arbitrary field-space basis, this condition would create a nightmare boundary in the $(N^2+N)/2$ different components of $\zeta$. Therefore it is much easier to rotate the field-space so that $\zeta$ is diagonal, with the diagonal elements being the set of $\lambda_i$. The new set of variables then becomes the $N$ eigenvalues $\lambda_i$ and the $(N^2-N)/2$ angles required to do the full rotation of all the field-space axes. Once this rotation is done, many simplifications occur: $\zeta_{ii}=-\lambda_i$, $\zeta_{ij}=0$ and $|{\rm det} \zeta| = \prod_i |\lambda_i|$.}
+
+\sh{One final complication arises, which is the transformation of the $(N^2+N)/2$ components in the integral measure $d\zeta$ into the new basis of $\lambda_i$ and the rotation angles. In 2D and 3D the rotation can be found explicitly and the Jacobian of the transformation matrix yields $d \zeta = \prod_{i \neq j}^N |\lambda_i - \lambda_j|(\prod_k d\lambda_k) d \Omega$. Here ``$d\Omega$'' represents the $(N^2-N)/2$-dimensional integral measure of the set of rotation angles. The same result holds in $N$ dimensions. A proof of this result in $N$ dimensions is present in \cite{Easther2016}.\footnote{\sh{The proof in \cite{Easther2016} is based on the 3D proof in BBKS and corrects a typo in that proof. Unfortunately it introduces some new typos, but the proof itself is robust.}} The function $V$ and its derivatives are statistically isotropic. Therefore each set of rotation angles is as probable as any other. And therefore the integral over all the rotation angles must give just a constant.}
 
 
 
 
-\SH{I think this bit of the paragraph is not explained well}while the off-diagonal $\zeta_{ij}$ terms can be Euler-rotated away by choosing an appropriate set of axes \SH{I don't know what this means.}. The $\xi$ matrix is already symmetric (by rotational symmetry), and Euler rotation turns it diagonal.\cite{Goldstein}
+%\SH{I think this bit of the paragraph is not explained well}while the off-diagonal $\zeta_{ij}$ terms can be Euler-rotated away by choosing an appropriate set of axes \SH{I don't know what this means.}. The $\xi$ matrix is already symmetric (by rotational symmetry), and Euler rotation turns it diagonal.\cite{Goldstein}
 
-The upshot is that $\zeta$ becomes diagonal and the individual elements of $\zeta$ are the eigenvalues $\lambda_i = -\zeta_{ii}$ of the Hessian. We are interested in minima, hence we demand all second derivatives to be positive, i.e. all eigenvalues to be \sh{negative}.\footnote{Note there is an alternative convention where the eigenvalues \sh{are defined with the opposite sign, in which case} \emph{positive} \sh{eigenvalues} correspond to \sh{minima}} From here, the analysis is exactly the same as BBKS, except that when we define the ordering of the eigenvalues $\lambda_1 \leq \lambda_2 \leq \lambda_3 \ldots \leq 0$, our boundary conditions become $x_1\leq x_N\leq x_{N-1} ... \leq x_2 \leq 0$ because of the different choice of \sh{variables}. This leads to significantly simpler boundary conditions, for example in 3D our conditions are $x_1\leq x_3 \leq x_2 \leq 0$ (compare BBKS's equation between Eq. (A14) and Eq. (A15)).
+%The upshot is that $\zeta$ becomes diagonal and the individual elements of $\zeta$ are the eigenvalues $\lambda_i = -\zeta_{ii}$ of the Hessian. We are interested in minima, hence we demand all second derivatives to be positive, i.e. all eigenvalues to be \sh{negative}.\footnote{Note there is an alternative convention where the eigenvalues \sh{are defined with the opposite sign, in which case} \emph{positive} \sh{eigenvalues} correspond to \sh{minima}}
+\SH{It could be better to only introduce $x_n$ now? I feel lazy, so suggest no.}
 
-This yields the following expression for the \sh{number} density of \sh{minima}:
+\sh{\sout{From here, the analysis is exactly the same as BBKS, except that when} We have all the ingredients we now need, but we take one last step which is to enforce an ordering of the eigenvalues. This avoids having a multimodal integrand and allows us to ask questions about, e.g. the smallest or largest eigenvalue.} We define the ordering of the eigenvalues \sh{as} $\lambda_1 \leq \lambda_2 \leq \lambda_3 \ldots \leq 0$ \sh{so} our boundary conditions become $x_1\leq x_N\leq x_{N-1} ... \leq x_2 \leq 0$ \sh{\sout{because of the different choice of \sh{variables}}}. This leads to significantly simpler boundary conditions \sh{than earlier choices for diagonalising the covariance matrix}, for example in 3D our conditions are $x_1\leq x_3 \leq x_2 \leq 0$ (compare BBKS's equation between Eq. (A14) and Eq. (A15)).\SH{Do we want to relabel $x_1$ as $x_N$ instead, to make this ordering more sensible looking? I vote yes.}
+
+This yields the following expression for the \sh{expected number} density of \sh{minima (the Jacobian of the transformation between $\lambda_i$ and $x_n$ is just a constant factor)}:
 %
 \begin{equation} \label{DensityOfPeaks}
-N_{{\rm min}} = A \int_{\lambda_1 \leq \lambda_2 \leq \lambda_3 \ldots \leq 0} G \times e^{-Q} d\nu dx_1 dx_2 dx_3 \ldots
+\sh{\langle n_{{\rm min}} \rangle} = A \int_{\lambda_1 \leq \lambda_2 \leq \lambda_3 \ldots \leq 0} G \times e^{-Q} d\nu \sh{\left(\prod_n dx_n\right)}
 \end{equation}
 %
-\noindent where $G$ has the form\footnote{$G$ can also be expressed in terms of $x_i$ using the inverse transform of Eq. \ref{BasisTransform}}\SH{We haven't explained at all where $G$ comes from. The rest is self-contained.}
+\noindent where $G$ has the form\footnote{$G$ can also be expressed in terms of $x_n$ using the inverse transform of Eq. \ref{BasisTransform}.}
 
 \begin{equation}
 G = \left(\prod_{i}^{N} \lambda_i \right)\left(\prod_{i<j} |\lambda_i-\lambda_j|\right),
 \end{equation} 
 %
-$Q$ is given by Eq. \ref{Q}, $A$ is \sh{a} constant factor, and the integration limits are only over the region where the conditions are satisfied. \sh{We extract probabilities from this expression by calculating the proportion of minima satisfying various properties, hence we do not need to determine $A$ explicitly because it cancels when we take ratios to determine proportions.} Evaluating this integral will be the focus of much of the remainder of this paper.
+$Q$ is given by Eq. \ref{Q} \sh{and} $A$ is \sh{a} constant factor\sh{\sout{, and the integration limits are only over the region where the conditions are satisfied}}. \sh{We extract probabilities from this expression by calculating the proportion of minima satisfying various properties, hence we do not need to determine $A$ explicitly because it cancels when we take ratios to determine proportions.} Evaluating this integral will be the focus of \sh{\sout{much} most} of the remainder of this paper.
 
 %We will find it convenient to make a further transformation to
 %%

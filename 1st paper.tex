@@ -190,7 +190,26 @@ The $Q$ factor in equation \eqref{MultivariateGaussian} \sh{can now be calculate
 \end{equation}
 %
 
-This is the equivalent of BBKS equation (A4) for $N$-dimensions, \sh{and our slightly different definition of the $x_n$ variables}. Note the first two terms remain constant for all $N$, but the remaining terms vary. The $\eta$ terms are zero at minima by definition.
+This is the equivalent of BBKS equation (A4) for $N$-dimensions, \sh{and our slightly different definition of the $x_n$ variables}. Note the first two terms remain constant for all $N$, but the remaining terms vary. \sh{\sout{The $\eta$ terms are zero at minima by definition.}}
+
+\sh{Via equations \eqref{Q} and \eqref{MultivariateGaussian} we have, in as diagonal a form as possible, the full probability density function for the function, $V$, and its first two derivatives at an arbitrary point in field space. We are interested in finding probabilities about the \emph{minima} of $V$. The probability that an arbitrary point is a minima is vanishing. Therefore, we must instead examine the \emph{number density} of minima instead. To do this we first need the number density of extrema (i.e. points where $\eta=0$), which we then restrict to minima.}
+
+\sh{The process of converting the probability density into a number density of extrema is well described in 3D in BBKS \cite{BBKS} (section III a). The only difference for us is that BBKS had a field $F$ that exists in physical space ${\bf r}$, whereas we have a function $V$ existing in an $N$-dimensional field space, $\phi$. Otherwise it is the same and we get} \SH{We could reproduce it if we want, it seems a bit weird to reproduce everything above and then not reproduce this, but this doesn't change for ND vs 3D.}
+
+\begin{equation}
+n_{\rm ext}(\phi) \,\,{\rm d}^N \phi= |{\rm det}\,\, \zeta(\phi)| \delta^{(N)}\left[ \eta(\phi)\right] {\rm d}^N \phi.
+\end{equation}
+%
+\sh{The number density of extrema, $n_{\rm ext}(\phi)$, is itself a random variable. For an actual realisation of the function it can and would vary in field space. It would be interesting for future work to study this variable and to construct the probability of minima from it directly; however it is customary to simplify things and work only with the \emph{expected} number density, which is simply the ensemble average of this variable, i.e.}
+\begin{equation}
+\langle n_{\rm ext}(\phi)  \rangle= \int |{\rm det}\,\, \zeta(\phi)| P(V,\eta=0,\zeta)dV d\zeta
+\end{equation}
+\sh{where, for notational convenience we have dropped the ${\rm d}^N \phi$ from each side.}
+
+\sh{Finally, we need to restrict this integral to consider only the extema that are also local minima. It is easiest to do this by considering the eigenvalues, $\lambda_i$ of the Hessian $-\zeta$ and restricting them to be negative.\footnote{Note there is an alternative convention where the eigenvalues \sh{are defined with the opposite sign, in which case} \emph{positive} \sh{eigenvalues} correspond to \sh{minima}}}
+
+
+
 
 \SH{I think this bit of the paragraph is not explained well}while the off-diagonal $\zeta_{ij}$ terms can be Euler-rotated away by choosing an appropriate set of axes \SH{I don't know what this means.}. The $\xi$ matrix is already symmetric (by rotational symmetry), and Euler rotation turns it diagonal.\cite{Goldstein}
 
@@ -199,7 +218,7 @@ The upshot is that $\zeta$ becomes diagonal and the individual elements of $\zet
 This yields the following expression for the \sh{number} density of \sh{minima}:
 %
 \begin{equation} \label{DensityOfPeaks}
-N_{peak} = A \int_{\lambda_1 \leq \lambda_2 \leq \lambda_3 \ldots \leq 0} G \times e^{-Q} d\nu dx_1 dx_2 dx_3 \ldots
+N_{{\rm min}} = A \int_{\lambda_1 \leq \lambda_2 \leq \lambda_3 \ldots \leq 0} G \times e^{-Q} d\nu dx_1 dx_2 dx_3 \ldots
 \end{equation}
 %
 \noindent where $G$ has the form\footnote{$G$ can also be expressed in terms of $x_i$ using the inverse transform of Eq. \ref{BasisTransform}}\SH{We haven't explained at all where $G$ comes from. The rest is self-contained.}

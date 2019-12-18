@@ -262,14 +262,14 @@ $Q$ is given by Eq. \ref{Q} \sh{and} $A$ is \sh{a} constant factor\sh{\sout{, an
 
 
 \section{Peak Probabilities: $V$ and $N$} \label{PeakNumbers}
-
-Our goal  is to evaluate $P(V|min)$ for  Gaussian random landscape potentials, the probability density that defines the distribution of vacuum energies at minima in the landscape. We are interested in the probability of finding a minimum above $\nu = 0$ (equivalently, the probability of finding a maximum below $\nu = 0$), i.e. we want to calculate
+\SH{remember the assumption that $\langle V\rangle = 0$, which changes the zero for the integral}
+Our goal  is to evaluate $P(V|{\rm min})$ for  Gaussian random landscape potentials, the probability density that defines the distribution of vacuum energies at minima in the landscape. We are interested in the probability of finding a minimum above $\nu = 0$ \sh{\sout{(equivalently, the probability of finding a maximum below $\nu = 0$)}}, i.e. we want to calculate\SH{mention why this is an approximate probability (via it being a proportion)}
 
 \begin{equation} \label{PminIntegral}
-P(V|min) =  \frac{\int^\infty_0 d\nu \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} G \times e^{-Q} dx_1  \cdots dx_N}{\int^\infty_{-\infty} d\nu \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} G \times e^{-Q} dx_1  \cdots dx_N}
+P(V>0|{\rm min}) =  \frac{\int^\infty_0 d\nu \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} G \times e^{-Q} dx_1  \cdots dx_N}{\int^\infty_{-\infty} d\nu \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} G \times e^{-Q} dx_1  \cdots dx_N}
 \end{equation}
 
-This integral depends on the value of $Q$ (Eq. \ref{Q})  and therefore on the moments of the power spectrum $\sigma_0, \sigma_1$,  and $\sigma_2$. We now argue that of these three parameters, only one is physically significant. Given a purely Gaussian landscape we can $\sigma_0=1$ by rescaling $V$ multiplicatively, see Eq. \ref{corr}, and we can thus take $F = \nu$. Likewise, $\sigma_1$ responds to the average magnitude of the first derivatives and can be set to unity by rescaling the units of length. This leaves $\sigma_2$ as the only nontrivial parameter. It can be shown that if $\sigma_0=\sigma_1=1$, $\sigma_2>1$.\footnote{Per Ref. \cite{Yamada2018}, if $\sigma_0\sigma_2 - \sigma_1^2 < 0$, then the probability density Eq. \ref{ProbDistrib} cannot be normalized.} In much of what follows we follow BBKS and parameterise the landscape by $\gamma = \frac{\sigma_1^2}{\sigma_2 \sigma_0}=1/\sigma_2$ and the dimensionality $N$,  in the knowledge that $0<\gamma<1$.
+This integral depends on the value of $Q$ (Eq. \ref{Q})  and therefore on the moments of the power spectrum $\sigma_0, \sigma_1$,  and $\sigma_2$. We now argue that of these three parameters, only one is physically significant.\SH{Do we need this? Also, only one is statistically significant, but they're all physically significant once you want to extract an answer with units} Given a purely Gaussian landscape we can $\sigma_0=1$ by rescaling $V$ multiplicatively, see Eq. \ref{corr}, and we can thus take $V = \nu$. Likewise, $\sigma_1$ responds to the average magnitude of the first derivatives and can be set to unity by rescaling the units of length. This leaves $\sigma_2$ as the only nontrivial parameter. It can be shown that if $\sigma_0=\sigma_1=1$, $\sigma_2>1$.\footnote{Per Ref. \cite{Yamada2018}, if $\sigma_0\sigma_2 - \sigma_1^2 < 0$, then the probability density Eq. \ref{MultivariateGaussian} cannot be normalized.} In much of what follows we follow BBKS and parameterise the landscape by $\gamma = \frac{\sigma_1^2}{\sigma_2 \sigma_0}=1/\sigma_2$ and the dimensionality $N$,  in the knowledge that $0<\gamma<1$.
 
 %The probability $P$ gives the (relative) likelihood of finding a minimum \re{at what point do we start talking about minima, not maxima; we should probably flip it from the start} \lfl{I don't understand, we've been using minimum since the beginning?} with value $F$ and the given values of $x_i$ which will, in turn, determine the eigenvalues of the Hessian at the minimum.  Up to an undetermined overall  constant the probability of obtaining a peak with value $F$ is given thus given by 
 
@@ -282,7 +282,7 @@ This integral depends on the value of $Q$ (Eq. \ref{Q})  and therefore on the mo
 
 
 \subsection{Landscape Heuristics}
-
+\SH{Need to change $F$ to $V$ throughout}
 \begin{figure}
   \centering
   
@@ -293,13 +293,13 @@ This integral depends on the value of $Q$ (Eq. \ref{Q})  and therefore on the mo
   \label{examples1}
 \end{figure}
 
-We begin by making a qualitative exploration of the overall ``likelihood''. Firstly, we note that the integrand vanishes when any two ``adjacent'' $\lambda_i$ become equal, enforcing an ``eigenvalue repulsion'' in the Hessian matrices for the maxima and minima. This implies that a generic minima will be asymmetric, as their Hessians will have well separated eigenvalues.   
+We begin by making a qualitative exploration of the overall ``likelihood''.\SH{``likelihood''} Firstly, we note that the integrand vanishes when any two ``adjacent'' $\lambda_i$ become equal, enforcing an ``eigenvalue repulsion'' in the Hessian matrices for the maxima and minima. This implies that a generic minima will be asymmetric, as their Hessians will have well separated eigenvalues.   
 
-Secondly,  looking at Eq.~\ref{Q} we see that if $\gamma$ is close to unity,  the second term in $Q$ becomes very large, making the integrand a steeper function of the $x_i$ Conversely, if   $\gamma$ is small, $\nu$ can take larger values without dominating $Q$.  At larger values of $\gamma$ the power spectrum is effectively ``red'' and the random function is dominated by longer wavelength modes. By constrast, when $\gamma$ is small the spectrum is ``blue'' and dominated by shorter modes. In this case, it is more likely that extrema will be found at positive values of $\nu$. This behaviour is sketched in Fig~\ref{examples1} for illustrative one dimensional examples. 
+Secondly,  looking at Eq.~\ref{Q} we see that if $\gamma$ is close to unity,  the second term in $Q$ becomes very large, making the integrand a steeper function of the $x_n$. Conversely, if   $\gamma$ is small, $\nu$ can take larger values without dominating $Q$.  At larger values of $\gamma$ the power spectrum is effectively ``red'' and the random function is dominated by longer wavelength modes. By constrast, when $\gamma$ is small the spectrum is ``blue'' and dominated by shorter modes.\SH{I don't think this is true. changes in $\gamma$ are to do with the bandwith of the power spectrum, not whether it is red or blue. the conclusions are fine though, maybe make a point about the signs of the $\nu$ and $x$ terms in $Q$ though to avoid confusion.} In this case, it is more likely that extrema will be found at positive values of $\nu$. This behaviour is sketched in Fig~\ref{examples1} for illustrative one dimensional examples. 
 
-Thirdly, as $N$ increases $Q$ will always grow, making it less likely to find minima and maxima on the ``wrong'' side of zero.
+Thirdly, as $N$ increases $Q$ will always grow, making it less likely to find minima and maxima on the ``wrong'' side of zero.\SH{i think this is confused.}
 
-Finally, because we are interested in the regimes $\nu = 0 \ldots \infty$ and $\nu = -\infty \ldots \infty$, we can simplify the integral Eq. \ref{PminIntegral} by performing the $\nu$ integral analytically. The only dependence in the integrand on $\nu$ is in the first two terms of $Q$, which further remains the same for all $N$:
+Finally, because we are interested in the regimes $\nu = 0 \ldots \infty$ and $\nu = -\infty \ldots \infty$, we can simplify the integral Eq. \ref{PminIntegral} by performing the $\nu$ integral analytically. The only dependence in the integrand on $\nu$ is in the first two terms of $Q$, which further remains the same for all $N$:\SH{We could probably have fewer lines of working here. Also the $f$ function doesn't depend on $x_1$ and $x$ is written instead of $x_1$. We can also simplify notation of the measure product term.}
 
 \begin{equation}
 \begin{split}
@@ -333,11 +333,11 @@ Although these analytic integrals are not always usable in what follows, when th
 \begin{figure}
   \centering
     \includegraphics[width=\linewidth]{PVaryingWithN.png}
-  \caption{A plot showing the value of $P(F>0|min)$ as a function of $N$ with $N\le10$, for $\gamma$ values $\frac{1}{5}, \frac{1}{3.5}$ and $\frac{1}{2}$ from top to bottom.}
+  \caption{A plot showing the value of $P(F>0|{\rm min})$ as a function of $N$ with $N\le10$, for $\gamma$ values $\frac{1}{5}, \frac{1}{3.5}$ and $\frac{1}{2}$ from top to bottom.}
   \label{gamma}
 \end{figure}
 
-For relatively small values of $N$ we can compute the integrals without any further approximations.   In Figs.~\ref{N6} and \ref{gamma}, we present $P(F>0|min)$ as a function of $N$ and $\gamma$. As expected, if the potential is highly oscillatory ($\sigma_2$ large, or $\gamma$ small), $P(F>0|min)$  tends towards 0.5 --  an equal likelihood of any given extremum being a maximum or a minimum. Conversely, if the potential is very smooth ($\sigma_2$ small; $\gamma$ very large), $P(F>0|min)$  tends towards 0. Moreover, for any given $\gamma$, $P(F>0|min)$ decreases with increasing $N$. 
+For relatively small values of $N$ we can compute the integrals without any further approximations.   In Figs.~\ref{N6} and \ref{gamma}, we present $P(F>0|{\rm min})$ as a function of $N$ and $\gamma$. As expected, if the potential is highly oscillatory ($\sigma_2$ large, or $\gamma$ small)\SH{I'd prefer we just stick to $\gamma$}, $P(F>0|{\rm min})$  tends towards 0.5 --  an equal likelihood of any given extremum being a maximum or a minimum\SH{I think this is wrong, or at least confusing}. Conversely, if the potential is very smooth ($\sigma_2$ small; $\gamma$ very large)\SH{just $\gamma$}, $P(F>0|{\rm min})$  tends towards 0. Moreover, for any given $\gamma$, $P(F>0|{\rm min})$ decreases with increasing $N$. 
  
 %\begin{table}[h!] \label{Data}
 %  \begin{center}
@@ -388,8 +388,9 @@ For relatively small values of $N$ we can compute the integrals without any furt
 %As can be seen, the probability that a given minimum has $\phi > 0$ decreases with increasing $N$. For a constant $\sigma_0$ and $\sigma_1$, the probability also decreases for increasing $\sigma_2$. Both of these general trends are to be expected: as $N$ increases, there are more conditions that must be simultaneously met for a point to be a minimum, hence the probability decreases. Also, since $\sigma_2$ is the average of the second derivative of the function, as $\sigma_2$ increases the function gets more and more turbulent. This means there are both more maxima and more minima, and the probability increases.
 
 \subsection{$10 < N < \sim30$: Gaussian Approximations to the Integral}
-For $N>10$, direct calculation becomes very resource-intensive. To proceed, we first select a value of the field $\nu$, then find the values of $x_1, x_2 \ldots$ that maximizes the integral in in Eq. \ref{DensityOfPeaks}. We then approximate the integral as a Gaussian integral about this maximum likelihood point:
+For $N>10$, direct calculation becomes very resource-intensive. To proceed, we \sh{instead} first select a value of the field $\nu$\SH{I think we inste4ad use the full $\vu$ integral here, right?}, then find the values of $x_1, x_2 \ldots$ that maximizes the integrand in Eq. \ref{DensityOfPeaks}. We then approximate the integrand as a Gaussian about this maximum likelihood point:\
 
+\SH{Still has $x,y,z$. Also can make explicit that we've done the $\nu$ integral for the denominator, but not the numerator. Also maybe clarify that full pdf isn't Gaussian due to ``G'' function. should we call it $F$ seeing as we don't use $F$ for field? It is $F$ below, but $G$ earlier}
 \begin{align*}
 \begin{split}
 N &= A \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} F \times e^{-Q} dx dy dz \ldots \\
@@ -398,13 +399,13 @@ N &= A \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} F \times e^{
 \end{split}
 \end{align*}
 
-\noindent where $H$ is the Hessian at the point being considered, and we no longer have an integral over $\nu$. This produces a list of points for each value of $\nu$. Fitting these points to a function and integrating that for the region with $\nu > 0$, we get an approximate result of the integral. \lfl{I feel like there's a more technical term for this, don't know what though.} This approximate value can then be compared against the exact value. The Gaussian approximation turns out to be very good (see Fig. \ref{Comparison}). The Gaussian integral can be more efficiently computed than Eq. \ref{DensityOfPeaks}, which lets us evaluate it up to $N\approx30$.
+\noindent where $H$ is the Hessian at the point being considered, and we no longer have an integral over $\nu$ \SH{clarify that it is the Hessian with respect to the integrand variables, not the field-space}. This produces a list of points for each value of $\nu$. Fitting these points to a function and integrating that for the region with $\nu > 0$, we get an approximate result of the integral.\SH{Why fit to a function and not just integrate directly? I think I've been told this before, but I've forgotten} \lfl{I feel like there's a more technical term for this, don't know what though.} This approximate value can then be compared against the exact value. The Gaussian approximation turns out to be very good (see Fig. \ref{Comparison}).\SH{we should move this figure to here where we examine it. Also, do we want to also show the even \emph{better} result when we look at the ratios? Or has figure 5 already done this? Also, we could include here the comparison to $(N-1)^\alpha$ to show we understand why the gaussian approximation misses. I think we could do with a more thorough examination of when/where this approximation works and where it doesn't, as a function of $N$ and $\gamma$.}} The Gaussian integral can be more efficiently computed than Eq. \ref{DensityOfPeaks}, which lets us evaluate it up to $N\approx30$.
 
-The plot of the logarithms of these results against the number of dimensions is surprisingly straight (Fig. \ref{PVaryingWithNGaussian}). Although it is not conclusive,\footnote{Per Figure 4 of \cite{Yamada2018}, it is possible the behavior of the function changes at $N >100$.} it is suggestive.
+The plot of the logarithms of these results against the number of dimensions is surprisingly straight (Fig. \ref{PVaryingWithNGaussian}). Although it is not conclusive,\footnote{Per Figure 4 of \cite{Yamada2018}, it is possible the behavior of the function changes at $N >100$.} it is suggestive.\SH{This figure should be moved up to here too. Can we overplot the results for the exact integral to show how well they match? Need to change $F$ to $V$ in figures.}
 
 \subsection{$\sim 30 < N < \sim100$: Approximations using the $\nu=0$ point}
 
-The Gaussian approximation described in the previous subsection requires the integral to be computed for several different values of $\nu$. If we use only the result at the $\nu=0$ point, we get a result that is much larger than the exact results, but it remains at a nearly-constant ratio to it (see Fig. \ref{sigma2=2v=0}). Using this, we confirm that the straight line behavior holds up to $N = 100$.
+The Gaussian approximation described in the previous subsection requires the integral to be computed for several different values of $\nu$. If we use only the result at the $\nu=0$ point, we get a result that is much larger than the exact results, but it remains at a nearly-constant ratio to it (see Fig. \ref{sigma2=2v=0})\SH{We can predict this ratio, and I think we should plot the ``corrected'' value for the approximation. I think we should also have a plot like the above, but for a few values of $\gamma$ and we should include comparisons of all three methods on it.}. Using this, we confirm that the straight line behavior holds up to $N = 100$.
 
 \begin{figure} 
   \centering
@@ -413,7 +414,7 @@ The Gaussian approximation described in the previous subsection requires the int
   \label{sigma2=2v=0}
 \end{figure}
 
-Based on these calculations, we conclude that the value of $\sigma_2$ for which $P(F>0|min)$ drops to $\sim 10^{-500}$ at $N = 100$ is about $1.08$. In other words, there will be plenty of minima in the landscape that could correspond to our universe if the landscape has $\sigma_2 \gtrapprox 1.08$ (with $\sigma_0$ and $\sigma_1$ normalized to 1).
+\SH{change to $\gamma?$}Based on these calculations, we conclude that the value of $\sigma_2$ for which $P(F>0|{\rm min})$ drops to $\sim 10^{-500}$ at $N = 100$ is about $1.08$. In other words, there will be plenty of minima in the landscape that could correspond to our universe if the landscape has $\sigma_2 \gtrapprox 1.08$ (with $\sigma_0$ and $\sigma_1$ normalized to 1).
 
 \begin{figure} 
   \centering
@@ -425,7 +426,7 @@ Based on these calculations, we conclude that the value of $\sigma_2$ for which 
 \begin{figure} 
   \centering
   \includegraphics[width=\linewidth]{PVaryingWithNGaussian.png}
-  \caption{(Left) The probability of a minimum above $\nu=0$, calculated using the Gaussian approximation. The lines correspond to $\gamma = \frac{1}{10}, \frac{1}{5}, \frac{1}{3.5}, \frac{1}{2.5}$ respectively from top to bottom. Compare Fig. \ref{gamma}. (Right) The same data, plotted using a different y-axis ($Log$ here is to base 10). All four lines yield a logarithm well above $-500$ at $N=100$. The cutoff at which $p(F>0|min) \sim 10^{-500}$, with $\sigma_0$ and $\sigma_1$ normalized to 1,  is $\sigma_2 \approx 1.08$.}
+  \caption{(Left) The probability of a minimum above $\nu=0$, calculated using the Gaussian approximation. The lines correspond to $\gamma = \frac{1}{10}, \frac{1}{5}, \frac{1}{3.5}, \frac{1}{2.5}$ respectively from top to bottom. Compare Fig. \ref{gamma}. (Right) The same data, plotted using a different y-axis ($Log$ here is to base 10). All four lines yield a logarithm well above $-500$ at $N=100$. The cutoff at which $p(F>0|{\rm min}) \sim 10^{-500}$, with $\sigma_0$ and $\sigma_1$ normalized to 1,  is $\sigma_2 \approx 1.08$.}
   \label{PVaryingWithNGaussian}
 \end{figure}
 
@@ -453,12 +454,23 @@ Based on these calculations, we conclude that the value of $\sigma_2$ for which 
 
 \section{Implications for Multiverse Cosmology}
 
+\SH{I think a section like this would be nice... everything up to now is an explanation of why we should trust our $P(V>0|{\rm min})$ results... now we should play with them and say interesting stuff about them! Richard's suggestion of stuff around how steep, or not steep, minima would be at different values of $V$ would be good.}
+
+\SH{We could also put the contour plot here and put a line in it to show where one would expect at least one minimum above $V=0$.}
+  
 \re{I would move from looking at the abstract problem in the previous section to the specific implications for cosmology in this section; and how $P(\Lambda)$ depends on $\sigma_2$}
 
 \lfl{Dunno what to put here anymore}
 
 \section{Conclusion}
-We have presented results for the statistics of stationary points at a given function value as a function of $N$ and $\sigma_2$. The numbers confirm the intuitive expectation that the probability of a given extremum with $F > 0$ being a minimum decreases as $N$ increases or as $\sigma_2$ decreases. We are able to calculate precise values for the probability up to $N=10$. Above this dimension, evaluating Eq. \ref{DensityOfPeaks} is computationally prohibitive, but we find that Eq. \ref{DensityOfPeaks} is well-approximated by a Gaussian integral. Using this approximation, we are able to estimate the probability up to $N \approx 30$. For $N>30$, we use only the $\nu=0$ point, which although much smaller than the actual results, remains in roughly constant ratio with it. The final probability as a function of $N$ is well-approximated by a straight line when plotted on a logarithmic scale for various values of $\sigma_2$ (Fig. \ref{PVaryingWithNGaussian}). If this trend holds to larger values of $N$, we estimate that the value of $\sigma_2$ for which $P(F>0|min)$ drops to $\sim 10^{-500}$ is approximately $1.08$.
+\SH{Change to $V$ and $\gamma$}
+
+\SH{Has any paper pointed out that $P(F>0|{\rm min})$ is actually really small in the first place, maybe that itself isn't understood yet. And then we say exactly how small, and find the range of $N$ and $\gamma$ for which it is big enough that at least one above water minima is expected. We could also put the dimensions back in for $V$ (e.g. make $\sigma_0$ equal to the Planck vacuum energy)  and say something about how probable/improbable it is that $V$ gets to the value we observe?}
+
+\SH{For ``future work'' we could also mention that we aren't necessarily in a minimum, we're just at a point where $\eta$ is below some threshold, which would require a slightly different analysis, in particular we wouldn't limit ourselves to extrema and thus would lose the $\prod |\lambda|$ term in the pdf, thus favouring smaller eigenvalues a lot more. There's heaps of things that could be explored/asked about...}
+
+
+We have presented results for the statistics of stationary points at a given function value as a function of $N$ and $\sigma_2$. The numbers confirm the intuitive expectation that the probability of a given extremum with $F > 0$ being a minimum decreases as $N$ increases or as $\sigma_2$ decreases. We are able to calculate precise values for the probability up to $N=10$. Above this dimension, evaluating Eq. \ref{DensityOfPeaks} is computationally prohibitive, but we find that Eq. \ref{DensityOfPeaks} is well-approximated by a Gaussian integral. Using this approximation, we are able to estimate the probability up to $N \approx 30$. For $N>30$, we use only the $\nu=0$ point, which although much smaller than the actual results, remains in roughly constant ratio with it. The final probability as a function of $N$ is well-approximated by a straight line when plotted on a logarithmic scale for various values of $\sigma_2$ (Fig. \ref{PVaryingWithNGaussian}). If this trend holds to larger values of $N$, we estimate that the value of $\sigma_2$ for which $P(F>0|{\rm min})$ drops to $\sim 10^{-500}$ is approximately $1.08$.
 
 The results of this paper establish the number of vacua that could correspond to our universe in string theory, but does not treat the distribution of eigenvalues -- and accordingly the duration of slow-roll inflation -- that could arise from these vacua. An analysis of this will be the focus of future work.
 

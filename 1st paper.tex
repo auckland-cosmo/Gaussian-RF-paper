@@ -57,17 +57,8 @@ We proceed from an $N$-dimensional generalisation of the Kac-Rice formalism \cit
 
 %\sh{\sout{We begin by developing an $N$-dimensional analogue of the treatment of three dimensional random functions due to Bardeen, Bond, Kaiser and Szalay (henceforth BBKS) \cite{BBKS}, generalising their derivation and keeping their notation as far as possible.}}\SH{We're no longer following the notation and we say the rest in the paragraph just before this, in the introduction}.
 
-We treat the potential energy function $V({\vec{\phi}})$ as a Gaussian random function over an $N$-dimensional field space. We wish to examine minima and saddles, therefore we require the probability density for the value of the potential itself and the values of its derivatives, $\eta_i = \partial V/\partial \phi^i$ and $\zeta_{ij}=\partial^2 V/\partial \phi^i\partial \phi^j$ at individual points in this field space. These variables can be grouped together into a vector ${\bf y} = [V,\eta,\zeta]$. In $N$ dimensions ${\bf y}$ has $\mathcal{N}=1+N+(N^2+N)/2$ independent components via $V$, $\eta$ and $\zeta$ respectively. $V$ is a Gaussian random function, this means that the variables in ${\bf y}$ are described by a multivariate Gaussian distribution. A general multivariate Gaussian distribution with $\mathcal{N}$ independent variables has the form
-  %\sout{An $N$-dimensional scalar-valued function $V({\bf r})$ is a set of values \sh{\sout{that fill} defined at} each point of $N$-dimensional space. The function is \emph{random} if its values \sh{can be described by} a probability density function},
-%
-%\begin{equation}
-%P[V({\bf r_1}), V({\bf r_2}), \ldots, V({\bf r_n})]dV({\bf r_1})dV({\bf r_2})\ldots dV({\bf r_n})
-%\end{equation}
-%
-%\noindent where ${\bf r_i}$ is a position in $N$ dimensional space. This corresponds to the probability that the function takes value $V({\bf r_1}) \pm dV({\bf r_1})$ at position ${\bf r_1}$ \emph{and} $V({\bf r_2}) \pm dV({\bf r_2})$ at position ${\bf r_2}$, and so on.
-%
-%A function is \emph{Gaussian random} if the probability density function is an $N$-dimensional Gaussian function,
-%
+We treat the potential energy function $V({\vec{\phi}})$ as a Gaussian random function over an $N$-dimensional field space. We wish to examine minima and saddles, therefore we require the probability density for the value of the potential itself and the values of its derivatives, $\eta_i = \partial V/\partial \phi^i$ and $\zeta_{ij}=\partial^2 V/\partial \phi^i\partial \phi^j$ at individual points in this field space. These variables can be grouped together into a vector ${\bf y} = [V,\eta,\zeta]$. In $N$ dimensions ${\bf y}$ has $\mathcal{N}=1+N+(N^2+N)/2$ independent components via $V$, $\eta$ and $\zeta$ respectively. $V$ is a Gaussian random function, this means that the variables in ${\bf y}$ are described by a multivariate Gaussian distribution. A general multivariate Gaussian distribution with $\mathcal{N}$ independent variables has the form \re{should that be a curly $N$ on the $2 \pi$ }
+  %
 \begin{equation} \label{MultivariateGaussian}
 \begin{split}
 P({\bf y})d^\mathcal{N}{\bf y} &= \frac{e^{-Q}}{[(2\pi)^N \mathrm{det}(M)]^{1/2}} d^\mathcal{N}{\bf y} \, ,\\
@@ -89,7 +80,7 @@ We next introduce the field space power spectrum, $P$, of the random function $V
 \langle V(\vec{\phi}_1) V(\vec{\phi}_2) \rangle = \xi(|\vec{\phi}_1-\vec{\phi}_2|)= \frac{1}{(2\pi)^N} \int d^Nk e^{i \vec{k} \cdot (\vec{\phi}_1-\vec{\phi}_2)} P(k).
 \end{equation}
 %
-We have assumed $V$ is statistically homogeneous and isotropic in field space, therefore $\xi$ depends only on $|\vec{\phi}_1-\vec{\phi}_2|$ and  $P$ depends only on the magnitude of the Fourier coordinate $k$.\footnote{We work in a field space basis where the field space metric is Euclidean.} The moments of the power spectrum can be defined as
+We have assumed $V$ is statistically homogeneous and isotropic in field space, therefore $\xi$ depends only on $|\vec{\phi}_1-\vec{\phi}_2|$ and  $P$ depends only on the magnitude of the Fourier coordinate $k$.\footnote{We work in a field space basis where the field space metric is Euclidean.} The moments of the power spectrum are defined to be
 %
 \begin{equation} \label{moments}
 \sigma_n^2 = \frac{1}{(2\pi)^N}\int d^Nk (k^{2})^n P(k)
@@ -104,17 +95,15 @@ We can differentiate equation \eqref{powspec} and then set $\vec{\phi}_1 = \vec{
 &= \frac{1}{(2\pi)^N}\int d^Nk (k^i k^j) P(k)
 \end{align*}
 %
-\sh{The integrand on the RHS is an odd function of both $k^i$ and $k^j$, therefore the integral over all $\vec{k}$ is zero unless $i=j$. Furthermore, because $k^2 = \sum_i k_i^2$, we see that $\sum_i \langle \eta_{i}\eta_{i}\rangle = \sigma_1^2$. We have assumed the field is statistically isotropic and thus $\langle \eta_{i}\eta_{i}\rangle=\langle \eta_{j}\eta_{j}\rangle$, meaning $\langle \eta_{i}\eta_{i}\rangle=\sigma_1^2/N$. Therefore $\langle \eta_{i}\eta_{j}\rangle=\delta_{ij}\sigma_1^2/N$}.
+The integrand on the RHS is an odd function of both $k^i$ and $k^j$, therefore the integral over all $\vec{k}$ is zero unless $i=j$. Furthermore, because $k^2 = \sum_i k_i^2$,  $\sum_i \langle \eta_{i}\eta_{i}\rangle = \sigma_1^2$. We have assumed the field is statistically isotropic and thus $\langle \eta_{i}\eta_{i}\rangle=\langle \eta_{j}\eta_{j}\rangle$, meaning $\langle \eta_{i}\eta_{i}\rangle=\sigma_1^2/N$ and $\langle \eta_{i}\eta_{j}\rangle=\delta_{ij}\sigma_1^2/N$.
 
 %\begin{align*}
 %\langle \eta_{\alpha,i}\eta_{\beta,j}\rangle = K \delta_{\alpha,\beta}\delta_{ij} &\rightarrow \delta_{ij}\langle \eta_{\alpha,i}\eta_{\beta,j}\rangle = NK \delta_{\alpha,\beta}=\sigma_1^2\\
 %&\rightarrow K = \frac{1}{N}\sigma_1^2
 %\end{align*}
 
-A similar analysis holds for the second derivatives \sh{$\zeta_{ij}$}\sh{, which can be used to find the rest of the elements of the covariance matrix. In terms of the} moments of the power spectrum they are:
-
-%Our analysis is an N-dimensional generalization of Appendix A in Bardeen, Bond, Kaiser and Szalay (henceforth BBKS) \cite{BBKS}. We adopt the same notation, $\eta_i \equiv \frac{\partial \phi}{\partial x^i}, \xi_{ij} \equiv \frac{\partial^2 \phi}{\partial x^i \partial x^j}$. In this notation, the correlations of a Gaussian random function at a random point in N-dimensions are:
-
+A similar analysis holds for the second derivatives $\zeta_{ij}$, and will yield the rest of the elements of the covariance matrix. In terms of the moments of the power spectrum these are:
+%
 \begin{equation} \label{corr}
 \begin{split}
 \langle VV \rangle &= \sigma_0^2 \\
@@ -123,8 +112,8 @@ A similar analysis holds for the second derivatives \sh{$\zeta_{ij}$}\sh{, which
 \langle\zeta_{ij}\zeta_{kl}\rangle &= \frac{1}{N(N+2)}\sigma_2^2(\delta_{ij}\delta_{kl}+\delta_{il}\delta_{jk}+\delta_{ik}\delta_{jl})
 \end{split}
 \end{equation}
-
-\noindent \LFL{and all other correlations are zero}. For $N=3$ this reduces to equation A1 \sh{of \cite{BBKS} (hereafter called BBKS)}. 
+%
+and all other correlations are zero. For $N=3$ this reduces to equation A1 of \cite{BBKS} (hereafter called BBKS). 
 
 %We define the following vector\SH{This small passage is the only time the notation $\alpha$ is used. I think we can get away without introducing it. I think in general the way BBKS goes from $F$ at different points in space to $F$, $\eta$ and $\xi$ is confusing and we can make it a bit clearer here if we want}:
 
@@ -153,24 +142,17 @@ A similar analysis holds for the second derivatives \sh{$\zeta_{ij}$}\sh{, which
 %\end{equation}
 %
 %We can usually ignore the constant prefactor since we will primarily be concerned with ratios of probabilities.
-\sh{This covariance matrix is far from diagonal. Therefore, instead of using $V$, $\eta$ and $\zeta$ we wish to adopt a basis of variables that is as diagonal as possible. The $\eta_i$ variables are already diagonal, as are the $\zeta_{ij}$ terms with $i\neq j$. The $\zeta_{ii}$ variables are correlated \LFL{to each other} however, and in fact are also correlated to $V$. We look for a set of $N$ linear combinations of these $N$ variables that is diagonal. For this we choose}
-
-%
+This covariance matrix is far from diagonal; and our analysis will be facilitated if we use a basis that is as close to diagonal as possible. The $\eta_i$ variables are already diagonal, as are the $\zeta_{ij}$ terms with $i\neq j$ but the $\zeta_{ii}$ variables are correlated to each other, and also  to $V$. We look for a set of $N$ linear combinations of these $N$ variables that is diagonal, choosing,
 \begin{align}
 \label{BasisTransform}
 x_1 &= -\frac{1}{\sigma_2}\sum_i\zeta_{ii} \nonumber \\
-x_n &= -\frac{1}{\sigma_2}\sum_{i=1}^{n-1}\zeta_{ii}-(n-1)\zeta_{nn},\,\, (2\leq n \leq N)
+x_n &= -\frac{1}{\sigma_2}\sum_{i=1}^{n-1}\zeta_{ii}-(n-1)\zeta_{nn},\,\, (2\leq n \leq N) \, .
 %\sigma_2x_3 &= -(\xi_{11}+\xi_{22}-2\xi_{33})\\
 %\sigma_2x_4 &= -(\xi_{11}+\xi_{22}+\xi_{33}-3\xi_{44})\\
 %\ldots
 \end{align}
 %
-
-%\begin{equation}
-%x_1 = \sum_{i=1}^N \lambda_i \, , \qquad x_n = \sum_{i=1}^{n-1} \lambda_i  -(n-1) \lambda_n\, , n\geq 2\, . 
-%\end{equation} 
-
-The $x_n$ here are analogous, but not identical, to BBKS's $x, y, z$. Following BBKS, we also \sh{rescale $V$ and} introduce $\nu = V/\sigma_0$. With this choice of basis, the \sh{new} nonzero correlations are, from equation \eqref{corr}:
+The $x_n$ here are analogous, but not identical, to BBKS's $x, y, z$. Following BBKS, we also rescale $V$, introducing $\nu = V/\sigma_0$. With this choice of basis in equation \eqref{corr} become
 %
 \begin{eqnarray}
   \langle\nu^2\rangle &=& 1 \nonumber\\
@@ -181,47 +163,38 @@ The $x_n$ here are analogous, but not identical, to BBKS's $x, y, z$. Following 
 %
 \noindent where $\gamma = \sigma_1^2/(\sigma_2 \sigma_0)$. The only non-diagonal correlation left is between $\nu$ and $x_1$.
 
-The $Q$ factor in equation \eqref{MultivariateGaussian} \sh{can now be calculated and} takes the form
-
+The $Q$ factor in equation \eqref{MultivariateGaussian} becomes
+%
 \begin{equation} \label{Q}
 \begin{split}
 2Q = \nu^2 + \frac{(x_1-\gamma \nu)^2}{1-\gamma^2}+\sum_{n=2}^N\frac{N(N+2)}{2n(n-1)}x_n^2 + \frac{N \pmb{\eta}\cdot \pmb{\eta}}{\sigma_1^2} + \sum_{i,j;i > j}^N\frac{N(N+2)(\zeta_{ij})^2}{\sigma_2^2}
 \end{split}
 \end{equation}
 %
+This is the equivalent of BBKS equation (A4) for $N$-dimensions. Note that the first two terms remain constant for all $N$, but the remaining terms are $N$ dependent.  
 
-This is the equivalent of BBKS equation (A4) for $N$-dimensions, \sh{and our slightly different definition of the $x_n$ variables}. Note the first two terms remain constant for all $N$, but the remaining terms vary. \sh{\sout{The $\eta$ terms are zero at minima by definition.}}
-
-\sh{Via equations \eqref{Q} and \eqref{MultivariateGaussian} we have, in as diagonal a form as possible, the full probability density function for the function, $V$, and its first two derivatives at an arbitrary point in field space. We are interested in finding probabilities about the \emph{minima} of $V$. The probability that an arbitrary point is a minima is vanishing. Therefore, we must instead examine the \emph{number density} of minima instead. To do this we first need the number density of extrema (i.e. points where $\eta=0$), which we then restrict to minima.}
-
-\sh{The process of converting the probability density into a number density of extrema is well described in 3D in BBKS \cite{BBKS} (section III a). The only difference for us is that BBKS had a field $F$ that exists in a 3D physical space ${\bf r}$, whereas we have a function $V$ existing in an $N$-dimensional field space, $\phi$. Otherwise it is the same and we get} \SH{We could reproduce the working in BBKS if we want, it seems a bit weird to reproduce everything above and then not reproduce this, but this doesn't change for ND vs 3D.}
-
+Equations \eqref{Q} and \eqref{MultivariateGaussian} give, in as diagonal a form as possible, the full probability density function for the function, $V$, and its first two derivatives at an arbitrary point in field space. We are interested in characterising the distribution of \emph{minima} of $V$, and begin by looking at the number density of extrema, i.e. points where $\eta=0$. BBKS \cite{BBKS} (section III a) show how to obtain the number density of extrema from the probability density (for $N=3$ ).  BBKS consider a field $F$ in Euclidean space with position vector ${\bf r}$, whereas we have an $N$-dimensional function $V$ with coordinates $\phi$. \SH{We could reproduce the working in BBKS if we want, it seems a bit weird to reproduce everything above and then not reproduce this, but this doesn't change for ND vs 3D.}\re{I think it would be nice} 
+%
 \begin{equation}
 n_{\rm ext}(\phi) \,\,{\rm d}^N \phi= |{\rm det}\,\, \zeta(\phi)| \delta^{(N)}\left[ \eta(\phi)\right] {\rm d}^N \phi.
 \end{equation}
 %
-\sh{The number density of extrema, $n_{\rm ext}(\phi)$, is itself a random variable. For an actual realisation of the function it can and would vary in field space. It would be interesting for future work to study this variable and to construct the probability of minima from it directly; however it is \sout{customary to simplify things and} \LFL{simpler to} \lfl{I don't like the word `customary'} work only with the \emph{expected} number density, which is simply the ensemble average of this variable, i.e.}
+The number density of extrema, $n_{\rm ext}(\phi)$, is itself a random variable. However, we will work with the \emph{expected} number density, which is simply the ensemble average of $n_{\rm ext}$, or
+% 
 \begin{equation} \label{NumberDensity}
 \langle n_{\rm ext}(\phi)  \rangle= \int |{\rm det}\,\, \zeta(\phi)| P(V,\eta=0,\zeta)dV d\zeta
 \end{equation}
-\sh{where for notational convenience we have dropped the ${\rm d}^N \phi$ from each side.}
+where for notational convenience we have dropped the ${\rm d}^N \phi$ from each side.
 
-\sh{Finally, we need to restrict this integral to consider only the extrema that are also local minima. It is easiest to do this by considering the eigenvalues, $\lambda_i$ of the Hessian \LFL{of the landscape} $-\zeta$\SH{What convention do we want to use here for the sign?} and restricting them to be negative.\footnote{Note there is an alternative convention where the eigenvalues \sh{are defined with the opposite sign, in which case} \emph{positive} \sh{eigenvalues} correspond to \sh{minima}} \LFL{The Hessian is always symmetric by definition. We can further rotate it such that it is diagonal, in which case the diagonal elements are its eigenvalues. In order to perform this rotation, we need to compute the Jacobian. In 2D and 3D, the Jacobian of the transformation matrix can be calculated explicitly as $d \zeta = \prod_{i \neq j}^N |\lambda_i - \lambda_j|(\prod_k d\lambda_k) d \Omega$. Here ``$d\Omega$'' represents the $(N^2-N)/2$-dimensional integral measure of the set of rotation angles. The same result holds in $N$ dimensions. A proof of this result in $N$ dimensions is present in section V of \cite{Easther2016}.\footnote{\sh{The proof in \cite{Easther2016} is based on the 3D proof in BBKS and corrects a typo in that proof. Unfortunately it introduces some new typos, but the proof itself is robust. \lfl{Lol! I love this sentence}}} The function $V$ and its derivatives are statistically isotropic. Therefore each set of rotation angles is as probable as any other, \LFL{and} the integral over all the rotation angles must give just a constant.} \sout{For $\zeta$ expressed in an arbitrary field-space basis, this condition would create a nightmare boundary in the $(N^2+N)/2$ different components of $\zeta$. Therefore it is much easier to rotate the field-space so that $\zeta$ is diagonal, with the diagonal elements being the set of $\lambda_i$. The new set of variables then becomes the $N$ eigenvalues $\lambda_i$ and the $(N^2-N)/2$ angles required to do the full rotation of all the field-space axes.} Once this rotation is done, many simplifications occur: $\zeta_{ii}=-\lambda_i$, $\zeta_{ij}=0$ and $|{\rm det} \zeta| = \prod_i |\lambda_i|$.} \LFL{Accordingly, the factor $|\rm{det} \zeta(\phi)|$ in Eq. \ref{NumberDensity} can be expressed as $A \prod_i |\lambda_i| \prod_{i \neq j}^N |\lambda_i - \lambda_j|(\prod_k d\lambda_k)$, where $A$ is a constant.}
+Finally, we need to restrict this integral to count the extrema that are also local minima. It is easiest to do this by considering the eigenvalues, $\lambda_i$ of the Hessian of the landscape $-\zeta$\SH{What convention do we want to use here for the sign?}\re{haven't tried to sort this, but isn't the Hessian usually just the second derivatives (outside of random function theory), so let's use that?}  and restricting them to be negative.\footnote{Note there is an alternative convention where the eigenvalues \sh{are defined with the opposite sign, in which case} \emph{positive} \sh{eigenvalues} correspond to \sh{minima} \re{cite places where this is used}}  The Hessian is  symmetric by definition. We can further rotate it such that it is diagonal, in which case the diagonal elements are its eigenvalues.  In 2D and 3D, the Jacobian of the transformation matrix can be calculated explicitly as $d \zeta = \prod_{i \neq j}^N |\lambda_i - \lambda_j|(\prod_k d\lambda_k) d \Omega$, where ``$d\Omega$'' represents the $(N^2-N)/2$-dimensional integral measure of the set of rotation angles. The same result holds in $N$ dimensions.\footnote{A proof in $N$ dimensions is given in section V of \cite{Easther2016}, generalising the 3D  BBKS result. \re{can we just say what the typos are?}} The function $V$ and its derivatives are statistically isotropic. Therefore each set of rotation angles is as probable as any other, and the integral over all the rotation angles must give just a constant.   After this rotation $\zeta_{ii}=-\lambda_i$, $\zeta_{ij}=0$ and $|{\rm det} \zeta| = \prod_i |\lambda_i|$. and the factor $|\rm{det} \zeta(\phi)|$ in Eq. \ref{NumberDensity} can be expressed as $A \prod_i |\lambda_i| \prod_{i \neq j}^N |\lambda_i - \lambda_j|(\prod_k d\lambda_k)$, where $A$ is a constant.
 
-\sh{\sout{One final complication arises, which is the transformation of the $(N^2+N)/2$ components in the integral measure $d\zeta$ into the new basis of $\lambda_i$ and the rotation angles. In 2D and 3D the rotation can be found explicitly and the Jacobian of the transformation matrix yields $d \zeta = \prod_{i \neq j}^N |\lambda_i - \lambda_j|(\prod_k d\lambda_k) d \Omega$. Here ``$d\Omega$'' represents the $(N^2-N)/2$-dimensional integral measure of the set of rotation angles. The same result holds in $N$ dimensions. A proof of this result in $N$ dimensions is present in \cite{Easther2016}.}\footnote{\sh{The proof in \cite{Easther2016} is based on the 3D proof in BBKS and corrects a typo in that proof. Unfortunately it introduces some new typos, but the proof itself is robust. \lfl{Lol! I love this sentence}}} \sout{The function $V$ and its derivatives are statistically isotropic. Therefore each set of rotation angles is as probable as any other, \LFL{and} the integral over all the rotation angles must give just a constant.}}
+ 
 
 
-%\SH{I think this bit of the paragraph is not explained well}while the off-diagonal $\zeta_{ij}$ terms can be Euler-rotated away by choosing an appropriate set of axes \SH{I don't know what this means.}. The $\xi$ matrix is already symmetric (by rotational symmetry), and Euler rotation turns it diagonal.\cite{Goldstein}
-
-%The upshot is that $\zeta$ becomes diagonal and the individual elements of $\zeta$ are the eigenvalues $\lambda_i = -\zeta_{ii}$ of the Hessian. We are interested in minima, hence we demand all second derivatives to be positive, i.e. all eigenvalues to be \sh{negative}.\footnote{Note there is an alternative convention where the eigenvalues \sh{are defined with the opposite sign, in which case} \emph{positive} \sh{eigenvalues} correspond to \sh{minima}}
-\SH{It could be better to only introduce $x_n$ now? I feel lazy, so suggest no.}
-
-\sh{\sout{From here, the analysis is exactly the same as BBKS, except that when} We have all the ingredients we now need, but we take one last step which is to enforce an ordering of the eigenvalues. This avoids having a multimodal integrand and allows us to ask questions about, e.g. the smallest or largest eigenvalue.} We define the ordering of the eigenvalues \sh{as} $\lambda_1 \leq \lambda_2 \leq \lambda_3 \ldots \leq 0$ \sh{so} our boundary conditions become $x_1\leq x_N\leq x_{N-1} ... \leq x_2 \leq 0$ \sh{\sout{because of the different choice of \sh{variables}}}. This leads to significantly simpler boundary conditions \sh{than earlier choices for diagonalising the covariance matrix}, for example in 3D our conditions are $x_1\leq x_3 \leq x_2 \leq 0$ (compare BBKS's equation between Eq. (A14) and Eq. (A15)).\SH{Do we want to relabel $x_1$ as $x_N$ instead, to make this ordering more sensible looking? I vote yes.}
-
-This yields the following expression for the \sh{expected number} density of \sh{minima (the Jacobian of the transformation between $\lambda_i$ and $x_n$ is just a constant factor)}:
+ We now have  the ingredients we  need, but  also enforce an ordering on the eigenvalues to avoid dealing with a multimodal integrand.  We define  $\lambda_1 \leq \lambda_2 \leq \lambda_3 \ldots \leq 0$ so our boundary conditions become $x_1\leq x_N\leq x_{N-1} ... \leq x_2 \leq 0$, and the mapping between $\lambda_i$ and $x_i$  follows from Equation~\ref{BasisTransform}. This gives significantly simpler boundary conditions than our earlier choices for diagonalising the covariance matrix and yields the following expression for the expected number density of minima 
 %
 \begin{equation} \label{DensityOfPeaks}
-\sh{\langle n_{{\rm min}} \rangle} = A \int_{\lambda_1 \leq \lambda_2 \leq \lambda_3 \ldots \leq 0} G \times e^{-Q} d\nu \sh{\left(\prod_n dx_n\right)}
+\langle n_{{\rm min}} \rangle = A \int_{\lambda_1 \leq \lambda_2 \leq \lambda_3 \ldots \leq 0} G \times e^{-Q} d\nu  \left(\prod_n dx_n\right)
 \end{equation}
 %
 \noindent where $G$ has the form\footnote{$G$ can also be expressed in terms of $x_n$ using the inverse transform of Eq. \ref{BasisTransform}.}
@@ -230,230 +203,143 @@ This yields the following expression for the \sh{expected number} density of \sh
 G = \left(\prod_{i}^{N} \lambda_i \right)\left(\prod_{i<j} |\lambda_i-\lambda_j|\right),
 \end{equation} 
 %
-$Q$ is given by Eq. \ref{Q} \sh{and} $A$ is \sh{a} constant factor\sh{\sout{, and the integration limits are only over the region where the conditions are satisfied}}. \sh{We extract probabilities from this expression by calculating the proportion of minima satisfying various properties, hence we do not need to determine $A$ explicitly because it cancels when we take ratios to determine proportions.} Evaluating this integral will be the focus of \sh{\sout{much} most} of the remainder of this paper.
-
-%We will find it convenient to make a further transformation to
-%%
-%\begin{equation}
-%x_1 = \sum_{i=1}^N \lambda_i \, , \qquad x_n = \sum_{i=1}^{n-1} \lambda_i  -(n-1) \lambda_n\, , n\geq 2\, . 
-%\end{equation} 
-%%
-%In these variables it can be shown that  
-%%
-%\begin{equation}
-%Q = \frac{x^2-2\gamma x \nu+\nu^2}{1-\gamma^2} + \sum_{n=2}^N \frac{N(N+2)}{2n(n-1)}x_n^2  \label{Qx}
-%\end{equation}
-%%
-%The inverse transformation is $\lambda_1$,
-%%
-%\begin{equation}
-%\lambda_1 = \frac{x_1}{N} + \sum_{i=2}^N \frac{x_i}{i(i-1)} \, , \qquad
-%  \lambda_n = \frac{x_1}{N} - \frac{x_n}{n} + \sum_{i=n+1}^N \frac{x_i}{i(i-1)}.
-%\end{equation}
-%%
-%In these units the relevant region becomes $x_1\geq x_N\geq x_{N-1} ... \geq x_2 \geq 0$.
-
-%\re{this above is can be checked for self-consistency and trimmed}
-
-%\re{{\it can trim / compress/ move this} At this point we will briefly discuss the results obtained by Yamada and Vilenkin \cite{Yamada2018}. They have derived $p(\mathrm{min}|F, s.p.)$, while we are interested in $p(F>0|\mathrm{min})=\int^\infty_0 p(F|\mathrm{min})dF/\int^\infty_{-\infty} p(F|min)dF$. The two are related by $p(F|\mathrm{min})= \frac{p(\mathrm{min}|F, s.p.)p(F|s.p.)}{p(\mathrm{min}|sp)}$\footnote{This result is derived using Bayes theorem, as well as the fact that minima are necessarily stationary points.}.The numerator is independent of $F$, so it cancels. Therefore the two probabilities can be related with knowledge of $p(F|s.p.)$. However, this quantity is not trivial to compute. We have been able to derive an analytical formula for this in 2D (see appendix), but even in 2D the complexity is formidable.}
+$Q$ is given by Eq. \ref{Q} and the constant factor $A$ has absorbed by Jacobian. More generally, we can view the expression
+%
+\begin{equation}
+{\cal L}(\lambda_1,\cdots, \lambda_N; V, \gamma) = \left(\prod_{i}^{N} \lambda_i \right)\left(\prod_{i<j} |\lambda_i-\lambda_j|\right) e^{-Q}
+\end{equation} 
+%
+as an unnormalised probability density that gives the (relative) likelihood of finding a minimum at which the landscape has a $V$, and the Hessian matrix has eigenvalues $\lambda_i$ as a function of the single independent variable $\gamma$. This expression is exact;  we immediately see that the prefactor to the exponential enforces a variant of {\em eigenvalue repulsion\/} \re{cite RMT literature; in general you can have a symmetric matrix with degenerate eigenvalues}, in that the likelihood of finding a minimum with near-identical $\lambda_i$ is vanishingly small. 
 
 
 
-\section{Peak Probabilities: $V$ and $N$} \label{PeakNumbers}
+\section{Landscape Heuristics}
 
-\sh{\sout{Our goal is to evaluate $P(V|{\rm min})$, the probability density of vacuum energies at minima in the Gaussian random landscape.}} We are interested in the probability of finding a minimum above $V = 0$. \sh{\sout{(equivalently, the probability of finding a maximum below $\nu = 0$)} We approximate this by the ratio of the expected number density of minima above $V=0$ to the total number density of minima}, i.e. we want to calculate\footnote{\sh{We assumed earlier that $\langle V \rangle = 0$. If $\langle V \rangle \neq 0$ then this would be equivalent to a different lower bound in the following integral. We do not explore this here. \SH{We could though if we wanted?}}}
+Our  overall goal is to understand $P(\Lambda)$, the probability density of energy densities (ie the values of $V(\phi)$) at the minima of a Gaussian random landscape. In particular, we are interested in the proportion of  minima with $V > 0$, which is given by\footnote{We assumed earlier that $\langle V \rangle = 0$. In principle, one could consider an ``offset'' landscape, which consisted of a Gassian random field with zero mean, plus a constant, such that $\langle V \rangle \neq 0$ but we do not explore this here.}
 \begin{equation} \label{PminIntegral}
-  P(V>0|{\rm min}) =  \frac{\int^\infty_0 d\nu \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} G \times e^{-Q} \sh{\prod_n dx_n}}{\int^\infty_{-\infty} d\nu \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} G \times e^{-Q} \sh{\prod_n dx_n}}
+  P(\Lambda >0| N,\gamma) =  \frac{\int^\infty_0 d\nu \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} G \times e^{-Q} \prod_n dx_n}{\int^\infty_{-\infty} d\nu \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} G \times e^{-Q} \prod_n dx_n}
   \end{equation}
-
-\SH{I don't think we need most of this below. The reason we internally wanted to set sig1 and sig0 to 1 was for the simulation code, if I remember correctly. Equation 2.8 explicitly only depends on $\gamma$ and $N$, so we can just plot things in terms of those two parameters. I think all three moments are \emph{physically} significant, but only one is relevant statistically (i.e. if we want to add in units, or scales to the problem then sig0 and sig1 are also relevant)} \lfl{I am for keep: it's in the abstract, and it's a nice piece of physical insight}
-
-This integral depends on the value of $Q$ (Eq. \ref{Q}) and therefore on the moments of the power spectrum $\sigma_0, \sigma_1$,  and $\sigma_2$, \sh{through the single parameter $\gamma$. The allowed range of $\gamma$ is $0<\gamma<1$ because $0<\sigma_1^2<\sigma_0\sigma_2$}. \SH{could add proof if we wanted}
-
-\sh{\sout{We now argue that of these three parameters, only one is physically significant. Given a purely Gaussian landscape we can $\sigma_0=1$ by rescaling $V$ multiplicatively, see Eq. \ref{corr}, and we can thus take $V = \nu$. Likewise, $\sigma_1$ responds to the average magnitude of the first derivatives and can be set to unity by rescaling the units of length. This leaves $\sigma_2$ as the only nontrivial parameter. It can be shown that if $\sigma_0=\sigma_1=1$, $\sigma_2>1$.\footnote{Per Ref. \cite{Yamada2018}, if $\sigma_0\sigma_2 - \sigma_1^2 < 0$, then the probability density Eq. \ref{MultivariateGaussian} cannot be normalized.} In much of what follows we follow BBKS and parameterise the landscape by $\gamma = \frac{\sigma_1^2}{\sigma_2 \sigma_0}=1/\sigma_2$ and the dimensionality $N$,  in the knowledge that $0<\gamma<1$.}}
-
-%The probability $P$ gives the (relative) likelihood of finding a minimum \re{at what point do we start talking about minima, not maxima; we should probably flip it from the start} \lfl{I don't understand, we've been using minimum since the beginning?} with value $F$ and the given values of $x_i$ which will, in turn, determine the eigenvalues of the Hessian at the minimum.  Up to an undetermined overall  constant the probability of obtaining a peak with value $F$ is given thus given by 
-
-%\begin{equation}
-%P(V) = \int dx_1 \cdots dx_N F(x) \exp{(-Q)}
-%\end{equation} 
-
-%where it is assumed that all such integrals are over $x_1\geq x_N\geq x_{N-1} ... \geq x_2 \geq 0$.
-%We don't need this since it's already given in the previous section
+ %
+ and any specific $P(\Lambda)$ can be computed by dropping the integral over $\nu$ and setting $\nu=\Lambda$ in the numerator. 
+ %
+%
+This integral depends on the value of $Q$ (Eq. \ref{Q}) and therefore on the moments of the power spectrum $\sigma_0, \sigma_1$,  and $\sigma_2$, through the single parameter $\gamma$. The allowed range of this variable is $0<\gamma<1$ because $0<\sigma_1^2<\sigma_0\sigma_2$. \SH{could add proof if we wanted}\re{since we have it}
 
 
-\subsection{Landscape Heuristics}
+Broadly speaking, the overall distribution $P(\Lambda | N,\gamma)$ moves to lower values as $N$ and $\gamma$ are increased;  representative results for moderate $N$ are shown in Figure~\ref{distributions}. Moreover, as $\gamma$ increases, the width of the distribution contracts. Consequently, we will find that when $\gamma$ is close to unity and $N \gtrsim {\cal{O}}(10^2)$, $P(\Lambda >0)$ can be almost arbitrarily small, as we quantify below. 
+
+
 \begin{figure}
   \centering
-  
-  \includegraphics[width=\linewidth]{TwoSigmas.png}
-%Plot[1/2 Cos[-1.3718298377306848` x] +   1.3228756555322954` Cos[-0.9348860049921902` x], {x, -10 Pi,   10 Pi}](*Sigma2=0.9*)
-%Plot[1/2 Cos[-2.5082867902473156` x] +   1.3228756555322954` Cos[-0.4940354784643969` x], {x, -10 Pi,   10 Pi}](*Sigma2=0.2*)
-  \caption{We show illustrative realisations of 1D functions. The left figure has a smaller $\gamma$ \sh{\sout{(larger $\sigma_2$)}} and \sh{\sout{more “short scale” power} power over a greater range of scales}, allowing minima (maxima) to appear in significant numbers above (below) zero. When $\gamma$ is large (right figure) the spectrum is dominated by \sh{\sout{longer wavelength modes} a smaller range of modes}, and most minima are low-lying. \SH{y-axis on LHS and RHS are subtly different}}
+  \includegraphics[width=0.45 \linewidth]{PLam_gamma.eps}  \hfill
+  \includegraphics[width=0.45 \linewidth]{PLam_N.eps}
+  \caption{[Left] $P(\Lambda)$ for $\gamma = 0.2$, $0.5$ and $0.8$ and [Right] $P(\Lambda)$ for $N=3$, $5$ and $8$. The distribution moves leftward with increasing $N$ and increasing $\gamma$. The results were obtained by numerically evaluating the full integral for $P(\Lambda)$.  }
+  \label{distributions}
+  \end{figure}
+
+%def of gamma, and power spectrum
+This dependence on $\gamma$ and $N$ can be understood qualitatively via the expressions for $\sigma_2$ for the probability density. Via its definition, $\sigma_2$ increases as the range of $k$ over which the spectrum $P(k)$  is nontrivial  increases, and $\gamma$ will correspondingly decrease. Conversely, when $\gamma$ is close to unity, the power spectrum is peaked over a small range of $k$ and the random function is dominated by modes with a narrow band of wavelengths.  At small $\gamma$ the spectrum of $V(\phi)$ thus has power over a wide range of scales. This points to the presence of significant ``ripples'' on top of  larger-scale structure in $V(\phi)$, which  produce local minima even $V(\phi)$ is relatively large,  as illustrated in Fig~\ref{examples1}.  Similarly, while the second derivatives of a random function are correlated, at values of $V$ large enough for minima are rare, increasing $N$  increases the number of directions that must have an unlikely value of $\zeta_{ii}$. 
+
+We can likewise see $N$-dependence semi-quantitatively by noting that the number of terms in polynomial $G$ grows rapidly with $N$, so the full probability density at minima prefer larger magnitude eigenvalues, $|\lambda_i|$. Since $x_1$ is the sum of the eigenvalues, as its magnitude grows the $(x_1-\gamma \nu)^2$ term in $Q$ also grows. For minima, $x_1<0$, therefore large $|x_1|$ makes it less likely to find minima with $\nu >0$ (or $\nu <0 $ for maxima).  \re{but the expected value of $x_1^2$ is unity, via 2.7?. Not sure this is nailed.}
+
+
+\begin{figure}
+  \centering
+    \includegraphics[width=\linewidth]{TwoSigmas.png}
+  \caption{Illustrative realisations of 1D functions. The left figure has a small $\gamma$ and power over a greater range of scales, allowing minima (maxima) to appear in significant numbers above (below) zero. When $\gamma$ is large (right figure) the spectrum is dominated by  a smaller range of modes, and most minima are low-lying. \SH{y-axis on LHS and RHS are subtly different}}
   \label{examples1}
 \end{figure}
 
-We begin by making a qualitative exploration of the \sh{``probability density'' of our variables at minima, i.e. the integrand of the numerator in equation \eqref{PminIntegral}}. Firstly, we note that the integrand vanishes when any two \sh{\sout{``adjacent''} different} $\lambda_i$ become equal. This \sh{\sout{enforces} is because of} an ``eigenvalue repulsion'' in the Hessian matrices for the \sh{\sout{maxima and minima} random function}. This implies that a generic minima will be asymmetric, as their Hessians will have well separated eigenvalues.\SH{the eigenvalue repulsion is actually true fior any symmetric matrix, it isn't to do with minima/maxima}
+ % integrals over V
+Note that we can perform the integrals over $\nu$ in Eq. \ref{PminIntegral} analytically. The only dependence of the integrand on $\nu$ is via the first two terms of $Q$, which are independent of $N$. Consequently, we can write the denominator of Eq. \ref{PminIntegral} as 
+%
+\begin{eqnarray}
+\nonumber {\rm denom} &=&
+\int^\infty_{-\infty} d\nu \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} G \times e^{-Q} \prod_n dx_n \\ 
+\nonumber &=&  \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} f(x_1, x_2 \ldots) \prod_n dx_n \int^\infty_{-\infty} d\nu \,\exp\left(-\frac{\nu^2}{2}- \frac{(x_1- \gamma \nu)^2}{2(1-\gamma^2)}\right)\\
+&=& \sqrt{2\pi (1-\gamma^2)}  \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} f(x_1, x_2 \ldots) \prod_n dx_n\exp\left(-\frac{x_1^2}{2}\right) \, .
+\end{eqnarray}
+% 
+where $f$ is implicitly defined.  Similarly, the $\nu$ integral in the numerator can be performed to yield an error function. However, the general expressions are intractable. 
+%
+%\begin{figure}
+%  \centering
+%    \includegraphics[width=\linewidth]{PVaryingWithN.png}
+%  \caption{A plot showing the value of $P(V>0|{\rm min})$ as a function of $N$ with $N\le10$, for $\gamma$ values $\frac{1}{5}, \frac{1}{3.5}$ and $\frac{1}{2}$ from top to bottom.\SH{Title needs changed}}
+%  \label{gamma}
+%\end{figure}
 
-Secondly,  looking at Eq.~\ref{Q} we see that if $\gamma$ is close to unity,  the second term in $Q$ becomes very large, making the integrand a steeper function of \sh{\sout{the $x_n$} $x_1$}. Conversely, if   $\gamma$ is small, $\nu$ can take larger values without dominating $Q$.  At larger values of $\gamma$ the power spectrum is \sh{\sout{effectively ``red''} peaked over a shorter range of $k$} and the random function is dominated by \sh{\sout{longer wavelength}} modes \sh{with a narrow range of wavelengths}. By constrast, when $\gamma$ is small the spectrum is \sh{\sout{``blue''} wider} and \sh{\sout{dominated by shorter} the function is affected by a wider range of} modes. In this case, it is more likely that \sh{\sout{extrema} minima} will be found at positive values of $\nu$. This behaviour is sketched in Fig~\ref{examples1} for illustrative one dimensional examples.   \SH{I don't think what we previously had is true. changes in $\gamma$ are to do with the bandwith of the power spectrum, not whether it is red or blue. In fact $\gamma$ isn't even defined for a blue spectrum, or an insufficiently red one because $\sigma_2$ becomes infinite.}
-
-Thirdly, as $N$ increases, \sh{the polynomial $G$ gets more terms. This gives it a growing influence compared to $Q$, which makes the full probability density at minima prefer larger magnitude eigenvalues, $|\lambda_i|$. $x_1$ is the sum of the eigenvalues, so when its magnitude grows the $(x_1-\gamma \nu)^2$ term in $Q$ also grows. For minima, $x_1<0$, therefore large $|x_1|$ makes it less likely to find minima with $\nu >0$ (or $\nu <0 $ for maxima).} \sh{\sout{$Q$ will always grow, making it less likely to find minima and maxima on the ``wrong'' side of zero.}}\SH{i think this was confused before.}
-
-Finally, because we are interested in the \sh{ranges $\nu \in (0 , \infty)$ and $\nu \in (-\infty , \infty)$}, we can simplify the integral Eq. \ref{PminIntegral} by performing the $\nu$ integral analytically. The only dependence in the integrand on $\nu$ is in the first two terms of $Q$, which further remains the same for all $N$:
-
-\begin{equation}
-\begin{split}
-\int^\infty_{-\infty} d\nu \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} G \times e^{-Q} \sh{\prod_n dx_n} \\ 
-=  \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} f(x_1, x_2 \ldots) \sh{\prod_n dx_n} \int^\infty_{-\infty} d\nu \,\exp\left(-\frac{\nu^2}{2}- \frac{(x_1- \gamma \nu)^2}{2(1-\gamma^2)}\right)\\
-= \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} f(x_1, x_2 \ldots)  \sh{\prod_n dx_n}\int^\infty_{-\infty} d\nu \,\exp\left(-\frac{x_1^2}{2}- \frac{(\nu - \gamma x_1)^2}{2(1-\gamma^2)}\right)\\
-= \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} f(x_1, x_2 \ldots) \sh{\prod_n dx_n}\exp\left(-\frac{x_1^2}{2}\right) \sqrt{2\pi}\sqrt{1-\gamma^2}\\
-\end{split}
-\end{equation}
-\SH{Sorry, I've made these equations really ugly... previously we'd brought some $x_1$ dependence  out of the $x_1$ integral erroneously, so we need to keep that fixed, but it could look a lot nicer (even by just aligning the $=$ signs). I do think $\exp(f)$ looks nicer than $e^{f}$ though, or at least more readable.}
-
-Similarly, 
-
-\begin{equation}
-\begin{split}
-\int^\infty_0 d\nu \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} G \times e^{-Q} \sh{\prod_n dx_n}\\ 
-= \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} f(x_1, x_2 \ldots) \sh{\prod_n dx_n}\exp\left(-\frac{x_1^2}{2}\right) \sqrt{\frac{\pi}{2}}\sqrt{1-\gamma^2} \left(1+\mathrm{Erf}\left(\frac{\gamma x}{\sqrt{2-2\gamma^2}}\right)\right)\\
-\end{split}
-\end{equation}
-
-\sh{\sout{Although}} These analytic integrals are not always usable in what follows, \sh{but} when they are, they lighten the computational cost significantly.\SH{apparently you can't start a sentence with although. i've been doing it for years but a previous collaborator told me you can't and they were right}
-
-\subsection{$N < 10$: Direct Evaluation  }
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\linewidth]{N369.png}
-  \caption{The probability that a given minimum has $V > 0$ as a function of $\gamma$, for $N=3, 6, 9$. We can see that all the heuristics are obeyed: the probability decreases with $N$, and \sh{ $\gamma$ \sout{increases with $\sigma_2$}}. \re{Also -- we can smooth this, and use the LogListPlot (or ListLogPlot, or whatever it is ) command in mathematica}}
-  \label{N6}
-\end{figure}
-
-\begin{figure}
-  \centering
-    \includegraphics[width=\linewidth]{PVaryingWithN.png}
-  \caption{A plot showing the value of $P(V>0|{\rm min})$ as a function of $N$ with $N\le10$, for $\gamma$ values $\frac{1}{5}, \frac{1}{3.5}$ and $\frac{1}{2}$ from top to bottom.\SH{Title needs changed}}
-  \label{gamma}
-\end{figure}
-
-For relatively small values of $N$ we can compute the integrals without any further approximations.   In Figs.~\ref{N6} and \ref{gamma}, we present $P(V>0|{\rm min})$ as a function of $N$ and $\gamma$. As expected, if the potential is highly oscillatory (\sh{\sout{$\sigma_2$ large, or}} $\gamma$ small), $P(V>0|{\rm min})$  tends towards 0.5 --  an equal likelihood of any given \sh{\sout{extremum} minimum} being \sh{\sout{a maximum or a minimum} above or below $V=0$}. Conversely, if the potential is very smooth (\sh{\sout{$\sigma_2$ small;}} $\gamma$ very large), $P(V>0|{\rm min})$  tends towards 0. Moreover, for any given $\gamma$, $P(V>0|{\rm min})$ decreases with increasing $N$. 
  
-%\begin{table}[h!] \label{Data}
-%  \begin{center}
-%    \caption{The probability that a given minimum has $\phi > 0$ as a function of $\sigma_2$. Values given for $N=4,5,6$ are exact; for larger values they are approximate (see the text; errors are on the order of the third nonzero digit after the decimal).}
-%    \label{tab:table1}
-%    \begin{tabular}{c|c|c} % <-- Alignments: center/center/center (l and r for left and right if needed)
-%      $\textbf{N}$ & $\sigma_2$ & $p_{min}$\\
-%      \hline
-%      4 & 10 & 0.39141\\
-%      5 & 10 & 0.37667\\
-%      6 & 10 & 0.36320\\
-%      7 & 10 & 0.35210\\
-%      8 & 10 & 0.34227\\
-%      9 & 10 & 0.33159\\
-%      10 & 10 & 0.32151\\
-%      \hline
-%      4 & 3.5 & 0.21520\\
-%      5 & 3.5 & 0.17886\\
-%      6 & 3.5 & 0.15274\\
-%      7 & 3.5 & 0.13599\\
-%      8 & 3.5 & 0.11711\\
-%      9 & 3.5 & 0.10093\\
-%      10 & 3.5 & 0.08729\\
-%      \end{tabular}
-%      \quad
-%      \begin{tabular}{c|c|c} 
-%      $\textbf{N}$ & $\sigma_2$ & $p_{min}$\\
-%      \hline
-%      4 & 2 & 0.066638\\
-%      5 & 2 & 0.043103\\
-%      6 & 2 & 0.030844\\
-%      7 & 2 & 0.02013\\
-%      8 & 2 & 0.01307\\
-%      9 & 2 & 0.00845\\
-%      10 & 2 & 0.00544\\
-%      \hline
-%      4 & 1.25 & 0.001526\\
-%      5 & 1.25 & 0.000327\\
-%      6 & 1.25 & 6.53328 $\times 10^{-5}$\\
-%      7 & 1.25 & 2.09673 $\times 10^{-5}$ \\
-%      8 & 1.25 & 3.97235  $\times 10^{-6}$ \\
-%      9 & 1.25 & 7.13489  $\times 10^{-7}$ \\
-%      10 & 1.25 & 1.20253  $\times 10^{-7}$ \\
-%     \end{tabular}
-%  \end{center}
-%\end{table}
+Given the dependence of $P(\Lambda|N,\gamma)$ on $N$ and $\gamma$ it is clear that as these variables increase $P(\Lambda>0|N,\gamma)$ will involve the increasingly rare tail of an increasingly narrow distribution. Figure~\ref{N6} shows $P(\Lambda>0)$ as a function of $\gamma$ for values of $N$ that are small enough for the relevant integrals to be evaluated numerically, and we see that positive minima grow far less likely as $N$ and $\gamma$ increase. 
 
-%As can be seen, the probability that a given minimum has $\phi > 0$ decreases with increasing $N$. For a constant $\sigma_0$ and $\sigma_1$, the probability also decreases for increasing $\sigma_2$. Both of these general trends are to be expected: as $N$ increases, there are more conditions that must be simultaneously met for a point to be a minimum, hence the probability decreases. Also, since $\sigma_2$ is the average of the second derivative of the function, as $\sigma_2$ increases the function gets more and more turbulent. This means there are both more maxima and more minima, and the probability increases.
 
-\subsection{$10 < N < \sim30$: Gaussian Approximations to the Integral}
 
-For $N>10$, direct calculation becomes very resource-intensive. To proceed, we \sh{instead} first select a value of the field $\nu$, then find the values of $x_n$ that maximize the integrand in Eq. \ref{DensityOfPeaks}. We then approximate the integrand as a Gaussian about this maximum likelihood point \sh{(note that although the function $V$ is a Gaussian random function, the derived probability density function at minima is not an exact Gaussian due to the $G$ polynomial)}:
+\begin{figure}
+  \centering
+  \includegraphics[width=.6 \linewidth]{N369.eps}
+  \caption{The probability that a given minimum has $V > 0$ as a function of $\gamma$, for $N=3, 6, 9$. We see that all the heuristics are obeyed: the probability decreases with $N$, and  $\gamma$.}
+  \label{N6}
+  \end{figure}
 
+
+   
+
+
+ 
+
+\section{Gaussian Landscapes: Evaluating $P(\Lambda)$} \label{PeakNumbers}
+
+We now turn to the problem of evaluating $P(\Lambda|N,\gamma)$  for more general parameter values. Many and perhaps all of the following calculations could be performed using analytical techniques in a large-$N$ limit. However,  as we are particularly interested in scenarios involving extreme tails of  the probability distribution we will focus on quasi-numerical strategies for obtaining quantities of interest. Moreover, we are  not necessarily working at ``large'' $N$; given the inherently speculative nature of this investigation, there are few  grounds for specifying likely values of $N$;  $N\sim{\cal O}(10^2)$ is not unreasonable, but we cannot necessarily rely on results that may only hold well as $N\rightarrow \infty$. 
+
+That said, for $N>10$, direct calculation becomes very resource-intensive. To proceed, we approximate the full integrand as a Gaussian; fixing $\gamma$ and find the values of $x_n$ that maximize the integrand in Eq. \ref{DensityOfPeaks}, or 
+%
 \begin{align*}
 \begin{split}
-\langle n_{\rm min}(\nu)\rangle d\nu &= A \int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} G(\nu) \times e^{-Q(\nu)} \prod_n dx_n d\nu\\
-&=A\int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} e^{\mathrm{log}G-Q} \prod_n dx_n d\nu\\
-&\approx \int_{-\infty}^{\infty} \exp\left(-\frac{1}{2}\sum_{l,m}x_lH_{lm}x_m\right)  \prod_n dx_n d\nu = \sqrt{\frac{(2\pi)^N}{\mathrm{det} H(\nu)}}d\nu
+\langle n_{\rm min}(\nu)\rangle d\nu &=A\int_{\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0} e^{\mathrm{log}G-Q} \prod_n dx_n d\nu\\
+&\approx \int_{-\infty}^{\infty} \exp\left(-\frac{1}{2}\sum_{l,m}x_lH_{lm}x_m\right)  \prod_n dx_n d\nu \\
+&= \sqrt{\frac{(2\pi)^N}{\mathrm{det} H(\nu)}}d\nu
 \end{split}
 \end{align*}
-
+%
+\noindent where $H_{lm}$ is the Hessian \sh{of the integrand with respect to the $x_n$ variables} at the peak.
 \begin{figure} 
   \centering
-  \includegraphics[width=\linewidth]{Comparison.png}
-  \caption{A comparison of $P(\nu)d\nu$ with the Gaussian approximation, at specified values of $\nu$ ($N=8$ \SH{what $\gamma$?}). Blue line corresponds to the Gaussian results, while the orange line corresponds to the exact integral. Horizontal axis is $\nu$ while the vertical axis is (unormalized) \sh{probability density}. As expected, because the Gaussian integral integrates to infinity while the exact integral does not, it yields a larger likelihood. \SH{The $(N-1)^\alpha$ correction takes this into account.}}
+  \includegraphics[width=.3 \linewidth]{PLam_approx.eps} \hfill
+   \includegraphics[width=.3 \linewidth]{PLam_approx_log.eps} \hfill
+    \includegraphics[width=.3 \linewidth]{PLam_ratio.eps}
+  \caption{  
+  A comparison of the unnormalised exact $P(\Lambda)$ with the Gaussian approximation, for $\gamma=0.6$ and $N=4$. The left and middle plots show the exact result and the Gaussian approximation, on linear and logarithmic axes; the ratio of the two is show on the right. The Gaussian approximation always  over-estimates the integral, but the ratio is roughly independent of $\Lambda$ and remains close to unity. }
   \label{Comparison}
 \end{figure}
 
-\noindent where $H_{lm}$ is the Hessian \sh{of the integrand with respect to the $x_n$ variables} at the \sh{\sout{point} value of the potential} being considered\sh{\sout{, and we no longer have an integral over $\nu$}}. This produces a list of points for each value of $\nu$. Fitting these points to a function and integrating that for the region with $\nu > 0$, we get an approximate result of the integral.\SH{Why fit to a function and not just integrate directly? I think I've been told this before, but I've forgotten.} \lfl{I feel like there's a more technical term for this, don't know what though.} This approximate value can then be compared against the exact value. The Gaussian approximation turns out to be very good (see Fig. \ref{Comparison}). The Gaussian integral can be more efficiently computed than Eq. \ref{DensityOfPeaks}, which lets us evaluate it up to $N\approx30$.
-\SH{Do we want to also show the even \emph{better} result when we look at the ratios? Or has figure 4 already done this? Also, we could include here the comparison to $(N-1)^\alpha$ to show we understand why the gaussian approximation misses. We could also use the $(N-1)^\alpha$ corrected Gaussian approximation as the default if we want. Finally, I think we could do with a more thorough examination of when/where this approximation works and where it doesn't, as a function of $N$ and $\gamma$.}
+It turns out that the numerical location of the peak can be obtained fairly simply for $N\lesssim 200$, which will be sufficient for our purposes.\footnote{All numerical results in this paper are obtained using Mathematica. We note that the computational efficiency of the calculations can depend strongly on apparently small tweaks in their implementation.} A representative comparison between the Gaussian approximation and the exactly evaluated integral is shown in Figure~\ref{Comparison}, and we see that it is sufficiently accurate for our purposes. In particularly, for fixed $N$ and $\gamma$ the discrepancy between the exact result and the approximation depends very weakly on $\Lambda$, so  the normalised results will be highly accurate.  
+\SH{We could include here the comparison to $(N-1)^\alpha$ to show we understand why the gaussian approximation misses. We could also use the $(N-1)^\alpha$ corrected Gaussian approximation as the default if we want. Finally, I think we could do with a more thorough examination of when/where this approximation works and where it doesn't, as a function of $N$ and $\gamma$.} \re{include to agree  this could use more discussion, but not to go overboard} 
 
 \begin{figure} 
   \centering
-  \includegraphics[width=\linewidth]{PVaryingWithNGaussian.png}
-  \caption{(Left) The probability of a minimum above $\nu=0$, calculated using the Gaussian approximation. The lines correspond to $\gamma = \frac{1}{10}, \frac{1}{5}, \frac{1}{3.5}, \frac{1}{2.5}$ respectively from top to bottom. Compare Fig. \ref{gamma} \SH{Why can't we overplot the exact result up to $N=10$ on both LHS and RHS}. (Right) The same data, plotted using a different y-axis ($Log$ here is to base 10 \SH{Richard's suggestion of just plotting $P(V>0)$ with a logarithmic axis is a good one}). All four lines yield a logarithm well above $-500$ \sh{\sout{at} if extrapolated to} $N=100$. The cutoff at which $p(V>0|{\rm min}) \sim 10^{-500}$, \sh{\sout{with $\sigma_0$ and $\sigma_1$ normalized to 1,  is $\sigma_2 \approx 1.08$}}\SH{can we just write the $\gamma$ value? Titles need $F$ changed to $V$ in the plots}.}
+  \includegraphics[width=.6 \linewidth]{pwithN.eps}
+  \caption{The probability that a given minimum has $\Lambda>0$, as a function of $N$ for $\gamma=0.2$, $0.5$, $0.8$ and $0.9$ (top to bottom) calculated using the Gaussian approximation. }
   \label{PVaryingWithNGaussian}
 \end{figure}
   
-The plot of the logarithms of these results against the number of dimensions is surprisingly straight (Fig. \ref{PVaryingWithNGaussian}). Although it is not conclusive,\footnote{Per Figure 4 of \cite{Yamada2018}, it is possible the behavior of the function changes at $N >100$.} it is suggestive.\SH{Can we overplot the results for the exact integral to show how well they match?}
+In  Figure~\ref{PVaryingWithNGaussian} we show $P(\Lambda>0|N,\gamma)$ as a function of $N$ for several values of $\gamma$, given by Equation~\ref{PminIntegral}. We use the Gaussian approximation for the integrals over the $x_i$; in the numerator we compute the final integral over $\nu$ by evaluating at multiple, evenly spaced values of $\nu > 0$  and then performing a simple numerical integral. We see that the logarithms of $P(\Lambda>0|N,\gamma)$ are linear with $N$, but the constant of proportionality increases rapidly as $\gamma$ approaches unity; for $N=30$ and $\gamma = .9$ only 1 in $10^{50}$ minima in the landscape will have a positive cosmological constant. 
 
-\subsection{$\sim 30 < N < \sim100$: Approximations using the $\nu=0$ point}
-
-The Gaussian approximation described in the previous subsection requires the integral to be computed for several different values of $\nu$. If we use only the result at the $\nu=0$ point, we get a result that is much larger than the exact results, but it remains at a nearly-constant ratio to it (see Fig. \ref{sigma2=2v=0})\SH{We can (appproximately) predict this ratio, and I think we should plot the ``corrected'' value for the approximation. I think we should also have a plot like Fig 6, but for a few values of $\gamma$ and we should include comparisons of all three methods on it.}. Using this, we confirm that the straight line behavior holds up to $N = 100$.
+In practice, when $\Lambda>0$ is effectively in the right-hand tail of $P(\Lambda)$,  the value of $P(\Lambda=0|N,\gamma)$ is a reliable proxy for $P(\Lambda>0|N,\gamma)$. In the tail of the distribution,  $P(\Lambda|N,\gamma)$ will decrease significantly between $\nu=0$ and $\nu=1$, so $P(\Lambda=0|N,\gamma)$ will always overestimate $P(\Lambda>0|N,\gamma)$. However, because we have normalised $\nu$, the factor between the $\Lambda=0$ and $\Lambda>0$ case will not depend strongly on $N$ or $\gamma$ and is typically less than a factor of $10$. In other circumstances this would be a poor approximation, but here our focus is effectively on the logarithms of very small numbers, so this factor can be safely ignored. 
 
 \begin{figure} 
   \centering
-  \includegraphics[width=\linewidth]{sigma2=2v=0.png}
-  \caption{A comparison of the Gaussian approximation evaluated at the $\nu=0$ point to the full integral. The blue line corresponds to the $\nu=0$ results, while the orange line corresponds to the Gaussian results (Section 3.3). Horizontal axis is $N$ while the vertical axis is the $Log_{10}$ of the probability. The $\nu=0$ results are always larger than the actual results, but the ratio of their logarithms is approximately constant.}
-  \label{sigma2=2v=0}
+  \includegraphics[width=.6 \linewidth]{histo.eps}
+  \caption{The contour plot displays $P(\Lambda =0 |N,\gamma)$. Contours are at $\log_{10}(P(\Lambda =0 |N,\gamma)) = -25$, -50, -100, -200, -300, and  -400.  We see that for $N \sim 100$ there are significant regions of parameter space for which $P(\Lambda =0 |N,\gamma)$ is vastly less than unity. }
+  \label{fullcontourplot}
 \end{figure}
 
-\SH{change to $\gamma?$}Based on these calculations, we conclude that the value of $\sigma_2$ for which $P(V>0|{\rm min})$ drops to $\sim 10^{-500}$ at $N = 100$ is about $1.08$. In other words, there will be plenty of minima in the landscape that could correspond to our universe if the landscape has $\sigma_2 \gtrapprox 1.08$ (with $\sigma_0$ and $\sigma_1$ normalized to 1).
+Figure~\ref{fullcontourplot} displays  $P(\Lambda =0 |N,\gamma)$ as a function of $N$ and $\gamma$.  \re{out to $N=200$}
 
-%We have tried two ways to do this.
 
-%The first way is to extrapolate from the data in Table \ref{Data}. In Fig. \ref{Log-Linear}, we present a log-linear plot of the probability against the dimension for the three values of $\sigma_2$. The resulting lines are surprisingly straight. There is a noticeable kink in both the $\sigma_2 = 3.5$ and $\sigma_2=2$ case between $N=6$ and $N=7$. This is a numerical effect -- it is where the exact results end and the numerical ones begin. If the trend is robust, then for the case of $\sigma_2=2$, the probability at $N=100$ is of the order of $p \sim 10^{-42}$. Since there are $\sim 10^{500}$ stationary points in the landscape,\cite{Douglas} this probability, while small, still leads to there being $\sim 10^{458}$ minima that might correspond to our universe.
+\section{Eigenvalue Distributions and Slopes} 
 
-%We checked this by running the numerical integration for $N=6$ as well. Replacing the exact result with the numerical one, the kink moves to the left. The kink indicates that the numerical results are consistently overestimating the true probability, but that is not surprising because the numerical results rely on the trapezoidal rule. The trapezoidal rule overestimates the result when the integral is concave up, and underestimates it when it is concave down. The final probability is the area under the curve for $\phi > 0$ divided by the area under the curve for all $\phi$. From Fig. \ref{Likelihood}, for $\phi > 0$ the curve is concave up, so the trapezoidal rule overestimates the numerator, and accordingly the probability as well. This trend holds for higher $N$ as well, since for higher $N$ the plot moves to more negative values.
-
-%\begin{figure}
-%  \centering
-%  \includegraphics[width=\linewidth]{LikelihoodPlot.png}
-%  \caption{A plot of the likelihood for $\sigma_2=2, N=6$. The final probability desired is the area under the curve for $\phi > 0$ divided by the area unde the curve for all $\phi$. For the region $\phi > 0$, the curve is concave upwards, so the trapezoidal rule overestimates its value. Accordingly, the numerator and probability are also overestimated.}
-%  \label{Likelihood}
-%\end{figure}
-
-%The other way is to with ratios of the peak likelihood. The idea is to take the logarithm of the integrand in Eq. \ref{DensityOfPeaks}, which results in a function $G(x, y, z, \ldots)$, and then find the values of $x, y, z \ldots$ which maximizes this integrand. This corresponds to the single most likely point. Having done this, we can compute the ratio of this maximum vs. the point $\phi = 0$, which is a number much more easily calculated. The result in 4D is show in Fig. \ref{LogRatioNoFit}. It's obvious that the blue line is not a good fit of the orange line, but it takes the same shape. Since string theory predicts a truly gargantuan number of stationary points -- on the order of $10^{500}$ -- being off by even $\sim100$ orders of magnitude is not necessarily fatal.
-
-%\begin{figure}
-%  \centering
-%  \includegraphics[width=\linewidth]{LogRatioNoFit.png}
-%  \caption{Plot of the logarithm of the ratio of likelihood for the overall peak to the point $\phi = 0$ as a function of $\gamma$, as well as the analytic results, in 4 dimensions. The blue line is the logarithm of the ratio of likelihood, the orange line is the analytic results.}
-%  \label{LogRatioNoFit}
-%\end{figure}
-
+In order to compute the Gaussian  approximations to the integrals in Equation~\ref{PminIntegral} we must first locate the position of the peak as a function of the $x_i$. However, this calculation yields much more information than just $P(\Lambda  |N,\gamma)$, as the $x_i$ are a linear combination of the $\lambda_i$, the eigenvalues of the Hessian matrix of $V(\phi)$ at the minima. 
+ 
 \section{Implications for Multiverse Cosmology}
 
 \SH{I think a section like this would be nice... everything up to now is an explanation of why we should trust our $P(V>0|{\rm min})$ results... now we should play with them and say interesting stuff about them! Richard's suggestion of stuff around how steep, or not steep, minima would be at different values of $V$ would be good (although we should check that Vilenkin etc haven't already done it in one of their papers).}
@@ -464,7 +350,7 @@ The Gaussian approximation described in the previous subsection requires the int
 
 \lfl{Dunno what to put here anymore}
 
-\section{Conclusion}
+
 \SH{Change to $V$ and $\gamma$}
 
 \SH{Has any paper pointed out that $P(V>0|{\rm min})$ is actually really small in the first place, maybe that itself isn't understood yet. And then we say exactly how small, and find the range of $N$ and $\gamma$ for which it is big enough that at least one above water minima is expected. We could also put the dimensions back in for $V$ (e.g. make $\sigma_0$ equal to the Planck vacuum energy)  and say something about how probable/improbable it is that $V$ gets to the value we observe?}

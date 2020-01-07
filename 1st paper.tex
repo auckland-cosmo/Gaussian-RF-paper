@@ -329,7 +329,7 @@ In practice, when $\Lambda>0$ is effectively in the right-hand tail of $P(\Lambd
 \begin{figure} 
   \centering
   \includegraphics[width=.6 \linewidth]{histo.eps}
-  \caption{The contour plot displays $P(\Lambda =0 |N,\gamma)$. Contours are at $\log_{10}(P(\Lambda =0 |N,\gamma)) = -25$, -50, -100, -200, -300, and  -400.  We see that for $N \sim 100$ there are significant regions of parameter space for which $P(\Lambda =0 |N,\gamma)$ is vastly less than unity. }
+  \caption{We plot the minimum and maximum eigne}
   \label{fullcontourplot}
 \end{figure}
 
@@ -338,7 +338,48 @@ Figure~\ref{fullcontourplot} displays  $P(\Lambda =0 |N,\gamma)$ as a function o
 
 \section{Eigenvalue Distributions and Slopes} 
 
-In order to compute the Gaussian  approximations to the integrals in Equation~\ref{PminIntegral} we must first locate the position of the peak as a function of the $x_i$. However, this calculation yields much more information than just $P(\Lambda  |N,\gamma)$, as the $x_i$ are a linear combination of the $\lambda_i$, the eigenvalues of the Hessian matrix of $V(\phi)$ at the minima. 
+In order to compute the Gaussian  approximations to the integrals in Equation~\ref{PminIntegral} we must first locate the position of the peak as a function of the $x_i$. However, this calculation yields much more information than just $P(\Lambda  |N,\gamma)$, as the $x_i$ are a linear combination of the $\lambda_i$, the eigenvalues of the Hessian matrix of $V(\phi)$ at the minima. In particular, because we work with the full probability distribution function rather than an approximation, we can compute the likely shape of minima that occur at values of $V(\phi)$ that  are  far from the peak of $P(\Lambda)$ as easily as we can for typical values.  
+
+\begin{figure} 
+  \centering
+  \includegraphics[width=.9\linewidth]{eign.eps}
+  \caption{We show the expected minimum and maximum eigenvalues at a minimum as a function of $N$ for four values of $\gamma$.  The dashed lines show the expected eigenvalues at the most likely value of $\Lambda$; the solid lines show the values at $V=0$. In all cases the expected values of the smallest eigenvalue decreases as $N$ increases, while the maximum value stays roughly unchanged. Moreover, if $\gamma$ is small  the difference between the  likely value of $\Lambda$ and $\Lambda=0$ is small, but this grows with $\gamma$.}
+  \label{eigen}
+\end{figure}
+
+The range of the eigenvalue distributions is shown in Figure~\ref{eigen}. The eigenvalue distribution at the peak value of $\Lambda$ for a given $N$ is independent of $\gamma$. This can be seen by looking at the overall probability density; it is maximised with respect to $\nu$ when $\nu = \gamma x_1$; enforcing this eliminates $\gamma$ from the full  probability density.     Given that we have set $\sigma_0 = \sigma_1=1$, our potentials are effectively dimensionless, and we see that in all cases the largest eigevalue is a little less than unity. Conversely, as $N$ increases the smallest eigenvalue approaches zero. When $\gamma$ approaches unity, almost all of the minima in the landscape  occur at negative values of $\Lambda$ the relative handful of minima above the waterline become more ``elongated'' as the lowest-lying eigenvalue approaches zero. This will have implications for quintessence scenarios in any landscape, as it points to a mechanism for producing minima which are almost guaranteed to have a handful of very gradual approaches, as we discuss in the following Section. 
+
+\begin{figure} 
+  \centering
+  \includegraphics[width=.45\linewidth]{h1_100.eps} \hfill \includegraphics[width=.45\linewidth]{h2_100.eps}
+  \caption{The expected eigenvalue distributions are plotted for $\gamma=0.9$ and $N=100$; the left hand histogram shows the distribution at the most likely value of $\Lambda$; the right hand plot shows the result for $\Lambda=0$.}
+  \label{eigendist}
+\end{figure}
+
+\begin{figure} 
+  \centering
+  \includegraphics[width=.45\linewidth]{l1_100.eps} \hfill \includegraphics[width=.45\linewidth]{l2_100.eps}
+  \caption{The expected eigenvalues are plotted for $\gamma=0.9$ and $N=100$; the left hand plot shows the most likely value of each of the 100 $\lambda_i$; the right hand plot shows the smallest eigenvalues on a log scale. The upper points correspond to the value for $\Lambda$ for which $P(\Lambda| N,\gamma)$  is peaked; the lower points correspond to $\Lambda=0$. }
+  \label{eigendist}
+\end{figure}
+
+
+
+We can also examine the distribution of eigenvalues. At  $N\gtrsim 100$ the eigenvalue distribution at the peak value of $\Lambda$ is roughly ``semicircular''; for values of $N$ and $\gamma$ for which $P(\Lambda|N,\gamma)$ is very small at zero the number of low-lying eigenvalues grows substantially. \re{does this look reminiscent of the Yamada and Vilenkin paper?} Intuitively, this makes sense, at values of $\Lambda$ for which minima are rare, we would expect that they will become increasingly ``marginal'' and the smaller the eigenvalues of the Hessian of $V(\phi)$ become, the shallower the resulting minima become. 
+
+\begin{figure} 
+  \centering
+  \includegraphics[width=.6\linewidth]{ratio.eps}  
+  \caption{The expected ratio of the two smallest eigenvalues is plotted as a function of $N$.   From bottom to top the lines are i) the eigenvalues at the peak  of the distribution (which do not depend on $\gamma$), and $\Lambda=0$ for $\gamma =0.5$ and $0.9$.}
+  \label{ratio}
+\end{figure}
+
+Conversely, as we show in Figure~\ref{ratio} the ratio between the two lowest lying eigenvalues at a minimum increases slowly with $N$ and with $\gamma$; interestingly, not only does the value of the lowest lying eigenvalue decrease as  $N$ increases, the ratio between this and the next smallest eigenvalue increases with $\gamma$, which will have implications for cosmological models that are based on dynamical scalar fields in a landscape. 
+
+
+
+
+
  
 \section{Implications for Multiverse Cosmology}
 

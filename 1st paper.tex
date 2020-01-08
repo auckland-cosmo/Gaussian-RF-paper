@@ -186,7 +186,7 @@ The number density of extrema, $n_{\rm ext}(\phi)$, is itself a random variable.
 \end{equation}
 where for notational convenience we have dropped the ${\rm d}^N \phi$ from each side.
 
-Finally, we need to restrict this integral to count the extrema that are also local minima. It is easiest to do this by considering the eigenvalues, $\lambda_i$ of the Hessian of the landscape $-\zeta$\SH{What convention do we want to use here for the sign?}\re{haven't tried to sort this, but isn't the Hessian usually just the second derivatives (outside of random function theory), so let's use that?}  and restricting them to be negative.\footnote{Note there is an alternative convention where the eigenvalues \sh{are defined with the opposite sign, in which case} \emph{positive} \sh{eigenvalues} correspond to \sh{minima} \re{cite places where this is used}}  The Hessian is  symmetric by definition. We can further rotate it such that it is diagonal, in which case the diagonal elements are its eigenvalues.  In 2D and 3D, the Jacobian of the transformation matrix can be calculated explicitly as $d \zeta = \prod_{i \neq j}^N |\lambda_i - \lambda_j|(\prod_k d\lambda_k) d \Omega$, where ``$d\Omega$'' represents the $(N^2-N)/2$-dimensional integral measure of the set of rotation angles. The same result holds in $N$ dimensions.\footnote{A proof in $N$ dimensions is given in section V of \cite{Easther2016}, generalising the 3D  BBKS result. \re{can we just say what the typos are?}} The function $V$ and its derivatives are statistically isotropic. Therefore each set of rotation angles is as probable as any other, and the integral over all the rotation angles must give just a constant.   After this rotation $\zeta_{ii}=-\lambda_i$, $\zeta_{ij}=0$ and $|{\rm det} \zeta| = \prod_i |\lambda_i|$. and the factor $|\rm{det} \zeta(\phi)|$ in Eq. \ref{NumberDensity} can be expressed as $A \prod_i |\lambda_i| \prod_{i \neq j}^N |\lambda_i - \lambda_j|(\prod_k d\lambda_k)$, where $A$ is a constant.
+Finally, we need to restrict this integral to count the extrema that are also local minima. It is easiest to do this by considering the eigenvalues, $\lambda_i$ of the Hessian of the landscape $-\zeta$\SH{What convention do we want to use here for the sign?}\re{haven't tried to sort this, but isn't the Hessian usually just the second derivatives (outside of random function theory), so let's use that?}  and restricting them to be negative.\footnote{Note there is an alternative convention where the eigenvalues are defined with the opposite sign, in which case \emph{positive} eigenvalues correspond to minima (e.g. \cite{Baker1986}). \re{cite places where this is used}}  The Hessian is  symmetric by definition. We can further rotate it such that it is diagonal, in which case the diagonal elements are its eigenvalues.  In 2D and 3D, the Jacobian of the transformation matrix can be calculated explicitly as $d \zeta = \prod_{i \neq j}^N |\lambda_i - \lambda_j|(\prod_k d\lambda_k) d \Omega$, where ``$d\Omega$'' represents the $(N^2-N)/2$-dimensional integral measure of the set of rotation angles. The same result holds in $N$ dimensions.\footnote{A proof in $N$ dimensions is given in section V of \cite{Easther2016}, generalising the 3D  BBKS result. \re{can we just say what the typos are?}} The function $V$ and its derivatives are statistically isotropic. Therefore each set of rotation angles is as probable as any other, and the integral over all the rotation angles must give just a constant.   After this rotation $\zeta_{ii}=-\lambda_i$, $\zeta_{ij}=0$ and $|{\rm det} \zeta| = \prod_i |\lambda_i|$. and the factor $|\rm{det} \zeta(\phi)|$ in Eq. \ref{NumberDensity} can be expressed as $A \prod_i |\lambda_i| \prod_{i \neq j}^N |\lambda_i - \lambda_j|(\prod_k d\lambda_k)$, where $A$ is a constant.
 
  
 
@@ -209,7 +209,7 @@ $Q$ is given by Eq. \ref{Q} and the constant factor $A$ has absorbed by Jacobian
 {\cal L}(\lambda_1,\cdots, \lambda_N; V, \gamma) = \left(\prod_{i}^{N} \lambda_i \right)\left(\prod_{i<j} |\lambda_i-\lambda_j|\right) e^{-Q}
 \end{equation} 
 %
-as an unnormalised probability density that gives the (relative) likelihood of finding a minimum at which the landscape has a $V$, and the Hessian matrix has eigenvalues $\lambda_i$ as a function of the single independent variable $\gamma$. This expression is exact;  we immediately see that the prefactor to the exponential enforces a variant of {\em eigenvalue repulsion\/} \re{cite RMT literature; in general you can have a symmetric matrix with degenerate eigenvalues}, in that the likelihood of finding a minimum with near-identical $\lambda_i$ is vanishingly small. 
+as an unnormalised probability density that gives the (relative) likelihood of finding a minimum at which the landscape has a $V$, and the Hessian matrix has eigenvalues $\lambda_i$ as a function of the single independent variable $\gamma$. This expression is exact;  we immediately see that the prefactor to the exponential enforces a variant of {\em eigenvalue repulsion\/} \cite{Mehta1990} \re{cite RMT literature; in general you can have a symmetric matrix with degenerate eigenvalues}, in that the likelihood of finding a minimum with near-identical $\lambda_i$ is vanishingly small. 
 
 
 
@@ -223,7 +223,7 @@ Our  overall goal is to understand $P(\Lambda)$, the probability density of ener
  and any specific $P(\Lambda)$ can be computed by dropping the integral over $\nu$ and setting $\nu=\Lambda$ in the numerator. 
  %
 %
-This integral depends on the value of $Q$ (Eq. \ref{Q}) and therefore on the moments of the power spectrum $\sigma_0, \sigma_1$,  and $\sigma_2$, through the single parameter $\gamma$. The allowed range of this variable is $0<\gamma<1$ because $0<\sigma_1^2<\sigma_0\sigma_2$. \SH{could add proof if we wanted}\re{since we have it}
+This integral depends on the value of $Q$ (Eq. \ref{Q}) and therefore on the moments of the power spectrum $\sigma_0, \sigma_1$,  and $\sigma_2$, through the single parameter $\gamma$. The allowed range of this variable is $0<\gamma<1$ because $0<\sigma_1^2<\sigma_0\sigma_2$.\footnote{See Section \ref{Proof} for a proof.}
 
 
 Broadly speaking, the overall distribution $P(\Lambda | N,\gamma)$ moves to lower values as $N$ and $\gamma$ are increased;  representative results for moderate $N$ are shown in Figure~\ref{distributions}. Moreover, as $\gamma$ increases, the width of the distribution contracts. Consequently, we will find that when $\gamma$ is close to unity and $N \gtrsim {\cal{O}}(10^2)$, $P(\Lambda >0)$ can be almost arbitrarily small, as we quantify below. 
@@ -246,7 +246,7 @@ We can likewise see $N$-dependence semi-quantitatively by noting that the number
 \begin{figure}
   \centering
     \includegraphics[width=\linewidth]{TwoSigmas.png}
-  \caption{Illustrative realisations of 1D functions. The left figure has a small $\gamma$ and power over a greater range of scales, allowing minima (maxima) to appear in significant numbers above (below) zero. When $\gamma$ is large (right figure) the spectrum is dominated by  a smaller range of modes, and most minima are low-lying. \SH{y-axis on LHS and RHS are subtly different}}
+  \caption{Illustrative realisations of 1D functions. The left figure has a small $\gamma$ and power over a greater range of scales, allowing minima (maxima) to appear in significant numbers above (below) zero. When $\gamma$ is large (right figure) the spectrum is dominated by a smaller range of modes, and most minima are low-lying.}
   \label{examples1}
 \end{figure}
 
@@ -312,7 +312,7 @@ That said, for $N>10$, direct calculation becomes very resource-intensive. To pr
   \label{Comparison}
 \end{figure}
 
-It turns out that the numerical location of the peak can be obtained fairly simply for $N\lesssim 200$, which will be sufficient for our purposes.\footnote{All numerical results in this paper are obtained using Mathematica. We note that the computational efficiency of the calculations can depend strongly on apparently small tweaks in their implementation.} A representative comparison between the Gaussian approximation and the exactly evaluated integral is shown in Figure~\ref{Comparison}, and we see that it is sufficiently accurate for our purposes. In particularly, for fixed $N$ and $\gamma$ the discrepancy between the exact result and the approximation depends very weakly on $\Lambda$, so  the normalised results will be highly accurate.  
+It turns out that the numerical location of the peak can be obtained fairly simply for $N\lesssim 200$, which will be sufficient for our purposes.\footnote{All numerical results in this paper are obtained using Mathematica. We note that the computational efficiency of the calculations can depend strongly on apparently small tweaks in their implementation.} A representative comparison between the Gaussian approximation and the exactly evaluated integral is shown in Figure~\ref{Comparison}, and we see that it is sufficiently accurate for our purposes. In particular, for fixed $N$ and $\gamma$ the discrepancy between the exact result and the approximation depends very weakly on $\Lambda$, so  the normalised results will be highly accurate.  
 \SH{We could include here the comparison to $(N-1)^\alpha$ to show we understand why the gaussian approximation misses. We could also use the $(N-1)^\alpha$ corrected Gaussian approximation as the default if we want. Finally, I think we could do with a more thorough examination of when/where this approximation works and where it doesn't, as a function of $N$ and $\gamma$.} \re{include to agree  this could use more discussion, but not to go overboard} 
 
 \begin{figure} 
@@ -333,7 +333,7 @@ In practice, when $\Lambda>0$ is effectively in the right-hand tail of $P(\Lambd
   \label{fullcontourplot}
 \end{figure}
 
-Figure~\ref{fullcontourplot} displays  $P(\Lambda =0 |N,\gamma)$ as a function of $N$ and $\gamma$.  \re{out to $N=200$}
+Figure~\ref{fullcontourplot} displays  $P(\Lambda =0 |N,\gamma)$ as a function of $N$ and $\gamma$.  \re{out to $N=200$} \lfl{Do we want to zoom in on the region $\gamma > 0.9$?}
 
 
 \section{Eigenvalue Distributions and Slopes} 
@@ -365,7 +365,7 @@ The range of the eigenvalue distributions is shown in Figure~\ref{eigen}. The ei
 
 
 
-We can also examine the distribution of eigenvalues. At  $N\gtrsim 100$ the eigenvalue distribution at the peak value of $\Lambda$ is roughly ``semicircular''; for values of $N$ and $\gamma$ for which $P(\Lambda|N,\gamma)$ is very small at zero the number of low-lying eigenvalues grows substantially. \re{does this look reminiscent of the Yamada and Vilenkin paper?} Intuitively, this makes sense, at values of $\Lambda$ for which minima are rare, we would expect that they will become increasingly ``marginal'' and the smaller the eigenvalues of the Hessian of $V(\phi)$ become, the shallower the resulting minima become. 
+We can also examine the distribution of eigenvalues. At  $N\gtrsim 100$ the eigenvalue distribution at the peak value of $\Lambda$ is roughly ``semicircular''; for values of $N$ and $\gamma$ for which $P(\Lambda|N,\gamma)$ is very small at zero the number of low-lying eigenvalues grows substantially. \re{does this look reminiscent of the Yamada and Vilenkin paper?} \lfl{Yes? Yamada \& Vilenkin Fig 9 shows that at large $N$, small values of the eigenvalue become more likely, although the \emph{really} small ones are unlikely} Intuitively, this makes sense, at values of $\Lambda$ for which minima are rare, we would expect that they will become increasingly ``marginal'' and the smaller the eigenvalues of the Hessian of $V(\phi)$ become, the shallower the resulting minima become. 
 
 \begin{figure} 
   \centering
@@ -385,9 +385,9 @@ Conversely, as we show in Figure~\ref{ratio} the ratio between the two lowest ly
 
 In the preceding sections, we have  written down an explicit and tractable probability distribution function for an $N$-dimensional  Gaussian random function, and 
 
-\SH{Has any paper pointed out that $P(V>0|{\rm min})$ is actually really small in the first place, maybe that itself isn't understood yet. And then we say exactly how small, and find the range of $N$ and $\gamma$ for which it is big enough that at least one above water minima is expected. We could also put the dimensions back in for $V$ (e.g. make $\sigma_0$ equal to the Planck vacuum energy)  and say something about how probable/improbable it is that $V$ gets to the value we observe?}
+\SH{Has any paper pointed out that $P(V>0|{\rm min})$ is actually really small in the first place, maybe that itself isn't understood yet. And then we say exactly how small, and find the range of $N$ and $\gamma$ for which it is big enough that at least one above water minima is expected. We could also put the dimensions back in for $V$ (e.g. make $\sigma_0$ equal to the Planck vacuum energy)  and say something about how probable/improbable it is that $V$ gets to the value we observe?} \lfl{I'm for doing this}
 
-\SH{For ``future work'' we could also mention that we aren't necessarily in a minimum, we're just at a point where $\eta$ is below some threshold, which would require a slightly different analysis, in particular we wouldn't limit ourselves to extrema and thus would lose the $\prod |\lambda|$ term in the pdf, thus favouring smaller eigenvalues a lot more. There's heaps of things that could be explored/asked about...}
+\SH{For ``future work'' we could also mention that we aren't necessarily in a minimum, we're just at a point where $\eta$ is below some threshold, which would require a slightly different analysis, in particular we wouldn't limit ourselves to extrema and thus would lose the $\prod |\lambda|$ term in the pdf, thus favouring smaller eigenvalues a lot more. There's heaps of things that could be explored/asked about...} \lfl{If we're not at a minimum but rather a near-minimum with small $\eta$'s, wouldn't we be inflating?}
 
 
 We have presented results for the statistics of stationary points at a given function value as a function of $N$ and $\sigma_2$. The numbers confirm the intuitive expectation that the probability of a given extremum with $V > 0$ being a minimum decreases as $N$ increases or as $\sigma_2$ decreases. We are able to calculate precise values for the probability up to $N=10$. Above this dimension, evaluating Eq. \ref{DensityOfPeaks} is computationally prohibitive, but we find that Eq. \ref{DensityOfPeaks} is well-approximated by a Gaussian integral. Using this approximation, we are able to estimate the probability up to $N \approx 30$. For $N>30$, we use only the $\nu=0$ point, which although much smaller than the actual results, remains in roughly constant ratio with it. The final probability as a function of $N$ is well-approximated by a straight line when plotted on a logarithmic scale for various values of $\sigma_2$ (Fig. \ref{PVaryingWithNGaussian}). If this trend holds to larger values of $N$, we estimate that the value of $\sigma_2$ for which $P(V>0|{\rm min})$ drops to $\sim 10^{-500}$ is approximately $1.08$.
@@ -395,17 +395,17 @@ We have presented results for the statistics of stationary points at a given fun
 The results of this paper establish the number of vacua that could correspond to our universe in string theory, but does not treat the distribution of eigenvalues -- and accordingly the duration of slow-roll inflation -- that could arise from these vacua. An analysis of this will be the focus of future work.
 
 \section{Appendix}
-\subsection{Density of peaks for $N=4$} 
-For $N=4$, the full result of the integral Eq. \ref{DensityOfPeaks} is: \lfl{This needs to be re-checked, there shouldn't be $x$ in the result. Computer is busy with the $N=100$ calculations for $\sigma_2=1.08$, will do it later.}
-
-\begin{equation}
-\begin{split}
-N = \frac{1}{214990848} \mathrm{Exp}\frac{9x^2\sigma_1^4 + 2\nu x \sigma_0 \sigma_1^2 \sigma_2 - (v^2+10x^2)\sigma_0^2\sigma_2^2}{-2\sigma_1^4+2\sigma_0^2\sigma_2^2}\\\bigg{(}80x - 1610e^{3x^2}+128x^3+418e^{3x^2}x^3+4e^{4x^2}\sqrt{\pi}(3+48x^2+64x^4)\mathrm{Erf}\bigg{[}\sqrt{\frac{3}{2}}x\bigg{]}\\
--486e^{\frac{9x^2}{2}}\sqrt{6\pi}x^2\mathrm{Erf}\bigg{[}\sqrt{\frac{3}{2}}x\bigg{]}+81e^{\frac{9x^2}{2}}\sqrt{6\pi}x^4\mathrm{Erf}\bigg{[}\sqrt{\frac{3}{2}}x\bigg{]}\bigg{)}
-\end{split}
-\end{equation}
-
-The higher-dimensional results take the same form: an overall exponential multiplied by a product of polynomials and error functions; however they are massive (for example, in 5D there are some eight hundred terms).
+%\subsection{Density of peaks for $N=4$} 
+%For $N=4$, the full result of the integral Eq. \ref{DensityOfPeaks} is: \lfl{This needs to be re-checked, there shouldn't be $x$ in the result. Computer is busy with the $N=100$ calculations for $\sigma_2=1.08$, will do it later.}
+%
+%\begin{equation}
+%\begin{split}
+%N = \frac{1}{214990848} \mathrm{Exp}\frac{9x^2\sigma_1^4 + 2\nu x \sigma_0 \sigma_1^2 \sigma_2 - (v^2+10x^2)\sigma_0^2\sigma_2^2}{-2\sigma_1^4+2\sigma_0^2\sigma_2^2}\\\bigg{(}80x - 1610e^{3x^2}+128x^3+418e^{3x^2}x^3+4e^{4x^2}\sqrt{\pi}(3+48x^2+64x^4)\mathrm{Erf}\bigg{[}\sqrt{\frac{3}{2}}x\bigg{]}\\
+%-486e^{\frac{9x^2}{2}}\sqrt{6\pi}x^2\mathrm{Erf}\bigg{[}\sqrt{\frac{3}{2}}x\bigg{]}+81e^{\frac{9x^2}{2}}\sqrt{6\pi}x^4\mathrm{Erf}\bigg{[}\sqrt{\frac{3}{2}}x\bigg{]}\bigg{)}
+%\end{split}
+%\end{equation}
+%
+%The higher-dimensional results take the same form: an overall exponential multiplied by a product of polynomials and error functions; however they are massive (for example, in 5D there are some eight hundred terms).
 
 \subsection{$p(V|s.p.)$ for $N=2$}
 \lfl{As long as the reference above to the difference with Yamada \& Vilenkin is commented out, this appendix isn't needed either}
@@ -419,6 +419,27 @@ p(V|s.p.)=\frac{\sqrt{\pi}}{4\sqrt{4\gamma^2-6}}\bigg{[}\mathrm{Exp}\frac{V^2}{2
 \end{equation}
 
 \noindent where $\gamma = \sigma_1^2/\sigma_0\sigma_2$. This result can be derived using a similar method as to derive Eq. \ref{DensityOfPeaks}, but by relaxing the requirement that the smallest eigenvalue is greater than zero.
+
+\subsection{Proof that $0 < \sigma_1^2 < \sigma_0\sigma_2$} \label{Proof}
+
+Consider the expression:
+
+\begin{equation}
+\int (k^2 - \frac{\sigma_1^2}{\sigma_0^2})^2 P(k) dk
+\end{equation}
+
+\noindent We must have that this expression is greater than 0, because the integrand is positive. Expanding the square leads to
+
+\begin{equation}
+\begin{split}
+\int k^4 P(k) dk &- 2 \int k^2 \frac{\sigma_1^2}{\sigma_0^2}k^2 P(k) dk + \int \frac{\sigma_1^4}{\sigma_0^4} P(k) dk \\
+&= \sigma_2^2 - 2 \frac{\sigma_1^4}{\sigma_0^2} + \frac{\sigma_1^4}{\sigma_0^2} \\
+&= \sigma_2^2 - \frac{\sigma_1^4}{\sigma_0^2} > 0
+\end{split}
+\end{equation}
+where the second line follows from the definition of the $\sigma$'s.
+
+Q.E.D.
 
 \begin{thebibliography}{99}
 \bibitem{Planck2018} Planck Collaboration 2018 results. Submitted to \emph{Astronomy \& Astrophysics}.
@@ -455,13 +476,15 @@ p(V|s.p.)=\frac{\sqrt{\pi}}{4\sqrt{4\gamma^2-6}}\bigg{[}\mathrm{Exp}\frac{V^2}{2
 \bibitem{Battefeld2012} D. Battefeld, T. Battefeld, S. Schulz, Journal of Cosmology and Astroparticle Physics, 06:034, 2012
 \bibitem{Fyodorov2013} Y. V. Fyodorov, Markov Processes Relat. Fields, 21, 483--51, 2015
 \bibitem{Masoumi2017} A. Masoumi, M. Yamada and A. Vilenkin, Journal of Cosmology and Astroparticle Physics, 07:003, 2017
-\bibitem{Easther2016} R. Easther, A. Guth and A. Masoumi, arXiv:1612.05224 (2016)
+\bibitem{Baker1986} J. Baker, Journal of Computational Chemistry, 07:04, 1986
+\bibitem{Easther2016} R. Easther, A. Guth and A. Masoumi, arXiv:1612.05224, 2016
+\bibitem{Mehta1990} M. L. Mehta, \emph{Random Matrices - 2nd edition} (Academic Press, Bolton, 1990)
 \bibitem{Kac1943} M. Kac, \emph{Bull. Amer. Math. Soc.}, 43, 314–320, 1943
 \bibitem{Rice1945}  S. O. Rice, \emph{Bell System Tech. J.}, 24, 46--156, 1945
-\bibitem{BBKS} J. M. Bardeen, J. R. Bond, N. Kaiser, and A. S. Szalay, Astrophysical Journal, Astrophysical Journal, vol. 304, page 15-61 (1986)
-\bibitem{Goldstein} See e.g. H. Goldstein, C. P. Poole, and J. L. Safko, \emph{Classical Mechanics 3rd ed.}, Pearson (2001)
+\bibitem{BBKS} J. M. Bardeen, J. R. Bond, N. Kaiser, and A. S. Szalay, Astrophysical Journal, Astrophysical Journal, vol. 304, page 15-61, 1986
+\bibitem{Goldstein} See e.g. H. Goldstein, C. P. Poole, and J. L. Safko, \emph{Classical Mechanics 3rd ed.}, Pearson, 2001
 \bibitem{VEGAS} G. P. Lepage, Journal of Computational Physics 27, 192, 1978.
-\bibitem{GSL} B. Gough, \emph{GNU Scientific Library Reference Manual - Third Edition, 3rd ed.} (Network Theory Ltd., 2009).
+\bibitem{GSL} B. Gough, \emph{GNU Scientific Library Reference Manual - Third Edition} (Network Theory Ltd., 2009)
 \bibitem{Douglas2003} M. R. Douglas, Journal of High Energy Physics, 05:046, 2003
 \end{thebibliography}
 

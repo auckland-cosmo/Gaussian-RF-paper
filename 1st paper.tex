@@ -300,7 +300,9 @@ Similarly, the $\nu$ integral in the numerator can be performed to yield an erro
 
 \section{Gaussian Landscapes: Evaluating $P(\Lambda)$} \label{PeakNumbers}
 
-We now turn to the problem of evaluating $p(\Lambda|N,\gamma)$  for more general parameter values. Many and perhaps all of the following calculations could be performed using analytical techniques in a large-$N$ limit. However,  as we are particularly interested in scenarios involving extreme tails of  the probability distribution we will focus on quasi-numerical strategies for obtaining quantities of interest. Moreover, we are  not necessarily working at ``large'' $N$; given the inherently speculative nature of this investigation, there are few  grounds for specifying likely values of $N$;  $N\sim{\cal O}(10^2)$ is not unreasonable, but we cannot necessarily rely on results that may only hold well as $N\rightarrow \infty$. 
+\SH{mostly good, want to frame it though as three different integrals being estimated. The $V$ ones, the denom ones and the numer ones. Each is done identically, but for slightly different integrand functions. Not sure if we want to plot P(Lam) or just ratio of numer or denom to exact integral? If we do plot P(Lam) I think we should plot corrected P(Lam) to show how awesome the fit can be. We also should incclude here or in an appendix the $\alpha^{N-1}$ stuff}
+  
+  We now turn to the problem of evaluating $p(\Lambda|N,\gamma)$  for more general parameter values. Many and perhaps all of the following calculations could be performed using analytical techniques in a large-$N$ limit. However,  as we are particularly interested in scenarios involving extreme tails of  the probability distribution we will focus on quasi-numerical strategies for obtaining quantities of interest. Moreover, we are  not necessarily working at ``large'' $N$; given the inherently speculative nature of this investigation, there are few  grounds for specifying likely values of $N$;  $N\sim{\cal O}(10^2)$ is not unreasonable, but we cannot necessarily rely on results that may only hold well as $N\rightarrow \infty$. 
 
 That said, for $N>10$, direct calculation becomes very resource-intensive. To proceed, we approximate the full integrand as a Gaussian; fixing $\gamma$ and find the values of $x_n$ that maximize the integrand in Eq. \ref{DensityOfPeaks}, or 
 %
@@ -312,7 +314,7 @@ That said, for $N>10$, direct calculation becomes very resource-intensive. To pr
 \end{split}
 \end{align*}
 %
-\noindent where $H_{lm}$ is the Hessian \sh{of the integrand with respect to the $x_n$ variables} at the peak.
+\noindent where $H_{lm}$ is the Hessian of the integrand with respect to the $x_n$ variables at the peak.
 \begin{figure} 
   \centering
   \includegraphics[width=.3 \linewidth]{PLam_approx.eps} \hfill
@@ -335,7 +337,7 @@ It turns out that the numerical location of the peak can be obtained fairly simp
   
 In  Figure~\ref{PVaryingWithNGaussian} we show $P(\Lambda>0|N,\gamma)$ as a function of $N$ for several values of $\gamma$, given by Equation~\ref{PminIntegral}. We use the Gaussian approximation for the integrals over the $x_i$; in the numerator we compute the final integral over $\nu$ by evaluating at multiple, evenly spaced values of $\nu > 0$  and then performing a simple numerical integral. We see that the logarithms of $P(\Lambda>0|N,\gamma)$ are linear with $N$, but the constant of proportionality increases rapidly as $\gamma$ approaches unity; for $N=30$ and $\gamma = .9$ only 1 in $10^{50}$ minima in the landscape will have a positive cosmological constant. 
 
-In practice, when $\Lambda>0$ is effectively in the right-hand tail of $p(\Lambda)$,  the value of $p(\Lambda=0|N,\gamma)$ is a reliable proxy for $P(\Lambda>0|N,\gamma)$. In the tail of the distribution,  $(\Lambda|N,\gamma)$ will decrease significantly between $\nu=0$ and $\nu=1$, so $p(\Lambda=0|N,\gamma)$ will always overestimate $P(\Lambda>0|N,\gamma)$. However, because we have normalised $\nu$, the factor between the $\Lambda=0$ and $\Lambda>0$ case will not depend strongly on $N$ or $\gamma$ and is typically less than a factor of $10$. In other circumstances this would be a poor approximation, but here our focus is effectively on the logarithms of very small numbers, so this factor can be safely ignored. 
+In practice, when $\Lambda>0$ is effectively in the right-hand tail of $p(\Lambda)$,  the value of $p(\Lambda=0|N,\gamma)$ is a reliable proxy for $P(\Lambda>0|N,\gamma)$. In the tail of the distribution,  $p(\Lambda|N,\gamma)$ will decrease significantly between $\nu=0$ and $\nu=1$, so $p(\Lambda=0|N,\gamma)$ will always overestimate $P(\Lambda>0|N,\gamma)$. However, because we have normalised $\nu$, the factor between the $\Lambda=0$ and $\Lambda>0$ case will not depend strongly on $N$ or $\gamma$ and is typically less than a factor of $10$. In other circumstances this would be a poor approximation, but here our focus is effectively on the logarithms of very small numbers, so this factor can be safely ignored. 
 
 \begin{figure} 
   \centering

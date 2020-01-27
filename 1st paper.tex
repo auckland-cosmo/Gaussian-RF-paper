@@ -53,15 +53,9 @@ In the conventional picture of the multiverse, a pocket universe traces out a pa
  -- it is still unclear whether any specific stringy construction  realises  the $SU(3) \times SU(2) \times U(1)$ gauge group of the Standard Model.  More recently the Swampland Conjecture suggests that all stable minima of the theory might actually be ``underwater'' \cite{Agrawal2018},  located at negative values of $\Lambda$. If true, this would appear to require that the cosmological dark energy was underpinned by dynamical quintessence-like evolution.  
 
 
- We begin from an $N$-dimensional generalisation of the Kac-Rice formalism \cite{Kac1943,Rice1945} and the  machinery developed and summarised by Bond, Bardeen, Kaiser and Szalay  \cite{BBKS} for studying the statistics of Gaussian random functions in three dimensions. This yields $N$-dimensional integral expressions for the proportion of minima that will have a given value of the potential, $V$. At $N=2$ the full integral can be evaluated analytically; at $N \lesssim 10$ we can directly compute the full integrals numerically; and for $N \lesssim 200$ we evaluate Gaussian approximations to the underlying integrals . The Gaussian approximations are tested against the exact numerical result for $N <10$ where they match closely. These techniques can be generalised to other, more complex questions about trajectories in these potentials, and give information about the ``shapes'' of minima which may inform analyses of tunnelling and inflation. We show that $p(\Lambda)$, the probability density function for the vacuum energy, depends on the dimensionality $N$ and a single free parameter for a Gaussian random landscape, and calculate how $p(\Lambda)$ varies with $N$. \re{Eigenvalues; motivation for working numerically}.
-
-We use both $V$ and $\Lambda$ within the text to refer to vacuum energy density. Explicitly, $V$ is the potential energy density of the underlying field, $\phi$; and $\Lambda$ refers to the value of $V$ at the local minimum of the field.
-
- \SH{Richard, Lerh Feng, check you're happy with my re-write of the distinction between $V$ and $\Lambda$}
+ We begin from an $N$-dimensional generalisation of the Kac-Rice formalism \cite{Kac1943,Rice1945} and the  machinery developed and summarised by Bond, Bardeen, Kaiser and Szalay  \cite{BBKS} for studying the statistics of Gaussian random functions in three dimensions. This yields $N$-dimensional integral expressions for the proportion of minima that will have a given value of the potential, $V$.\footnote{We use both $V$ and $\Lambda$ within the text to refer to vacuum energy density. Explicitly, $V$ is the potential energy density of the underlying field, $\phi$; and $\Lambda$ refers to the value of $V$ at the local minimum of the field.} At $N=2$ the full integral can be evaluated analytically; at $N \lesssim 10$ we can directly compute the full integrals numerically; and for $N \lesssim 200$ we evaluate Gaussian approximations to the underlying integrals . The Gaussian approximations are tested against the exact numerical result for $N <10$ where they match closely. These techniques can be generalised to other, more complex questions about trajectories in these potentials, and give information about the ``shapes'' of minima which may inform analyses of tunnelling and inflation. We show that $p(\Lambda)$, the probability density function for the vacuum energy, depends on the dimensionality $N$ and a single free parameter for a Gaussian random landscape, and calculate how $p(\Lambda)$ varies with $N$. \re{Eigenvalues; motivation for working numerically}.
 
 \section{Random Potentials in $N$ Dimensions}
-
-%\sh{\sout{We begin by developing an $N$-dimensional analogue of the treatment of three dimensional random functions due to Bardeen, Bond, Kaiser and Szalay (henceforth BBKS) \cite{BBKS}, generalising their derivation and keeping their notation as far as possible.}}\SH{We're no longer following the notation and we say the rest in the paragraph just before this, in the introduction}.
 
 We treat the potential energy function $V({\vec{\phi}})$ as a Gaussian random function over an $N$-dimensional field space. We wish to examine minima and saddles, therefore we require the probability density for the value of the potential itself and the values of its derivatives, $\eta_i = \partial V/\partial \phi^i$ and $\zeta_{ij}=\partial^2 V/\partial \phi^i\partial \phi^j$ at individual points in this field space. These variables can be grouped together into a vector ${\bf y} = [V,\eta,\zeta]$, with $\mathcal{N}=1+N+(N^2+N)/2$ independent components. $V$ is a Gaussian random function, therefore the variables in ${\bf y}$ are described by a multivariate Gaussian distribution. A general multivariate Gaussian distribution with $\mathcal{N}$ independent variables has the form
   %
@@ -121,33 +115,6 @@ A similar analysis holds for the second derivatives $\zeta_{ij}$, and will yield
 %
 and all other correlations are zero. For $N=3$ this reduces to equation A1 of \cite{BBKS} (hereafter called BBKS). 
 
-%We define the following vector\SH{This small passage is the only time the notation $\alpha$ is used. I think we can get away without introducing it. I think in general the way BBKS goes from $F$ at different points in space to $F$, $\eta$ and $\xi$ is confusing and we can make it a bit clearer here if we want}:
-
-%\begin{equation}
-%\begin{split}
-%\alpha = \{F,\eta_1,\eta_2,\ldots,\xi_{11},\xi_{22},\ldots,\xi_{NN},\xi_{N-1,N},\xi_{N-2,N},\ldots,\xi_{1N},\xi_{N-2,N-1},\\
-%\ldots\xi_{1,N-1},\ldots,\xi_{12}\}
-%\end{split}
-%\end{equation}
-
-%\noindent With this choice for $\alpha$ (equivalent to $\Delta y$ in Eq. \ref{MultivariateGaussian}), the covariance matrix $M_{ij}\equiv\langle\alpha_i\alpha_j\rangle$ and its inverse $K \equiv M^{-1}$ takes the following general form\SH{I guess this result comes from Mathematica? There must be a way of simplifying the $K_{\xi_{ij}\xi_{kl}}$ terms into one expression using $\delta_{ij}$ etc, like with $M$. Actually, this $K$ seems to never be used so I'm not sure we need to write it down. If we want to write out the inverse in all detail we should do it in terms of the variables we eventually use (i.e. $x_i$)}:
-
-%\begin{align*}
-%K_{F, F} &= \frac{\sigma_2^2}{\sigma_0^2\sigma_2^2-\sigma_1^4} \\
-%K_{F, \xi_{ij}} &= \frac{\sigma_1^2}{\sigma_0^2\sigma_2^2-\sigma_1^4} \\
-%K_{\eta_i,\eta_j} &= \frac{N}{\sigma_1^2}\\
-%K_{\xi_{ii},\xi_{ii}} &=  \frac{N(N+2)}{\sigma_2^2} \\
-%K_{\xi_{ij}, \xi_{ij}} &= \frac{N\sigma_0^2\sigma_2^2-(N+2)\sigma_1^4}{2(\sigma_1^4\sigma_2^2-\sigma_0^2\sigma_2^4)}, (i\neq j)\\
-%K_{\xi_{ii}, \xi_{jj}} &= \frac{(N(N+1)-2)\sigma_1^4 - N(N+1)\sigma_0^2\sigma_2^2}{2(\sigma_1^4\sigma_2^2-\sigma_0^2\sigma_2^4)}, (i \neq j)\\
-%\end{align*}
-
-%\noindent and all other terms are zero\SH{Are there some $\delta_{ij}$ terms missing in the 2nd and 3rd lines above?}. The probability density of $\alpha_i$ is, from Eq. \ref{MultivariateGaussian}\SH{This is just eq. 2.2 repeated with $\alpha$ instead of $y$, I think there is a way of expressing all of this without so many introduced variables like $y$ $\alpha$ that are used only once each. I don't we've ever explicitly said we're considering functions/fields where $\langle F\rangle=0$ either, which we've assumed in order to write this equation.}.
-
-%\begin{equation} \label{ProbDistrib}
-%p(\alpha_i)=\frac{1}{(2\pi)^{N/2}\sqrt{\mathrm{det}M}} e^{-\frac{1}{2}\alpha K \alpha}
-%\end{equation}
-%
-%We can usually ignore the constant prefactor since we will primarily be concerned with ratios of probabilities.
 This covariance matrix is far from diagonal; and our analysis will be facilitated if we use a basis that is as close to diagonal as possible. The $\eta_i$ variables are already diagonal, as are the $\zeta_{ij}$ terms with $i\neq j$ but the $\zeta_{ii}$ variables are correlated to each other, and also  to $V$. We look for a set of $N$ linear combinations of these $N$ variables that is diagonal, choosing,
 \begin{align}
 \label{BasisTransform}
@@ -193,7 +160,7 @@ The number density of extrema, $n_{\rm ext}(\phi)$, is itself a random variable.
 \end{equation}
 where for notational convenience we have dropped the ${\rm d}^N \phi$ from each side.
 
-Finally, we need to restrict this integral to count the extrema that are also local minima. It is easiest to do this by considering the eigenvalues, $\lambda_i$ of the Hessian of the landscape $\zeta$ and restricting them to be positive.\footnote{Note there is an alternative convention where the eigenvalues are defined with the opposite sign, in which case \emph{negative} eigenvalues correspond to minima; e.g. Ref.~\cite{BBKS} (BBKS).}  The Hessian is symmetric by definition. We can also rotate it such that it is diagonal, meaning  $\zeta_{ii}=\lambda_i$, $\zeta_{ij}=0$ and $|{\rm det} \zeta| = \prod_i |\lambda_i|$. The new integration variables are then the eigenvalues themselves and the set of rotation angles required to diagonalise $\zeta$.  In 2D and 3D, the Jacobian of this transformation can be calculated explicitly, which leads to  ${\rm d} \zeta = \prod_{i \neq j}^N |\lambda_i - \lambda_j|\left(\prod_k {\rm d}\lambda_k\right) {\rm d} \Omega$, where ``${\rm d}\Omega$'' represents the $(N^2-N)/2$-dimensional integral measure of the set of rotation angles. The same result holds in $N$ dimensions.\footnote{A proof in $N$ dimensions is given in section V of \cite{Easther2016}, generalising the 3D  BBKS result.\SH{Make sure typos removed from  \cite{Easther2016} before removing this note.}} The function $V$ and its derivatives are statistically isotropic. Therefore each set of rotation angles is as probable as any other, and the integral over all the rotation angles must give just a constant.
+Finally, we need to restrict this integral to count the extrema that are also local minima. It is easiest to do this by considering the eigenvalues, $\lambda_i$ of the Hessian of the landscape $\zeta$ and restricting them to be positive.\footnote{Note there is an alternative convention where the eigenvalues are defined with the opposite sign, in which case \emph{negative} eigenvalues correspond to minima; e.g. Ref.~\cite{BBKS} (BBKS).}  The Hessian is symmetric by definition. We can also rotate it such that it is diagonal, meaning  $\zeta_{ii}=\lambda_i$, $\zeta_{ij}=0$ and $|{\rm det} \zeta| = \prod_i |\lambda_i|$. The new integration variables are then the eigenvalues themselves and the set of rotation angles required to diagonalise $\zeta$.  In 2D and 3D, the Jacobian of this transformation can be calculated explicitly, which leads to  ${\rm d} \zeta = \prod_{i \neq j}^N |\lambda_i - \lambda_j|\left(\prod_k {\rm d}\lambda_k\right) {\rm d} \Omega$, where ``${\rm d}\Omega$'' represents the $(N^2-N)/2$-dimensional integral measure of the set of rotation angles. The same result holds in $N$ dimensions.\footnote{A proof in $N$ dimensions is given in section V of \cite{Easther2016}, generalising the 3D  BBKS result.} The function $V$ and its derivatives are statistically isotropic. Therefore each set of rotation angles is as probable as any other, and the integral over all the rotation angles must give just a constant.
 
 We now have  the ingredients we  need, but  also enforce an ordering on the eigenvalues to avoid dealing with a multimodal integrand.  We define  $\lambda_1 \geq \lambda_2 \geq \lambda_3 \ldots \geq 0$ so our boundary conditions become $x_1\leq x_N\leq x_{N-1} ... \leq x_2 \leq 0$, and the mapping between $\lambda_i$ and $x_i$  follows from Equation~\ref{BasisTransform}. This gives significantly simpler boundary conditions than earlier choices that have been used for diagonalising the covariance matrix, e.g. Ref.\cite{BBKS} (BBKS).
 
@@ -249,7 +216,7 @@ One can understand this even further via figure \ref{examples1}. When $P(k)$ is 
 
 %Via its definition, $\sigma_2$ increases as the range of $k$ over which the spectrum $P(k)$  is nontrivial  increases, and $\gamma$ will correspondingly decrease. Conversely, when $\gamma$ is close to unity, the power spectrum is peaked over a small range of $k$ and the random function is dominated by modes with a narrow band of wavelengths.  At small $\gamma$ the spectrum of $V(\phi)$ thus has power over a wide range of scales. This points to the presence of significant ``ripples'' on top of  larger-scale structure in $V(\phi)$, which  produce local minima even $V(\phi)$ is relatively large,  as illustrated in Fig~\ref{examples1}.  Similarly, while the second derivatives of a random function are correlated, at values of $V$ large enough for minima are rare, increasing $N$  increases the number of directions that must have an unlikely value of $\zeta_{ii}$. 
 
-We can likewise see $N$-dependence semi-quantitatively by noting that the number of terms in the polynomial $G$ grows rapidly with $N$, so \sh{as $N$ increases}, the full probability density at minima prefers larger magnitude eigenvalues, $|\lambda_i|$. Since $x_1$ is the sum of the eigenvalues, as its magnitude grows the $(\nu-\gamma x_1)^2$ term in $Q$ also grows. For minima, $x_1<0$, therefore large $|x_1|$ makes it less likely to find minima with $\nu >0$ (or $\nu <0 $ for maxima). \sh{This effect should only change the mean of the $\nu$ distribution, and not its width, which is indeed what we see in the right hand panel of figure \ref{distributions}.}  Note that at a generic point in field space $\langle x_1^2\rangle = 1$; however at a minimum $\langle x_1^2 \rangle >1$ due to the effect of $G$.   
+We can likewise see $N$-dependence semi-quantitatively by noting that the number of terms in the polynomial $G$ grows rapidly with $N$, so as $N$ increases, the full probability density at minima prefers larger magnitude eigenvalues, $|\lambda_i|$. Since $x_1$ is the sum of the eigenvalues, as its magnitude grows the $(\nu-\gamma x_1)^2$ term in $Q$ also grows. For minima, $x_1<0$, therefore large $|x_1|$ makes it less likely to find minima with $\nu >0$ (or $\nu <0 $ for maxima). This effect should only change the mean of the $\nu$ distribution, and not its width, which is indeed what we see in the right hand panel of figure \ref{distributions}. Note that at a generic point in field space $\langle x_1^2\rangle = 1$; however at a minimum $\langle x_1^2 \rangle >1$ due to the effect of $G$.   
 
 
 \begin{figure}
@@ -259,21 +226,7 @@ We can likewise see $N$-dependence semi-quantitatively by noting that the number
   \label{examples1}
 \end{figure}
 
- % integrals over V
-
-%
-%
-%\begin{figure}
-%  \centering
-%    \includegraphics[width=\linewidth]{PVaryingWithN.png}
-%  \caption{A plot showing the value of $P(V>0|{\rm min})$ as a function of $N$ with $N\le10$, for $\gamma$ values $\frac{1}{5}, \frac{1}{3.5}$ and $\frac{1}{2}$ from top to bottom.\SH{Title needs changed}}
-%  \label{gamma}
-%\end{figure}
-
-
 Given the dependence of $p(\Lambda|N,\gamma)$ on $N$ and $\gamma$ it is clear that as these variables increase $P(\Lambda>0|N,\gamma)$ will involve the increasingly rare tail of an increasingly narrow distribution. Figure~\ref{N6} shows $P(\Lambda>0|N,\gamma)$ as a function of $\gamma$ for values of $N$ that are small enough for the relevant integrals to be fully evaluated numerically, and we see that positive minima grow far less likely as $N$ and $\gamma$ increase. 
-
-
 
 \begin{figure}
   \centering
@@ -326,7 +279,7 @@ This leaves us with three separate possible $x_n$ dependent integrals we would w
 \end{split}
 \end{align}
 %
-\noindent where $H_{lm}$ is the integrand's Hessian and $I_P$ is the integrand's value at the peak. $I_P$ and ${\rm det}H$ will of course be different for each integrand, and will depend on $N$ and $\gamma$. For $p(\Lambda)$, $I_P$ and ${\rm det} H$ will also depend on $\Lambda$. It turns out that the numerical location of the peak and its Hessian can be obtained fairly simply for $N\lesssim 200$, for all three integrands, which will be sufficient for our purposes.\footnote{All numerical results in this paper are obtained using Mathematica. We note that the computational efficiency of the calculations can depend strongly on apparently small tweaks in their implementation.} \SH{I added $I_P$ here, which I think is correct. But please check I haven't misunderstood something. I've also been careful with the wording here to try and avoid reader confusion regarding ``Hessian of $V$'' and ``Hessian of integrand in Gaussian approximation'', so please also be careful if re-wording.}
+\noindent where $H_{lm}$ is the integrand's Hessian and $I_P$ is the integrand's value at the peak. $I_P$ and ${\rm det}H$ will of course be different for each integrand, and will depend on $N$ and $\gamma$. For $p(\Lambda)$, $I_P$ and ${\rm det} H$ will also depend on $\Lambda$. It turns out that the numerical location of the peak and its Hessian can be obtained fairly simply for $N\lesssim 200$, for all three integrands, which will be sufficient for our purposes.\footnote{All numerical results in this paper are obtained using Mathematica. We note that the computational efficiency of the calculations can depend strongly on apparently small tweaks in their implementation.}
 \begin{figure} 
   \centering
   \includegraphics[width=.3 \linewidth]{PLam_approx.eps} \hfill
@@ -391,30 +344,30 @@ In order to compute the Gaussian  approximations to the integrals in Equation~\r
   \label{eigen}
 \end{figure}
 
-The range of the eigenvalue distributions is shown in Figure~\ref{eigen}. The eigenvalue distribution at the peak value of $\Lambda$ for a given $N$ is independent of $\gamma$. This can be seen by looking at the overall probability density; it is maximised with respect to $\nu$ when $\nu = \gamma x_1$; enforcing this eliminates $\gamma$ from the full  probability density.     Given that we have set $\sigma_0 = \sigma_1=1$, our potentials are effectively dimensionless, and we see that in all cases the largest eigevalue is a little less than unity. Conversely, as $N$ increases the smallest eigenvalue approaches zero. When $\gamma$ approaches unity, almost all of the minima in the landscape  occur at negative values of $\Lambda$ the relative handful of minima above the waterline become more ``elongated'' as the lowest-lying eigenvalue approaches zero. This will have implications for quintessence scenarios in any landscape, as it points to a mechanism for producing minima which are almost guaranteed to have a handful of very gradual approaches, as we discuss in the following Section. 
+The range of the eigenvalue distributions is shown in Figure~\ref{eigen}. The distribution of \sh{$x_n$ \sout{eigenvalue}} at the peak value of $\Lambda$ for a given $N$ is independent of $\gamma$. This can be seen by looking at the overall probability density; it is maximised with respect to $\nu$ when $\nu = \gamma x_1$; enforcing this eliminates $\gamma$ from the full  probability density. \sh{\sout{Given that we have set $\sigma_0 = \sigma_1=1$, our potentials are effectively dimensionless,} The eigenvalues themselves are linear combinations of $\sigma_2x_n$. Recall that the eigenvalues, $\lambda_i$, are eigenvalues of the Hessian, $\zeta_{ij}$ and the scale of $\zeta_{ij}$ is set via $\sigma_2$, see Eq. \eqref{corr}. Therefore in the figures in this section we plot the rescaled eigenvalues $\lambda_i/\sigma_2$.} We see that in all cases the largest \sh{of these rescaled} eigenvalues is a little less than unity. Conversely, as $N$ increases the smallest eigenvalue approaches zero. When $\gamma$ approaches unity, almost all of the minima in the landscape  occur at negative values of $\Lambda$ and the relative handful of minima above the waterline become even more ``elongated'' as the lowest-lying eigenvalue becomes even closer to zero. This will have implications for quintessence scenarios in any landscape, as it points to a mechanism for producing minima which are almost guaranteed to have a handful of very gradual approaches, as we discuss in the following Section. 
 
 \begin{figure} 
   \centering
   \includegraphics[width=.45\linewidth]{h1_100.eps} \hfill \includegraphics[width=.45\linewidth]{h2_100.eps}
   \caption{The expected eigenvalue distributions are plotted for $\gamma=0.9$ and $N=100$; the left hand histogram shows the distribution at the most likely value of $\Lambda$; the right hand plot shows the result for $\Lambda=0$.}
-  \label{eigendist}
+  \label{eigendist1}
 \end{figure}
 
 \begin{figure} 
   \centering
   \includegraphics[width=.45\linewidth]{l1_100.eps} \hfill \includegraphics[width=.45\linewidth]{l2_100.eps}
-  \caption{The expected eigenvalues are plotted for $\gamma=0.9$ and $N=100$; the left hand plot shows the most likely value of each of the 100 $\lambda_i$; the right hand plot shows the smallest eigenvalues on a log scale. The upper points correspond to the value for $\Lambda$ for which $p(\Lambda| N,\gamma)$  is peaked; the lower points correspond to $\Lambda=0$. }
-  \label{eigendist}
+  \caption{The expected eigenvalues are plotted for $\gamma=0.9$ and $N=100$; the left hand plot shows the most likely value of each of the 100 $\lambda_i$; the right hand plot shows the smallest eigenvalues on a log scale. The upper points correspond to the value for $\Lambda$ for which $p(\Lambda| N,\gamma)$  is peaked; the lower points correspond to $\Lambda=0$. \SH{in figure, perhaps have $\lambda_i/\sigma_2$ on y axis and $i$ on x-axis? might make it clearer?}}
+  \label{eigendist2}
 \end{figure}
 
+\SH{We should replace figure 9 with the reconstructed rho(lambda).}We examine the distribution of eigenvalues in figure \ref{eigendist1}. At  $N\gtrsim 100$ the eigenvalue distribution at the peak value of $\Lambda$ is roughly ``semicircular''; for values of $N$ and $\gamma$ for which $p(\Lambda|N,\gamma)$ is very small at zero the number of low-lying eigenvalues grows substantially. \re{does this look reminiscent of the Yamada and Vilenkin paper?} \lfl{Yes? Yamada \& Vilenkin Fig 9 shows that at large $N$, small values of the eigenvalue become more likely, although the \emph{really} small ones are unlikely} Intuitively, this makes sense, at values of $\Lambda$ for which minima are rare, we would expect that they will become increasingly ``marginal'' and the smaller the eigenvalues of the Hessian of $V(\phi)$ become, the shallower the resulting minima become.
 
-
-We can also examine the distribution of eigenvalues. At  $N\gtrsim 100$ the eigenvalue distribution at the peak value of $\Lambda$ is roughly ``semicircular''; for values of $N$ and $\gamma$ for which $p(\Lambda|N,\gamma)$ is very small at zero the number of low-lying eigenvalues grows substantially. \re{does this look reminiscent of the Yamada and Vilenkin paper?} \lfl{Yes? Yamada \& Vilenkin Fig 9 shows that at large $N$, small values of the eigenvalue become more likely, although the \emph{really} small ones are unlikely} Intuitively, this makes sense, at values of $\Lambda$ for which minima are rare, we would expect that they will become increasingly ``marginal'' and the smaller the eigenvalues of the Hessian of $V(\phi)$ become, the shallower the resulting minima become. 
+\sh{In figure \ref{eigendist2} we show the information in a cumulative distribution plot. We also zoom in on the smallest eigenvalues in the right hand panel. We see that the eigenvalues are consistenly smaller for the marginal, $\Lambda=0$ minima.}\SH{There was previously no discussion of figure 10}
 
 \begin{figure} 
   \centering
   \includegraphics[width=.6\linewidth]{ratio.eps}  
-  \caption{The expected ratio of the two smallest eigenvalues is plotted as a function of $N$.   From bottom to top the lines are i) the eigenvalues at the peak  of the distribution (which do not depend on $\gamma$), and $\Lambda=0$ for $\gamma =0.5$ and $0.9$.}
+  \caption{The expected ratio of the two smallest eigenvalues is plotted as a function of $N$.   From bottom to top the lines are i) the eigenvalues at the peak  of the distribution (which do not depend on $\gamma$), and $\Lambda=0$ for $\gamma =0.5$ and $0.9$. \SH{y-axis label could be added: $\lambda_{N-1}/\lambda_N$}}
   \label{ratio}
 \end{figure}
 

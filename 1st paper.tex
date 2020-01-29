@@ -300,34 +300,38 @@ This leaves us with three separate possible $x_n$ dependent integrals we would w
 
 \begin{figure} 
   \centering
-  \includegraphics[width=.6 \linewidth]{}
-  \caption{\SH{include $\alpha^{N-1}$ plot here. fit to denom and plot fit on numer. Two panels, LHS denom and RHS numer}}
-  \label{alphaN-1}
+  \includegraphics[width=.6 \linewidth]{errcontour.eps}
+  \caption{Contour plot of the relative error in $\ln(P(\Lambda>0|\gamma,N)$ obtained from calculating $P$ using the Gaussian approximation versus the exact numerical result. The trend for increasing $N$ is for the relative error to \emh{decrease}. \SH{someone add axes labels and correct axis values! code in dropbox (the legend is fractional error, we could change to \% if we want (i.e. by multiplying by 100)).}}
+  \label{errcontour}
 \end{figure}
 
-In order to perform this Gaussian approximation and make use of the analytical result in the second line of Eq. \eqref{Gauss} we needed to widen the range of the integral. There are therefore two possible ways in which one might imagine this approximation breaking down. The integrand might not be well approximated by a Gaussian, or the change in integration region could give spurious contributions to the integral.
+%In order to perform this Gaussian approximation and make use of the analytical result in the second line of Eq. \eqref{Gauss} we needed to widen the range of the integral. There are therefore two possible ways in which one might imagine this approximation breaking down. The integrand might not be well approximated by a Gaussian, or the change in integration region could give spurious contributions to the integral.
 
-A representative comparison between $p(\Lambda)$ from the Gaussian approximation and from the exactly evaluated integral is shown in Figure~\ref{Comparison}. We see that the approximation determines the peak location and shape of $p(\Lambda)$ very well, and determines the amplitude reasonably well, but off by a small factor. In particular, for this specific $N$ and $\gamma$ the discrepancy between the exact result and the approximation depends very weakly on $\Lambda$, so the normalised results of the Gaussian approximation will be highly accurate ($\sim\%$ level accuracy). If we could trust that this holds at all $N$ and $\gamma$ we would be justified to use the Gaussian approximation whenever we can calculate it.
+A representative comparison between $p(\Lambda)$ from the Gaussian approximation and from the exactly evaluated integral is shown in Figure~\ref{Comparison}. We see that the approximation determines the peak location and shape of $p(\Lambda)$ very well, and determines the amplitude reasonably well, but off by a small factor. In particular, for this specific $N$ and $\gamma$ the discrepancy between the exact result and the approximation depends very weakly on $\Lambda$, so the normalised results of the Gaussian approximation will be highly accurate ($\sim\%$ level accuracy).
 
-In figure \ref{alphaN-1} we plot the size of this offset in both ``numer'' and ``denom'' and we see that although it grows slowly with dimension it is almost identical in each integrand. This is reassuring as $P(\Lambda>0)={\rm ``numer"}/{\rm ``denom"}$ would remain very close to the exact result. We do not show it here but, over this range of $N$, the offset only \emph{very} weakly depends on $\gamma$. Unfortunately, we cannot test over a wider range of $N$; however we can explore the possible origin of the offset to further reassure ourselves that, at fixed $N$, it will remain roughly constant over $\Lambda$ and hence an accurate estimate of $p(\Lambda)$ and $P(\Lambda>0)$.
+\sh{In fact, in figure \ref{errcontour} we show a contour plot of the relative error in the calculated value of $\ln \left[P(\Lambda>0|N,\gamma)\right]$ obtained using the Gaussian approximation versus the exact numerical value (i.e. $(\ln P_{\rm Gauss})/(\ln P_{\rm exact}) -1$). The plot covers $\gamma \in (0.05,0.95)$ and $N \in (3,12)$, which is the range over which we can obtain the exact results. We see that nowhere in this range is the error in the Gaussian approximation more than $\simeq 1\%$ and the trend as $N$ increases is for this relative error to \emph{decrease} at all $\gamma$ values. This justifies the use of the Gaussian approximation at larger $N$. We choose to plot the relative error in $\ln P$, rather than $P$, because $P$ itself decreases exponentially with $N$ and we are ultimately interested in distinctions such as those between $P(\Lambda>0) \sim 10^{-500}$ and $\sim 10^{-490}$.}
 
-The fact that the offset depends on $N$ and not on $\Lambda$ or $\gamma$ suggests that it is the integration bounds causing the offset. The integrals in Eqs. \eqref{denom}, \eqref{numer} and \eqref{plam} are all $N$-dimensional. Therefore, if the offset is caused by the widened integration bounds we would expect it to grow with $N$, as more volume is erroneously added into the total integration region. This is what is seen. We therefore make a speculative ansatz that the amount of offset caused by each new dimension is the same. This is speculative, but provides a one-parameter model to test against the data. First we note that the first integration in each integral extends from $x_1\in(-\infty,0)$ and the best fit value of $x_1$ is far from zero for all $N$. Therefore the constant offset factor ``per-dimension'' only applies to the subsequent $N-1$ integrations, where e.g. $x_n<x_{n-1}$ should be enforced, but the best fit value of $x_n$ and $x_{n-1}$ are comparatively close. Our ansatz therefore predicts that an offset of unknown size $\alpha$ is applied for each of the $N-1$ integrations; that is, we expect the ratio of exact results to the Gaussian approximation should scale as $\alpha^{N-1}$.
+\sh{Nonetheless a similar contour for $P$ would show a maximum error of only $\sim 4\%$ over this range. This error would increase with $N$, however fitting the trend in the error and extrapolating to $N\sim 150$ predicts that the Gaussian approximation would under-estimate the normalised probability by at most a factor of $2$ for the worst fitting value of $\gamma$. In a log plot with base $\lesssim 10^{-100}$ a factor of two would be a sub $\%$ level inaccuracy.}
 
-In figure \ref{alphaN-1} we also fit the data to find $\alpha$ and overplot the fitted $\alpha^{N-1}$. It is clearly a very good fit. Moreover, we fit the data only to ``denom'' to find $\alpha$ and plot the same $\alpha^{N-1}$ over the ``numer'' data and it matches both datasets well. This gives us further re-assurance that we understand the source of the offset and we have good motivation to expect the ratio of ``numer'' and ``denom'' to remain an excellent approximation to the exact integral as $N$ increases further.\footnote{We cannot be certain, however.}
+%we plot the size of this offset in both ``numer'' and ``denom'' and we see that although it grows slowly with dimension it is almost identical in each integrand. This is reassuring as $P(\Lambda>0)={\rm ``numer"}/{\rm ``denom"}$ would remain very close to the exact result. We do not show it here but, over this range of $N$, the offset only \emph{very} weakly depends on $\gamma$. Unfortunately, we cannot test over a wider range of $N$; however we can explore the possible origin of the offset to further reassure ourselves that, at fixed $N$, it will remain roughly constant over $\Lambda$ and hence an accurate estimate of $p(\Lambda)$ and $P(\Lambda>0)$.
+
+%The fact that the offset depends on $N$ and not on $\Lambda$ or $\gamma$ suggests that it is the integration bounds causing the offset. The integrals in Eqs. \eqref{denom}, \eqref{numer} and \eqref{plam} are all $N$-dimensional. Therefore, if the offset is caused by the widened integration bounds we would expect it to grow with $N$, as more volume is erroneously added into the total integration region. This is what is seen. We therefore make a speculative ansatz that the amount of offset caused by each new dimension is the same. This is speculative, but provides a one-parameter model to test against the data. First we note that the first integration in each integral extends from $x_1\in(-\infty,0)$ and the best fit value of $x_1$ is far from zero for all $N$. Therefore the constant offset factor ``per-dimension'' only applies to the subsequent $N-1$ integrations, where e.g. $x_n<x_{n-1}$ should be enforced, but the best fit value of $x_n$ and $x_{n-1}$ are comparatively close. Our ansatz therefore predicts that an offset of unknown size $\alpha$ is applied for each of the $N-1$ integrations; that is, we expect the ratio of exact results to the Gaussian approximation should scale as $\alpha^{N-1}$.
+
+%In figure \ref{alphaN-1} we also fit the data to find $\alpha$ and overplot the fitted $\alpha^{N-1}$. It is clearly a very good fit. Moreover, we fit the data only to ``denom'' to find $\alpha$ and plot the same $\alpha^{N-1}$ over the ``numer'' data and it matches both datasets well. This gives us further re-assurance that we understand the source of the offset and we have good motivation to expect the ratio of ``numer'' and ``denom'' to remain an excellent approximation to the exact integral as $N$ increases further.\footnote{We cannot be certain, however.}
 
 
-\SH{I'm not sure how convincing that argument is now that it is written down. We could also include a contour plot of the relative error in $P(\Lambda>0)$ as a function of $N$ and $\gamma$ to show it is small everywhere we can calculate the exact result. I am strongly in favour of doing this, but will be OK if I'm outvoted. We could also remove the $\alpha^{N-1}$ stuff entirely and just use the contour plot as justification if the consensus is that the $\alpha$ stuff isn't convincing.}
+\SH{I've removed the $\alpha^{N-1}$ stuff. It is just commented out in case we want to add it back in}
 
 
 
 \begin{figure} 
   \centering
   \includegraphics[width=.6 \linewidth]{pwithN.eps}
-  \caption{The probability that a given minimum has $\Lambda>0$, as a function of $N$ for $\gamma=0.2$, $0.5$, $0.8$ and $0.9$ (top to bottom) calculated using the Gaussian approximation. \SH{Replace with plot using numer/denom. should look identical.extend to much larger values of $N$?}}
+  \caption{The probability that a given minimum has $\Lambda>0$, as a function of $N$ for $\gamma=0.2$, $0.5$, $0.8$ and $0.9$ (top to bottom) calculated using the Gaussian approximation. \SH{Replace with plot using numer/denom. should look identical. extend to much larger values of $N$}}
   \label{PVaryingWithNGaussian}
 \end{figure}
   
-In  Figure~\ref{PVaryingWithNGaussian} we show $P(\Lambda>0|N,\gamma)$ as a function of $N$ for several values of $\gamma$, given by Equation~\ref{PminIntegral}. We use the Gaussian approximation for the integrals over the $x_i$. We see that the logarithms of $P(\Lambda>0|N,\gamma)$ are linear with $N$, but the constant of proportionality increases rapidly as $\gamma$ approaches unity; for $N=30$ and $\gamma = .9$ only 1 in $10^{50}$ minima in the landscape will have a positive cosmological constant. \SH{These don't look linear to me, unless maybe if I restrict to only $N>20$. In any case, we could extend these plots to much larger $N$ now and it might be clearer that the large $N$ limit is linear.}
+In  Figure~\ref{PVaryingWithNGaussian} we show $P(\Lambda>0|N,\gamma)$ as a function of $N$ for several values of $\gamma$, given by Equation~\ref{PminIntegral}. We use the Gaussian approximation for the integrals over the $x_i$. We see that \SH{Suggestion: add ``, for sufficiently large $N$,'' if that is what the extended plot shows.} the logarithms of $P(\Lambda>0|N,\gamma)$ are linear with $N$, but the constant of proportionality increases rapidly as $\gamma$ approaches unity; for $N=30$ and $\gamma = .9$ only 1 in $10^{50}$ minima in the landscape will have a positive cosmological constant. \SH{These don't look linear to me, unless maybe if I restrict to only $N>20$. In any case, we could extend these plots to much larger $N$ now and it might be clearer that the large $N$ limit is linear.}
 
 %In practice, when $\Lambda>0$ is effectively in the right-hand tail of $p(\Lambda)$,  the value of $p(\Lambda=0|N,\gamma)$ is a reliable proxy for $P(\Lambda>0|N,\gamma)$. In the tail of the distribution,  $p(\Lambda|N,\gamma)$ will decrease significantly between $\nu=0$ and $\nu=1$, so $p(\Lambda=0|N,\gamma)$ will always overestimate $P(\Lambda>0|N,\gamma)$. However, because we have normalised $\nu$, the factor between the $\Lambda=0$ and $\Lambda>0$ case will not depend strongly on $N$ or $\gamma$ and is typically less than a factor of $10$. In other circumstances this would be a poor approximation, but here our focus is effectively on the logarithms of very small numbers, so this factor can be safely ignored. 
 
@@ -338,7 +342,7 @@ In  Figure~\ref{PVaryingWithNGaussian} we show $P(\Lambda>0|N,\gamma)$ as a func
   \label{fullcontourplot}
 \end{figure}
 
-Figure~\ref{fullcontourplot} displays  $P(\Lambda >0 |N,\gamma)$ as a function of $N$ and $\gamma$.  \re{out to $N=200$} \lfl{Do we want to zoom in on the region $\gamma > 0.9$?}\SH{Quick comment about plot? It is maybe the most important one in the paper, certainly the most important in this section.}
+Figure~\ref{fullcontourplot} displays  $P(\Lambda >0 |N,\gamma)$ as a function of $N$ and $\gamma$. \sh{We see that for sufficiently large $N$ and $\gamma$ there are fewer than 1 in $10^{500}$ minima in the whole field space with positive $\Lambda$. This is very interesting as it would indicate that \emph{if} the string theory landscape could be accurately modelled as a Gaussian random field and if there are only $10^{500}$ maxima in the whole field space then these values of $N$ and $\gamma$ would be tentatively ruled out. $N$ is the dimensionality of the field space, which translates to the number of different physically relevant degrees of freedom in the compactified space. Whereas $\gamma$ relates to the power spectrum of the potential $V$, so would be more difficult to immediately translate into fundamental particle/string physics. Nevertheless, that would be an interesting path for future research.} \re{out to $N=200$} \lfl{Do we want to zoom in on the region $\gamma > 0.9$?}\SH{Quick comment about plot? It is maybe the most important one in the paper, certainly the most important in this section.}
 
 
 \section{Eigenvalue Distributions and Slopes} 
@@ -364,18 +368,18 @@ The range of the eigenvalue distributions is shown in Figure~\ref{eigen}. The di
 \begin{figure} 
   \centering
   \includegraphics[width=.45\linewidth]{l1_100.eps} \hfill \includegraphics[width=.45\linewidth]{l2_100.eps}
-  \caption{The expected eigenvalues are plotted for $\gamma=0.9$ and $N=100$; the left hand plot shows the most likely value of each of the 100 $\lambda_i$; the right hand plot shows the smallest eigenvalues on a log scale. The upper points correspond to the value for $\Lambda$ for which $p(\Lambda| N,\gamma)$  is peaked; the lower points correspond to $\Lambda=0$. \SH{in figure, perhaps have $\lambda_i/\sigma_2$ on y axis and $i$ on x-axis? might make it clearer?}}
+  \caption{The expected eigenvalues are plotted for $\gamma=0.9$ and $N=100$; the left hand plot shows the most likely value of each of the 100 $\lambda_i$; the right hand plot shows the smallest eigenvalues on a log scale. The upper points correspond to the value for $\Lambda$ for which $p(\Lambda| N,\gamma)$  is peaked; the lower points correspond to $\Lambda=0$.}
   \label{eigendist2}
 \end{figure}
 
 \SH{We should replace figure 9 with the reconstructed rho(lambda).}We examine the distribution of eigenvalues in figure \ref{eigendist1}. At  $N\gtrsim 100$ the eigenvalue distribution at the peak value of $\Lambda$ is roughly ``semicircular''; for values of $N$ and $\gamma$ for which $p(\Lambda|N,\gamma)$ is very small at zero the number of low-lying eigenvalues grows substantially. \re{does this look reminiscent of the Yamada and Vilenkin paper?} \lfl{Yes? Yamada \& Vilenkin Fig 9 shows that at large $N$, small values of the eigenvalue become more likely, although the \emph{really} small ones are unlikely} Intuitively, this makes sense, at values of $\Lambda$ for which minima are rare, we would expect that they will become increasingly ``marginal'' and the smaller the eigenvalues of the Hessian of $V(\phi)$ become, the shallower the resulting minima become.
 
-\sh{In figure \ref{eigendist2} we show the information in a cumulative distribution plot. We also zoom in on the smallest eigenvalues in the right hand panel. We see that the eigenvalues are consistenly smaller for the marginal, $\Lambda=0$ minima.}\SH{There was previously no discussion of figure 10}
+\sh{In figure \ref{eigendist2} we show the information in a cumulative distribution plot. We also zoom in on the smallest eigenvalues in the right hand panel. We see that the eigenvalues are consistenly smaller for the marginal, $\Lambda=0$ minima.}
 
 \begin{figure} 
   \centering
   \includegraphics[width=.6\linewidth]{ratio.eps}  
-  \caption{The expected ratio of the two smallest eigenvalues is plotted as a function of $N$.   From bottom to top the lines are i) the eigenvalues at the peak  of the distribution (which do not depend on $\gamma$), and $\Lambda=0$ for $\gamma =0.5$ and $0.9$. \SH{y-axis label could be added: $\lambda_{N-1}/\lambda_N$}}
+  \caption{The expected ratio of the two smallest eigenvalues is plotted as a function of $N$.   From bottom to top the lines are i) the eigenvalues at the peak  of the distribution (which do not depend on $\gamma$), and $\Lambda=0$ for $\gamma =0.5$ and $0.9$.}
   \label{ratio}
 \end{figure}
 
@@ -417,18 +421,18 @@ The results of this paper establish the number of vacua that could correspond to
 %
 %The higher-dimensional results take the same form: an overall exponential multiplied by a product of polynomials and error functions; however they are massive (for example, in 5D there are some eight hundred terms).
 
-\subsection{$p(V|s.p.)$ for $N=2$}
-\lfl{As long as the reference above to the difference with Yamada \& Vilenkin is commented out, this appendix isn't needed either}
-The full expression for $p(V|s.p.)$ in 2D is:
+%\subsection{$p(V|s.p.)$ for $N=2$}
+%\lfl{As long as the reference above to the difference with Yamada \& Vilenkin is commented out, this appendix isn't needed either}
+%The full expression for $p(V|s.p.)$ in 2D is:
 
-\begin{equation}
-\begin{split}
-p(V|s.p.)=\frac{\sqrt{\pi}}{4\sqrt{4\gamma^2-6}}\bigg{[}\mathrm{Exp}\frac{V^2}{2(\gamma^2-1)}\bigg{(}2\mathrm{Exp}\bigg{(}\frac{V^2\gamma^2}{e^6-10\gamma^2+4\gamma^4}\bigg{)}\sqrt{\gamma^2-1}\\
--\mathrm{Exp}\bigg{(}\frac{V^2\gamma^2}{2-2\gamma^2}\bigg{)}(V^2-1)(\gamma^2-1)\gamma^2\sqrt{\frac{2\gamma^2-3}{1-\gamma^2}}\bigg{)}\bigg{]}
-\end{split}
-\end{equation}
+%\begin{equation}
+%\begin{split}
+%p(V|s.p.)=\frac{\sqrt{\pi}}{4\sqrt{4\gamma^2-6}}\bigg{[}\mathrm{Exp}\frac{V^2}{2(\gamma^2-1)}\bigg{(}2\mathrm{Exp}\bigg{(}\frac{V^2\gamma^2}{e^6-10\gamma^2+4\gamma^4}\bigg{)}\sqrt{\gamma^2-1}\\
+%-\mathrm{Exp}\bigg{(}\frac{V^2\gamma^2}{2-2\gamma^2}\bigg{)}(V^2-1)(\gamma^2-1)\gamma^2\sqrt{\frac{2\gamma^2-3}{1-\gamma^2}}\bigg{)}\bigg{]}
+%\end{split}
+%\end{equation}
 
-\noindent where $\gamma = \sigma_1^2/\sigma_0\sigma_2$. This result can be derived using a similar method as to derive Eq. \ref{DensityOfPeaks}, but by relaxing the requirement that the smallest eigenvalue is greater than zero.
+%\noindent where $\gamma = \sigma_1^2/\sigma_0\sigma_2$. This result can be derived using a similar method as to derive Eq. \ref{DensityOfPeaks}, but by relaxing the requirement that the smallest eigenvalue is greater than zero.
 
 \subsection{Proof that $0 < \sigma_1^2 < \sigma_0\sigma_2$} \label{Proof}
 

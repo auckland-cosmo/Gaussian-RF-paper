@@ -63,7 +63,7 @@ Note that we use both $V$ and $\Lambda$ within the text to refer to vacuum energ
  
 \section{Random Potentials in $N$ Dimensions}
 
-We treat the potential energy function $V({\vec{\phi}})$ as a Gaussian random function over an $N$-dimensional field space. We wish to examine minima and saddles, therefore we require the probability density for the value of the potential itself and the values of its derivatives, $\eta_i = \partial V/\partial \phi^i$ and $\zeta_{ij}=\partial^2 V/\partial \phi^i\partial \phi^j$ at individual points in this field space. These variables can be grouped together into a vector ${\bf y} = [V,\eta,\zeta]$, with $\mathcal{N}=1+N+(N^2+N)/2$ independent components. $V$ is a Gaussian random function, therefore the variables in ${\bf y}$ are described by a multivariate Gaussian distribution. A general multivariate Gaussian distribution with $\mathcal{N}$ independent variables has the form
+We treat the potential energy function $V({\vec{\phi}})$ as a Gaussian random function over an $N$-dimensional field space. \re{do we need the $\vec{\phi}$ rather than $\phi$; I think we can just take this out.?} We wish to examine minima and saddles, therefore we require the probability density for the value of the potential itself and the values of its derivatives, $\eta_i = \partial V/\partial \phi^i$ and $\zeta_{ij}=\partial^2 V/\partial \phi^i\partial \phi^j$ at individual points in this field space. These variables can be grouped together into a vector ${\bf y} = [V,\eta,\zeta]$, with $\mathcal{N}=1+N+(N^2+N)/2$ independent components. $V$ is a Gaussian random function, therefore the variables in ${\bf y}$ are described by a multivariate Gaussian distribution. A general multivariate Gaussian distribution with $\mathcal{N}$ independent variables has the form
   %
 \begin{equation} \label{MultivariateGaussian}
 \begin{split}
@@ -86,7 +86,7 @@ We next introduce the field space power spectrum, $P$, of the random function $V
 \langle V(\vec{\phi}_1) V(\vec{\phi}_2) \rangle = \xi(|\vec{\phi}_1-\vec{\phi}_2|)= \frac{1}{(2\pi)^N} \int d^Nk e^{i \vec{k} \cdot (\vec{\phi}_1-\vec{\phi}_2)} P(k).
 \end{equation}
 %
-We have assumed $V$ is statistically homogeneous and isotropic in field space, therefore $\xi$ depends only on $|\vec{\phi}_1-\vec{\phi}_2|$ and  $P$ depends only on the magnitude of the Fourier coordinate $k$.\footnote{We work in a field space basis where the field space metric is Euclidean.} The moments of the power spectrum are defined to be
+We have assumed $V$ is statistically homogeneous and isotropic in field space, therefore $\xi$ depends only on $|\vec{\phi}_1-\vec{\phi}_2|$ and  $P$ depends only on the magnitude of the Fourier coordinate $k$.\footnote{We work in a field space basis where the field space metric is Euclidean.} \re{we need to define what $\phi_1$ and $\phi_2$ are?} The moments of the power spectrum are defined to be
 %
 \begin{equation} \label{moments}
 \sigma_n^2 = \frac{1}{(2\pi)^N}\int d^Nk (k^{2})^n P(k)
@@ -194,7 +194,7 @@ as an unnormalised probability density that gives, for a fixed value of $N$, the
 
 \section{Landscape Heuristics}
 
-Our  overall goal is to understand $p(\Lambda)$, the probability density of energy densities (i.e the values of $V(\phi)$) at the minima of a Gaussian random landscape. In particular, we are interested in the proportion of  minima with $V > 0$, which is given by\footnote{We  earlier fixed $\langle V \rangle = 0$. One could consider an ``offset'' landscape, consisting of a Gaussian random function with zero mean, plus a constant, such that $\langle V \rangle \neq 0$ but we do not pursue this here.}
+Our  overall goal is to understand $p(\Lambda)$, the probability density of energy densities (i.e the values of $V(\phi)$) at the minima of a Gaussian random landscape.\re{do we explicitly differentiate between $p$ and $P$ anywhere; a footnote here would be good} In particular, we are interested in the proportion of  minima with $V > 0$, which is given by\footnote{We  earlier fixed $\langle V \rangle = 0$. One could consider an ``offset'' landscape, consisting of a Gaussian random function with zero mean, plus a constant, such that $\langle V \rangle \neq 0$ but we do not pursue this here.}
 \begin{equation} \label{PminIntegral}
   P(\Lambda >0| N,\gamma) =  \frac{\int^\infty_0 \,\,d\nu \int_{\lambda_1 \geq \lambda_2 \ldots \geq 0} d^Nx \,\, G \times e^{-Q} }{\int^\infty_{-\infty} d\nu \int_{\lambda_1 \geq \lambda_2 \ldots \geq 0} d^Nx\,\,G \times e^{-Q}}
   \end{equation}
@@ -216,13 +216,13 @@ Broadly speaking, the overall distribution $p(\Lambda | N,\gamma)$ moves to lowe
   \label{distributions}
   \end{figure}
 
-This dependence on $\gamma$ can be understood via the second term in $Q$ (equation \eqref{Q}). When $\gamma$ increases, $1-\gamma^2$ decreases, meaning the width of the $\nu$ dependent part of the probability density also decreases. Also, when $\gamma$ increases, the $\gamma x_1$ term grows in magnitude. At minima, $x_1 <0$ and therefore the most probable value for $\nu$ is also $<0$. As $\gamma$ increases this best fit value becomes more negative. We see both of these effects in the left panel of Figure \ref{distributions}.
+This dependence on $\gamma$ can be understood via the second term in $Q$ (equation \eqref{Q}). When $\gamma$ increases, $1-\gamma^2$ decreases, meaning the width of the $\nu$ dependent part of the probability density also decreases. Also, when $\gamma$ increases, the $\gamma x_1$ term grows in magnitude. At minima, $x_1 <0$ and therefore the most probable value for $\nu$ is also negative. As $\gamma$ increases this best fit value becomes more negative. We see both of these effects in the left panel of Figure \ref{distributions}.
 
-One can see this clearly via Figure \ref{examples1}. When $P(k)$ is peaked over a smaller range of scales (i.e. it has a small bandwith) $\gamma$ is closer to one. Similarly, when $P(k)$ is peaked over a wider range of scales, $\gamma$ is closer to zero. This latter case points to the presence of significant ``ripples'' on top of larger-scale structure in $V(\phi)$, which produce local minima even when $V(\phi)$ is relatively large, as illustrated in the left hand panel.
+One can see this clearly via Figure \ref{examples1}. When $P(k)$ is peaked over a smaller range of scales (i.e. it has a small bandwith) $\gamma$ is closer to one. Similarly, when $P(k)$ is peaked over a wider range of scales, $\gamma$ is closer to zero. This latter case would arise if a potential which had  significant ``ripples'' superimposed on top of larger-scale structure in $V(\phi)$, which can produce local minima even when $V(\phi)$ is relatively large, as illustrated in the left hand panel.
 
 %Via its definition, $\sigma_2$ increases as the range of $k$ over which the spectrum $P(k)$  is nontrivial  increases, and $\gamma$ will correspondingly decrease. Conversely, when $\gamma$ is close to unity, the power spectrum is peaked over a small range of $k$ and the random function is dominated by modes with a narrow band of wavelengths.  At small $\gamma$ the spectrum of $V(\phi)$ thus has power over a wide range of scales. This points to the presence of significant ``ripples'' on top of  larger-scale structure in $V(\phi)$, which  produce local minima even $V(\phi)$ is relatively large,  as illustrated in Fig~\ref{examples1}.  Similarly, while the second derivatives of a random function are correlated, at values of $V$ large enough for minima are rare, increasing $N$  increases the number of directions that must have an unlikely value of $\zeta_{ii}$. 
 
-We can likewise see $N$-dependence semi-quantitatively by noting that the number of terms in the polynomial $G$ grows rapidly with $N$, so as $N$ increases, the full probability density at minima prefers larger magnitude eigenvalues, $|\lambda_i|$. Since $x_1$ is the sum of the eigenvalues, as its magnitude grows the $(\nu-\gamma x_1)^2$ term in $Q$ also grows. For minima, $x_1<0$, therefore large $|x_1|$ makes it less likely to find minima with $\nu >0$ (or $\nu <0 $ for maxima). This effect should only change the mean of the $\nu$ distribution, and not its width, which is indeed what we see in the right hand panel of Figure \ref{distributions}. Note that at a generic point in field space $\langle x_1^2\rangle = 1$; however at a minimum $\langle x_1^2 \rangle >1$ due to the effect of $G$.   
+Likewise, we can under the $N$-dependence semi-quantitatively by noting that the number of terms in the polynomial $G$ grows rapidly with $N$, so as $N$ increases, the full probability density at minima prefers larger magnitude eigenvalues, $|\lambda_i|$. Since $x_1$ is the sum of the eigenvalues, as its magnitude grows the $(\nu-\gamma x_1)^2$ term in $Q$ also grows. For minima, $x_1<0$, therefore large $|x_1|$ makes it less likely to find minima with $\nu >0$ (or $\nu <0 $ for maxima). This effect only shifts the mean of the $\nu$ distribution, but does not change its width, which is indeed what we see in the right hand panel of Figure \ref{distributions}. Note that at a generic point in field space $\langle x_1^2\rangle = 1$; however at a minimum $\langle x_1^2 \rangle >1$ due to the effect of $G$.   
 
 
 \begin{figure}
@@ -232,12 +232,12 @@ We can likewise see $N$-dependence semi-quantitatively by noting that the number
   \label{examples1}
 \end{figure}
 
-Given the dependence of $p(\Lambda|N,\gamma)$ on $N$ and $\gamma$ it is clear that as these variables increase $P(\Lambda>0|N,\gamma)$ will involve the increasingly rare tail of an increasingly narrow distribution. Figure~\ref{N6} shows $P(\Lambda>0|N,\gamma)$ as a function of $\gamma$ for values of $N$ that are small enough for the relevant integrals to be fully evaluated numerically, and we see that positive minima grow far less likely as $N$ and $\gamma$ increase. 
+Given the dependence of $p(\Lambda|N,\gamma)$ on $N$ and $\gamma$ it is clear that as these variables increase $P(\Lambda>0|N,\gamma)$ will involve the increasingly small tail of an increasingly narrow distribution. Figure~\ref{N6} shows $P(\Lambda>0|N,\gamma)$ as a function of $\gamma$ for values of $N$ that are small enough for the relevant integrals to be fully evaluated numerically, and we see that positive minima grow far less likely as $N$ and $\gamma$ increase. 
 
 \begin{figure}
   \centering
   \includegraphics[width=.6 \linewidth]{N369.png}
-  \caption{The probability that a given minimum has $V > 0$ as a function of $\gamma$, for $N=3, 6, 9$. We see that both the heuristics are obeyed: the probability decreases with $N$, and  $\gamma$.}
+  \caption{The probability that a given minimum has $V > 0$ as a function of $\gamma$, for $N=3, 6, 9$. We see that both the heuristics are obeyed: the probability decreases with $N$, and  $\gamma$. \re{should we redo these as eps files?; this looks a bit "fuzzy"?}}
   \label{N6}
   \end{figure}
 
@@ -276,7 +276,7 @@ p(\Lambda) = \int_{\lambda_1 \geq \lambda_2 \ldots \geq 0}d^N x\,\, G\times \lef
 %
 It is possible to normalise $p(\Lambda)$ by simply dividing by ``denom'' from Eq. \eqref{denom}.
 
-This leaves us with three separate possible $x_n$ dependent integrals we would wish to solve: ``denom'' (Eq. \ref{denom}), ``numer'' (Eq. \ref{numer}) and $p(\Lambda)$ (Eq. \ref{plam}). To proceed further, we approximate each integrand as a Gaussian. We do this by fixing $\gamma$ and $N$, finding the location and value of the peak of the integrand and then numerically calculating the Hessian of the integrand with respect to the $x_n$ variables around this point. Thus we approximate each integral as
+This leaves us with three separate possible $x_n$ dependent integrals  to evaluate: ``denom'' (Eq. \ref{denom}), ``numer'' (Eq. \ref{numer}) and $p(\Lambda)$ (Eq. \ref{plam}). To proceed further, we approximate each integrand as a Gaussian. We do this by fixing $\gamma$ and $N$, finding the location and value of the peak of the integrand and then numerically calculating the Hessian of the integrand with respect to the $x_n$ variables around this point. Thus we approximate each integral as
 %
 \begin{align}\label{Gauss}
 \begin{split}
@@ -298,7 +298,7 @@ This leaves us with three separate possible $x_n$ dependent integrals we would w
 \begin{figure} 
   \centering
   \includegraphics[width=.6 \linewidth]{errcontour.png}
-  \caption{Contour plot of the relative error in $\rm{Log}(P(\Lambda>0|\gamma,N)$ obtained from calculating $P$ using the Gaussian approximation versus the exact numerical result. The trend for increasing $N$ is for the relative error to \emph{decrease}.\SH{need bigger labels on axes and legend (and change to raster plot, or not interpolated contour plot)}}
+  \caption{Contour plot of the relative error in $\rm{Log}(P(\Lambda>0|\gamma,N)$ obtained from calculating $P$ using the Gaussian approximation versus the exact numerical result. The trend for increasing $N$ is for the relative error to \emph{decrease}.\SH{need bigger labels on axes and legend (and change to raster plot, or not interpolated contour plot)}\re{is this the last plot to sort? and we have it done?}}
   \label{errcontour}
 \end{figure}
 
@@ -324,11 +324,11 @@ In  Figure~\ref{PVaryingWithNGaussian} we show $P(\Lambda>0|N,\gamma)$ as a func
 \begin{figure} 
   \centering
   \includegraphics[width=.6 \linewidth]{histo.eps}
-  \caption{We plot $\log_{10}(P(\Lambda>0|N,\gamma))$ as a function of $N$ and $\gamma$; as $N$ becomes moderately large, less than 1 in $10^{-500}$ minima have $\Lambda>0$, for $\gamma$  close to unity.  \SH{reproduce with ``error function'' code. It shouldn't change to the eye though}}
+  \caption{We plot $\log_{10}(P(\Lambda>0|N,\gamma))$ as a function of $N$ and $\gamma$; as $N$ becomes moderately large, less than 1 in $10^{-500}$ minima have $\Lambda>0$, for $\gamma$  close to unity.  \SH{reproduce with ``error function'' code. It shouldn't change to the eye though}\re{lerh feng; this is ready to go now?}}
   \label{fullcontourplot}
 \end{figure}
 
-Figure~\ref{fullcontourplot} displays  $P(\Lambda >0 |N,\gamma)$ as a function of $N$ and $\gamma$. We see that for sufficiently large $N$ and $\gamma$ there are fewer than 1 in $10^{500}$ minima in the whole field space with positive $\Lambda$. This is very interesting as it would indicate that \emph{if} the string theory landscape could be accurately modelled as a Gaussian random function and if there are only $10^{500}$ minima in the whole field space then broad regions of the parameter space for $N$ and $\gamma$ would be tentatively ruled out. $N$ is the dimensionality of the field space, which translates to the number of different physically relevant degrees of freedom in the compactified space, whereas $\gamma$ relates to the power spectrum of the potential $V$, so would be more difficult to immediately translate into fundamental particle/string physics. Nevertheless, that would be an interesting path for future research. \re{out to $N=200$} \lfl{Do we want to zoom in on the region $\gamma > 0.9$?}.
+Figure~\ref{fullcontourplot} displays  $P(\Lambda >0 |N,\gamma)$ as a function of $N$ and $\gamma$. We see that for sufficiently large $N$ and $\gamma$ there are fewer than 1 in $10^{500}$ minima in the whole field space with positive $\Lambda$. This is very interesting as it would indicate that \emph{if} the string theory landscape could be accurately modelled as a Gaussian random function and if there are only $10^{500}$ minima in the whole field space then broad regions of the parameter space for $N$ and $\gamma$ would be tentatively ruled out. $N$ is the dimensionality of the field space, which translates to the number of different physically relevant degrees of freedom in the compactified space, whereas $\gamma$ relates to the power spectrum of the potential $V$, so would be more difficult to immediately translate into fundamental particle/string physics. Nevertheless, that would be an interesting path for future research. \lfl{Do we want to zoom in on the region $\gamma > 0.9$?}\re{I think we are fine!}.
 
 
 \section{Eigenvalue Distributions and Slopes} 
@@ -401,7 +401,7 @@ In the preceding Sections, we have  written down an explicit and tractable proba
 
 The above result draws attention to the possibility that simply having a vast number of minima does not guarantee that any of them will be ``above the waterline''.  It is often tacitly assumed that $p(\Lambda)$ is such that a vast number of minima can be found with $\Lambda>0$, facilitating a stochastic and anthropic solution to the apparent tuning problem faced by a na\"ive cosmological constant. However, the calculation here makes it clear that this is far from guaranteed. Given an infinitely large landscape (in terms of its volume in field-space), any finite dimensional Gaussian random landscape will have an infinite number of minima with $\Lambda>0$, since $P(\Lambda >0)$ is always non-zero. However, typical landscape scenarios posit that the total number of minima is very large but still finite; in these cases it is possible that the number of minima with $\Lambda >0$ will be zero.  
 
-Interestingly, the ``swampland'' hypothesis posits that $M_{Pl} |\nabla_\phi V|/ V \gtrsim c$ where $c$ is a number of order unity and $M_{Pl}$ is the Planck mass \cite{Agrawal2018,Ooguri:2018wrx}; that is, the landscape potential has no minima with  positive vacuum energy. The swampland consists of apparently viable effective quantum field theories coupled to gravity, which are in fact inconsistent with a full quantum theory of gravity. This hypothesis can be construed as a constraint on the parameter space of a Gaussian random landscape. Given a Gaussian random landscape where the volume of field space accommodates an expected $10^{-M}$ minima\sh{, with $M\gtrsim 100$,} this immediately translates into a nontrivial restriction on $N$ and $\gamma$ which could be imposed from  Figure~\ref{fullcontourplot}. 
+Interestingly, the ``swampland'' hypothesis posits that $M_{Pl} |\nabla_\phi V|/ V \gtrsim c$ where $c$ is a number of order unity and $M_{Pl}$ is the Planck mass \cite{Agrawal2018,Ooguri:2018wrx}; that is, the landscape potential has no minima with  positive vacuum energy. The swampland consists of apparently viable effective quantum field theories coupled to gravity, which are in fact inconsistent with a full quantum theory of gravity. This hypothesis can be construed as a constraint on the parameter space of a Gaussian random landscape. Given a Gaussian random landscape where the volume of field space accommodates an expected $10^{-M}$ minima, with $M\gtrsim 100$, this immediately translates into a nontrivial restriction on $N$ and $\gamma$ which could be imposed from  Figure~\ref{fullcontourplot}. 
 
 The $\gamma$  parameter is a measure of the ``bandwidth'' of the landscape function; a Gaussian random function with a power spectrum that has support over a larger range of $k$ values will have a smaller value of $\gamma$. We do not draw strong physical conclusions from this observation, but it is worth noting that a Gaussian random landscape that is consistent with the swampland hypothesis is likely to have contributions from a narrower range of scales in field space. 
 

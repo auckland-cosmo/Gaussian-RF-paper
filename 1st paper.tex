@@ -245,7 +245,7 @@ Given the dependence of $p(\Lambda|N,\gamma)$ on $N$ and $\gamma$ it is clear th
  For the special case of a Gaussian power spectrum (and not just a Gaussian landscape), 
 %
 \begin{equation}
-\sigma_n^2 = \frac{2^n \Gamma{\left(1+ \frac{N}{2} \right)}}{\Gamma{\left(\frac{N}{2} \right)}} \frac{U_0^2}{L^{2n}}
+\sigma_n^2 = \frac{2^n \Gamma{\left(n+ \frac{N}{2} \right)}}{\Gamma{\left(\frac{N}{2} \right)}} \frac{U_0^2}{L^{2n}}
 \end{equation}
 %
 where $U_0$ sets the typical value of $|V|$ and $L$ is a correlation length \cite{Yamada2018}.  Consequently, for this specific power spectrum 
@@ -378,23 +378,14 @@ The distribution of eigenvalues in Figure \ref{eigendist} is very similar to tha
 \end{figure}
 
 In Figure \ref{eigen} we plot the distribution of the biggest and smallest rescaled eigenvalues for different values of $\gamma$ and $N$ at two points: at the most likely value of $\Lambda$, and at $\Lambda=0$.\footnote{Although the distribution of eigenvalues at the most likely value of $\Lambda$ is independent of $\gamma$, once we fix $\Lambda=0$, it is no longer independent of $\gamma$.} We see that in all cases the largest eigenvalue is a little less than unity. Conversely, as $N$ increases the smallest eigenvalue approaches zero. When $\gamma$ approaches unity, almost all of the minima in the landscape  occur at negative values of $\Lambda$ and the relative handful of minima above the waterline become even more ``elongated'' as the lowest-lying eigenvalue becomes even closer to zero. This will have implications for quintessence scenarios in any landscape, as it points to a mechanism for producing minima which are almost guaranteed to have a handful of very gradual approaches, as we discuss in the following Section. We further note that the order-of-magnitude estimate by Yamada and Vilenkin \cite{Yamada2018}, that the smallest eigenvalue is of order $\frac{1}{N}$, is accurate.
-
-%\begin{figure} 
-%  \centering
-%  \includegraphics[width=.45\linewidth]{h1_100.eps} \hfill \includegraphics[width=.45\linewidth]{h2_100.eps}
-%  \caption{The expected eigenvalue distributions are plotted for $\gamma=0.9$ and $N=100$; the left hand histogram shows the distribution at the most likely value of $\Lambda$; the right hand plot shows the result for $\Lambda=0$.}
-%  \label{eigendist1}
-%\end{figure}
-
+ 
 \begin{figure} 
   \centering
   \includegraphics[width=.45\linewidth]{l1_100.eps} \hfill \includegraphics[width=.45\linewidth]{l2_100.eps}
   \caption{The expected eigenvalues are plotted for $\gamma=0.9$ and $N=100$; the left hand plot shows the most likely value of each of the 100 $\lambda_i$; the right hand plot shows the smallest eigenvalues on a log scale. The upper points correspond to the value for $\Lambda$ for which $p(\Lambda| N,\gamma)$  is peaked; the lower points correspond to $\Lambda=0$.}
   \label{eigendist2}
 \end{figure}
-
-%\SH{We should replace figure 9 with the reconstructed rho(lambda).}We examine the distribution of eigenvalues in figure \ref{eigendist1}. At  $N\gtrsim 100$ the eigenvalue distribution at the peak value of $\Lambda$ is roughly ``semicircular''; for values of $N$ and $\gamma$ for which $p(\Lambda|N,\gamma)$ is very small at zero the number of low-lying eigenvalues grows substantially. \re{does this look reminiscent of the Yamada and Vilenkin paper?} \lfl{Yes? Yamada \& Vilenkin Fig 9 shows that at large $N$, small values of the eigenvalue become more likely, although the \emph{really} small ones are unlikely} Intuitively, this makes sense, at values of $\Lambda$ for which minima are rare, we would expect that they will become increasingly ``marginal'' and the smaller the eigenvalues of the Hessian of $V(\phi)$ become, the shallower the resulting minima become.
-
+ 
 \begin{figure} 
   \centering
   \includegraphics[width=.6\linewidth]{ratio.eps}  
